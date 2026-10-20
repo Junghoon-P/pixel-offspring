@@ -1,3 +1,4 @@
+import { answersV3Schema, personalityReadingSchema, compatibilitySchema, legendDiscoverySchema, legendIdSchema } from "./personalitySchemas";
 import { isLegacyBody, HYBRIDS } from "../domain/comicCatalog";
 import { z } from "zod";
 export const graphemes = (text: string): string[] =>
@@ -55,6 +56,7 @@ export const answersV2Schema = z
   .length(12)
   .refine((answers) => new Set(answers.map((a) => a.questionId)).size === 12);
 export const submissionSchema = z.discriminatedUnion("quizVersion", [
+  z.object({ quizVersion: z.literal(3), nickname: nicknameSchema, answers: answersV3Schema, idempotencyKey: idSchema }).strict(),
   z
     .object({
       quizVersion: z.literal(1),
@@ -89,6 +91,8 @@ export const recipeSchema = z
     hybrid: z.enum(["mushroom-bird", "snail-dragon", "ghost-jelly", "capybara-frog",
       "duck-cat", "hamster-potato", "raccoon-penguin", "axolotl-sloth"]).optional(),
     hybridStyle: z.literal("costume").optional(),
+    fusionBody: bodySchema.optional(),
+    legend: legendIdSchema.optional(),
     decorations: z
       .array(z.enum(["flame", "blanket", "sparkles", "leaves"]))
       .max(2),
@@ -96,7 +100,9 @@ export const recipeSchema = z
   })
   .strict()
   .refine((r) => {
-    if (r.assetVersion !== 4) return isLegacyBody(r.body) && r.face !== "signature" && !r.hybrid && !r.hybridStyle;
+    if (r.assetVersion !== 4) return isLegacyBody(r.body) && r.face !== "signature" && !r.hybrid && !r.hybridStyle && !r.fusionBody && !r.legend;
+    if (r.fusionBody && (r.hybrid || r.hybridStyle)) return false;
+    if (r.legend && !r.fusionBody && !r.hybrid) return false;
     const design = HYBRIDS.find((item) => item.id === r.hybrid);
     if (r.hybridStyle && (!design || r.body !== design.baseBody)) return false;
     const validBody = r.hybrid ? design?.parents.some((body) => body === r.body) : true;
@@ -120,10 +126,13 @@ export const traitsSchema = z
     energy: z.number().min(-1).max(1),
     spontaneity: z.number().min(-1).max(1),
     expression: z.number().min(-1).max(1).optional(),
+    conflict: z.number().min(-1).max(1).optional(),
+    support: z.number().min(-1).max(1).optional(),
   })
   .strict();
 export const profileSchema = z
   .object({
+    reading: personalityReadingSchema.optional(),
     typeId: z.string().regex(/^[01]{4}$/),
     name: z.string(),
     description: z.string(),
@@ -135,8 +144,8 @@ export const characterSchema = z
     id: idSchema,
     nickname: nicknameSchema,
     traits: traitsSchema,
-    quizVersion: z.union([z.literal(1), z.literal(2)]).optional(),
-    scoreVersion: z.union([z.literal(1), z.literal(2)]).optional(),
+    quizVersion: z.union([z.literal(1), z.literal(2), z.literal(3)]).optional(),
+    scoreVersion: z.union([z.literal(1), z.literal(2), z.literal(3)]).optional(),
     profile: profileSchema.optional(),
     recipe: recipeSchema,
     assetVersion: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4)]),
@@ -151,6 +160,8 @@ export const publicParentSchema = characterSchema.omit({
 });
 export const childSchema = z
   .object({
+    compatibility: compatibilitySchema.optional(),
+    legend: legendDiscoverySchema.optional(),
     recipe: recipeSchema,
     name: z.string(),
     description: z.string(),

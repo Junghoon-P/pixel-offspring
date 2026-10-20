@@ -6,10 +6,10 @@ test("불완전 초안은 처음 빠진 질문으로 복구한다", async ({ pag
     sessionStorage.setItem(
       "quiz-draft",
       JSON.stringify({
-        quizVersion: 2,
+        quizVersion: 3,
         nickname: "복구",
         choices: { q1: "a", q12: "b" },
-        step: 11,
+        step: 23,
         key: crypto.randomUUID(),
       }),
     ),
@@ -162,12 +162,12 @@ test("닉네임이 손상된 초안은 닉네임 입력부터 복구한다", asy
     sessionStorage.setItem(
       "quiz-draft",
       JSON.stringify({
-        quizVersion: 2,
+        quizVersion: 3,
         nickname: "",
         choices: Object.fromEntries(
           Array.from({ length: 12 }, (_, i) => [`q${i + 1}`, "a"]),
         ),
-        step: 11,
+        step: 23,
         key: crypto.randomUUID(),
       }),
     ),

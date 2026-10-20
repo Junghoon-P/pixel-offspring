@@ -1,4 +1,6 @@
 "use client";
+import { PersonalityDetails } from "../components/PersonalityDetails";
+import { LegendCodex } from "../components/LegendCodex";
 import Link from "next/link";
 import { COMIC_NAMES } from "../domain/catalog";
 import { useEffect, useState } from "react";
@@ -114,7 +116,7 @@ const CharacterCard = ({
   character: Character;
   state: MeState;
 }): ReactElement => (
-  <section className="panel">
+  <section className="panel creature-card">
     <CreatureCanvas
       recipe={character.recipe}
       label={`${character.nickname}의 생물`}
@@ -123,7 +125,8 @@ const CharacterCard = ({
     {character.profile && (
       <>
         <h3>{character.recipe.assetVersion === 4 ? `${COMIC_NAMES[character.recipe.body]} · ` : ""}{character.profile.name}</h3>
-        <p>{character.profile.description}</p>
+        <p className="character-intro">{character.profile.reading?.headline ?? character.profile.description}</p>
+        {character.profile.reading && <PersonalityDetails reading={character.profile.reading} />}
         <p>
           <strong>작은 능력</strong> · {character.profile.ability}
         </p>
@@ -173,7 +176,7 @@ const InviteLink = ({ invite }: { invite: Invite }): ReactElement => {
   );
 };
 const ResultSummary = ({ result }: { result: PublicResult }): ReactElement => (
-  <section className="panel">
+  <section className="panel creature-card">
     <CreatureCanvas
       recipe={result.child.recipe}
       label={result.child.name}
@@ -193,7 +196,7 @@ const ResultList = ({ state }: { state: MeState }): ReactElement => (
       목록 새로고침
     </button>
     {state.results?.items.length === 0 && (
-      <p>아직 함께 만든 생물이 없어요. 친구를 초대해 보세요.</p>
+      <p>우리의 첫 조합은 어떤 모습일까요? 친구를 초대해 발견해 보세요.</p>
     )}
     {state.results?.items.map((result) => (
       <ResultSummary key={result.resultId} result={result} />
@@ -244,6 +247,7 @@ export const Me = (): ReactElement => {
         <CharacterCard key={character.id} character={character} state={state} />
       ))}
       {state.invite && <InviteLink invite={state.invite} />}
+      <LegendCodex results={state.results?.items ?? []} hasMore={Boolean(state.results?.nextCursor)} />
       <ResultList state={state} />
       <p>
         <Link href="/create">새 생물 만들기</Link>

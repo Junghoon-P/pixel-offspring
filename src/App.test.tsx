@@ -20,7 +20,7 @@ setupDom();
 it("홈 데모와 검수 페이지의 기존 캐릭터 동작을 유지한다", async () => {
   await render(<Home />);
   await flush();
-  expect(text()).toContain("조합 미리보기");
+  expect(text()).toContain("둘을 고르면, 바로 섞여요");
   await select('select[aria-label="1번 부모"]', "ghost");
   await select('select[aria-label="2번 부모"]', "snail");
   await render(<Gallery />);

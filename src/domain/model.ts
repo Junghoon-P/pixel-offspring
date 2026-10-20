@@ -1,3 +1,4 @@
+import type { PersonalityReading, Compatibility, LegendDiscovery, LegendId } from "./personalityModel";
 export type LegacyBody = "snail" | "ghost" | "jelly" | "mushroom" | "bird" | "dragon";
 export type ComicBody = "capybara" | "frog" | "duck" | "cat" | "hamster" | "potato" | "raccoon" | "penguin" | "axolotl" | "sloth" | "cucumber" | "broccoli" | "pepe" | "squidward";
 export type Body = LegacyBody | ComicBody;
@@ -10,25 +11,30 @@ export interface Traits {
   energy: number;
   spontaneity: number;
   expression?: number;
+  conflict?: number;
+  support?: number;
 }
 export interface Recipe {
   assetVersion: 1 | 2 | 3 | 4;
   body: Body;
   hybrid?: Hybrid;
   hybridStyle?: "costume";
+  fusionBody?: Body;
+  legend?: LegendId;
   face: Face;
   decorations: Decoration[];
   palette: "original";
 }
 export interface Profile {
+  reading?: PersonalityReading;
   typeId: string;
   name: string;
   description: string;
   ability: string;
 }
 export interface Parent {
-  quizVersion?: 1 | 2;
-  scoreVersion?: 1 | 2;
+  quizVersion?: 1 | 2 | 3;
+  scoreVersion?: 1 | 2 | 3;
   profile?: Profile;
   id: string;
   nickname: string;
@@ -47,6 +53,8 @@ export interface Inheritance {
   label: string;
 }
 export interface Child {
+  compatibility?: Compatibility;
+  legend?: LegendDiscovery;
   recipe: Recipe;
   name: string;
   description: string;
@@ -57,8 +65,8 @@ export interface Child {
   copyVersion: 1 | 2;
 }
 export interface PublicParent {
-  quizVersion?: 1 | 2;
-  scoreVersion?: 1 | 2;
+  quizVersion?: 1 | 2 | 3;
+  scoreVersion?: 1 | 2 | 3;
   profile?: Profile;
   id: string;
   nickname: string;

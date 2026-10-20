@@ -28,7 +28,7 @@ const loadImage = (id: string): Promise<HTMLImageElement> => {
   images.set(id, promise);
   return promise;
 };
-const rasterizePortrait = (image: HTMLImageElement, layer: ReturnType<typeof creatureLayers>[number]): HTMLCanvasElement => {
+const rasterizePortrait = (loaded: HTMLImageElement[], layers: ReturnType<typeof creatureLayers>): HTMLCanvasElement => {
   const canvas = document.createElement("canvas");
   canvas.width = 128;
   canvas.height = 128;
@@ -37,8 +37,10 @@ const rasterizePortrait = (image: HTMLImageElement, layer: ReturnType<typeof cre
   // 고유 표정과 소품은 128px에서 정규화해 작은 눈과 윤곽을 보존한다.
   context.imageSmoothingEnabled = true;
   context.imageSmoothingQuality = "high";
-  const [x, y, width, height] = layer.target;
-  context.drawImage(image, ...layer.source, x * 2, y * 2, width * 2, height * 2);
+  layers.forEach((layer, index) => {
+    const [x, y, width, height] = layer.target;
+    context.drawImage(loaded[index], ...layer.source, x * 2, y * 2, width * 2, height * 2);
+  });
   return canvas;
 };
 export const drawCreature = async (
@@ -55,7 +57,7 @@ export const drawCreature = async (
     throw new Error("호환되지 않는 장식입니다.");
   const layers = creatureLayers(recipe);
   const loaded = await Promise.all(layers.map((item) => loadImage(item.path)));
-  const portrait = recipe.assetVersion === 4 ? rasterizePortrait(loaded[0], layers[0]) : undefined;
+  const portrait = recipe.assetVersion === 4 ? rasterizePortrait(loaded, layers) : undefined;
   context.save();
   context.imageSmoothingEnabled = false;
   if (portrait) {

@@ -115,3 +115,33 @@ it("코스튬 8종은 새 조합에만 적용하고 저장된 기존 레시피�
     expect(recipeSchema.safeParse({ ...child.recipe, body: otherBody }).success).toBe(false);
   }
 });
+
+it("20종의 모든 신규 조합은 같은 종까지 양쪽 부모 외형을 합성한다", async () => {
+  for (const [i, a] of bodySchema.options.entries()) {
+    for (const b of bodySchema.options.slice(i)) {
+      const parents: Parent[] = [a, b].map((body, index) => ({
+        id: `${index}-${body}`, nickname: body, assetVersion: 4, recipe: comicRecipe(body),
+        traits: { adventure: 0, energy: 0, spontaneity: 0, expression: 0 },
+      }));
+      const child = await offspring(parents[0], parents[1]);
+      expect(child).toEqual(await offspring(parents[1], parents[0]));
+      expect(childSchema.safeParse(child).success).toBe(true);
+      expect(child.inheritance.map((part) => part.parentId).sort()).toEqual(parents.map((p) => p.id).sort());
+      if (child.recipe.hybrid) continue;
+      const layers = creatureLayers(child.recipe);
+      expect(layers.length).toBeGreaterThan(1);
+      expect(layers.map((layer) => layer.path)).toContain(`/creatures/v4/${a}.png`);
+      expect(layers.map((layer) => layer.path)).toContain(`/creatures/v4/${b}.png`);
+      expect(layers).not.toEqual(creatureLayers(parents[0].recipe));
+      expect(layers).not.toEqual(creatureLayers(parents[1].recipe));
+    }
+  }
+});
+
+it("합성 레시피는 구버전·코스튬 혼용과 알 수 없는 부모를 거부한다", () => {
+  const recipe = { ...comicRecipe("cat"), fusionBody: "raccoon" };
+  expect(recipeSchema.safeParse(recipe).success).toBe(true);
+  for (const patch of [{ assetVersion: 3 }, { fusionBody: "missing" }, { hybrid: "duck-cat" }, { hybridStyle: "costume" }]) {
+    expect(recipeSchema.safeParse({ ...recipe, ...patch }).success).toBe(false);
+  }
+});

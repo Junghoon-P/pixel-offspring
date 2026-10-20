@@ -52,7 +52,8 @@ export const ResultShare = ({
   const { notice, share, copy, download } = useShareActions(card);
   return (
     <>
-      <div className="actions">
+      <h2>이 조합, 같이 보자</h2>
+      <div className="actions share-actions">
         <button disabled={!file} onClick={download}>
           PNG 저장
         </button>
