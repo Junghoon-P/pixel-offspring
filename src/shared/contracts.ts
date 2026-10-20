@@ -1,3 +1,4 @@
+import { isLegacyBody, HYBRIDS } from "../domain/comicCatalog";
 import { z } from "zod";
 export const graphemes = (text: string): string[] =>
   Array.from(
@@ -73,23 +74,34 @@ export const submissionSchema = z.discriminatedUnion("quizVersion", [
 ]);
 export const bodySchema = z.enum([
   "snail",
+  "cucumber", "broccoli", "pepe", "squidward",
   "ghost",
   "jelly",
   "mushroom",
   "bird",
-  "dragon",
+  "dragon", "capybara", "frog", "duck", "cat", "hamster", "potato", "raccoon", "penguin", "axolotl", "sloth",
 ]);
 export const recipeSchema = z
   .object({
-    assetVersion: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+    assetVersion: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4)]),
     body: bodySchema,
-    face: z.enum(["happy", "sleepy"]),
+    face: z.enum(["happy", "sleepy", "signature"]),
+    hybrid: z.enum(["mushroom-bird", "snail-dragon", "ghost-jelly", "capybara-frog",
+      "duck-cat", "hamster-potato", "raccoon-penguin", "axolotl-sloth"]).optional(),
+    hybridStyle: z.literal("costume").optional(),
     decorations: z
       .array(z.enum(["flame", "blanket", "sparkles", "leaves"]))
       .max(2),
     palette: z.literal("original"),
   })
   .strict()
+  .refine((r) => {
+    if (r.assetVersion !== 4) return isLegacyBody(r.body) && r.face !== "signature" && !r.hybrid && !r.hybridStyle;
+    const design = HYBRIDS.find((item) => item.id === r.hybrid);
+    if (r.hybridStyle && (!design || r.body !== design.baseBody)) return false;
+    const validBody = r.hybrid ? design?.parents.some((body) => body === r.body) : true;
+    return Boolean(validBody) && r.face === "signature" && r.decorations.length === 0;
+  }, "외형 버전과 몸통·표정·장식이 맞지 않아요.")
   .refine(
     (r) =>
       new Set(r.decorations).size === r.decorations.length &&
@@ -127,7 +139,7 @@ export const characterSchema = z
     scoreVersion: z.union([z.literal(1), z.literal(2)]).optional(),
     profile: profileSchema.optional(),
     recipe: recipeSchema,
-    assetVersion: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+    assetVersion: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4)]),
     createdAt: z.number(),
     expiresAt: z.number(),
   })
@@ -154,7 +166,7 @@ export const childSchema = z
         .strict(),
     ),
     notes: z.array(z.string()).optional(),
-    engineVersion: z.union([z.literal(1), z.literal(2)]),
+    engineVersion: z.union([z.literal(1), z.literal(2), z.literal(3)]),
     copyVersion: z.union([z.literal(1), z.literal(2)]),
   })
   .strict();

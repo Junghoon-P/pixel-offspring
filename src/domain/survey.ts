@@ -1,6 +1,6 @@
+import { comicRecipe } from "./comicCatalog";
 import { answersV2Schema } from "../shared/contracts";
-import { compatible } from "./catalog";
-import type { Body, Decoration, Profile, Recipe, Traits } from "./model";
+import type { Body, Profile, Recipe, Traits } from "./model";
 type Axis = "adventure" | "energy" | "spontaneity" | "expression";
 interface Question {
   id: string;
@@ -170,43 +170,30 @@ export const describeTraits = (traits: Traits): Profile => {
     ability: `${traits.spontaneity > 0 ? "우연히 만난" : "미리 점찍은"} ${traits.adventure > 0 ? "새로운 장소" : "단골 장소"}에서 ${traits.energy > 0 ? "즐거움 열 개" : "소중한 장면 하나"} ${(traits.expression ?? 0) > 0 ? "친구에게 전하기" : "오래 기억하기"}`,
   };
 };
-const surveyBody = (traits: Traits): Body => {
-  if (traits.adventure > 0)
-    return traits.energy > 0
-      ? "dragon"
-      : traits.spontaneity > 0
-        ? "mushroom"
-        : "snail";
-  if (traits.energy > 0) return traits.spontaneity > 0 ? "jelly" : "bird";
-  return "ghost";
-};
 interface SurveyProfile {
   traits: Traits;
   recipe: Recipe;
   profile: Profile;
 }
+const TYPE_BODIES: Body[] = [
+  "potato", "cat", "capybara", "ghost",
+  "frog", "bird", "jelly", "duck",
+  "snail", "hamster", "mushroom", "sloth",
+  "dragon", "raccoon", "penguin", "axolotl",
+];
 export const createSurveyProfile = (input: unknown): SurveyProfile => {
-  const traits = scoreSurvey(input),
-    body = surveyBody(traits);
-  const decoration: Decoration =
-    traits.spontaneity > 0
-      ? "sparkles"
-      : compatible(body, "blanket")
-        ? "blanket"
-        : body === "dragon"
-          ? "flame"
-          : "leaves";
-  return {
-    traits,
-    profile: describeTraits(traits),
-    recipe: {
-      assetVersion: 3,
-      body,
-      face: traits.expression! > 0 ? "happy" : "sleepy",
-      decorations: [decoration],
-      palette: "original",
-    },
-  };
+  const traits = scoreSurvey(input);
+  const profile = describeTraits(traits);
+  const body = selectSurveyBody(profile.typeId, traits);
+  return { traits, profile, recipe: comicRecipe(body) };
+};
+const selectSurveyBody = (typeId: string, traits: Traits): Body => {
+  // 유형은 유지하고 축별 답변 강도로 후보를 정해 재시도·답변 순서에도 외형이 같다.
+  if (typeId === "0000" && traits.energy === -1 / 3 && traits.expression === -1) return "cucumber";
+  if (typeId === "1101" && traits.energy === 1 / 3 && traits.expression === 1) return "broccoli";
+  if (typeId === "0101" && traits.energy === 1 / 3 && traits.expression === 1) return "pepe";
+  if (typeId === "1000" && traits.energy === -1 / 3 && traits.expression === -1) return "squidward";
+  return TYPE_BODIES[parseInt(typeId, 2)];
 };
 export const surveyExamples = (): SurveyProfile[] =>
   Array.from({ length: 16 }, (_, index) => {

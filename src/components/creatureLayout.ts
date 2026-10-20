@@ -1,5 +1,7 @@
+import { creatureLayersV4 } from "./creatureLayoutV4";
+import { isLegacyBody } from "../domain/comicCatalog";
 import { creatureLayersV3 } from "./creatureLayoutV3";
-import type { Body, Recipe } from "../domain/model";
+import type { LegacyBody, Recipe } from "../domain/model";
 type Rect = [number, number, number, number];
 interface Anchor {
   face: [number, number];
@@ -12,7 +14,7 @@ export interface CreatureLayer {
   source: Rect;
   target: Rect;
 }
-const LEGACY: Record<Body, Anchor> = {
+const LEGACY: Record<LegacyBody, Anchor> = {
   snail: { face: [38, 40], head: [17, 0], blanket: [-2, 0] },
   ghost: { face: [18, 35], head: [24, 2], blanket: [0, 0] },
   jelly: { face: [23, 40], head: [24, 8], blanket: [0, 0] },
@@ -25,7 +27,7 @@ interface Layout {
   head: [number, number];
   blanket: Rect;
 }
-const LAYOUT: Record<Body, Layout> = {
+const LAYOUT: Record<LegacyBody, Layout> = {
   snail: { face: [38, 38, 18, 10], head: [14, 8], blanket: [4, 20, 34, 36] },
   ghost: { face: [22, 36, 20, 10], head: [24, 4], blanket: [6, 19, 52, 40] },
   jelly: { face: [22, 40, 20, 10], head: [24, 8], blanket: [6, 25, 52, 34] },
@@ -45,6 +47,7 @@ const layer = (
   target,
 });
 const legacyLayers = (recipe: Recipe): CreatureLayer[] => {
+  if (!isLegacyBody(recipe.body)) throw new Error("구버전 몸통이 아닙니다.");
   const anchor = LEGACY[recipe.body];
   return [
     layer(recipe.body, [0, 0, 64, 64]),
@@ -66,6 +69,8 @@ const legacyLayers = (recipe: Recipe): CreatureLayer[] => {
   ];
 };
 export const creatureLayers = (recipe: Recipe): CreatureLayer[] => {
+  if (recipe.assetVersion === 4) return creatureLayersV4(recipe);
+  if (!isLegacyBody(recipe.body)) throw new Error("구버전 몸통이 아닙니다.");
   if (recipe.assetVersion === 3) return creatureLayersV3(recipe);
   if (recipe.assetVersion === 1) return legacyLayers(recipe);
   const layout = LAYOUT[recipe.body];

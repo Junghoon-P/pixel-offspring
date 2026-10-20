@@ -1,3 +1,4 @@
+import { comicOffspring } from "./comicOffspring";
 import { combinationCopy } from "./combinationCopy";
 import { answersSchema } from "../shared/contracts";
 import {
@@ -114,6 +115,8 @@ export const offspring = async (a: Parent, b: Parent): Promise<Child> => {
   const index = parseInt(seed.slice(0, 2), 16) % 2;
   const bodyParent = parents[index],
     faceParent = parents[1 - index];
+  const comic = comicOffspring(parents, bodyParent);
+  if (comic) return comic;
   const { decorations, inheritance } = inheritDecorations(
     bodyParent.recipe.body,
     parents,
@@ -121,11 +124,11 @@ export const offspring = async (a: Parent, b: Parent): Promise<Child> => {
   const recipe: Recipe = {
     assetVersion: bodyParent.recipe.assetVersion,
     body: bodyParent.recipe.body,
-    face: faceParent.recipe.face,
+    face: faceParent.recipe.face === "signature" ? bodyParent.recipe.face : faceParent.recipe.face,
     decorations,
     palette: bodyParent.recipe.palette,
   };
-  const upgraded = parents.some((parent) => parent.recipe.assetVersion === 3);
+  const upgraded = parents.some((parent) => parent.recipe.assetVersion >= 3);
   const nameParts = upgraded
     ? (["flame", "blanket", "leaves", "sparkles"] as Decoration[]).filter(
         (part) => decorations.includes(part),
@@ -147,7 +150,7 @@ export const offspring = async (a: Parent, b: Parent): Promise<Child> => {
       energy > 0
         ? "산책 한 번에 이야기 열 개 모으기"
         : "여행 계획만 세우고 집에 있기",
-    inheritance: baseInheritance(bodyParent, faceParent, recipe, inheritance),
+    inheritance: baseInheritance(bodyParent, faceParent.recipe.face === "signature" ? bodyParent : faceParent, recipe, inheritance),
     engineVersion: 1,
     copyVersion: 1,
     ...(upgraded ? combinationCopy(parents, bodyParent, recipe) : {}),

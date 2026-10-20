@@ -6,7 +6,7 @@ Next.js App Router와 Node.js Route Handlers, Neon PostgreSQL 구성입니다. �
 
 ## 최초 연결
 
-1. 기존 Vercel 프로젝트에 `Junghoon-P/pixel-offspring` 저장소를 연결합니다. 현재 개발 브랜치는 `dev`이며 Production Branch도 실제 배포할 브랜치와 일치시킵니다.
+1. 기존 Vercel 프로젝트에 `Junghoon-P/pixel-offspring` 저장소를 연결합니다. GitHub 기본 브랜치와 Vercel Production Branch는 `main`, 개발·Preview 브랜치는 `dev`입니다.
 2. Storage에서 Neon PostgreSQL을 생성/연결하고 이 프로젝트 전용 DB를 사용합니다. Preview와 Production은 서로 다른 DB/Neon 브랜치를 연결합니다.
 3. 아래 서버 환경변수를 설정합니다. `.env.example`은 키 안내이며 실제 비밀 값은 커밋하거나 채팅에 공유하지 않습니다.
 4. 원격 DB 스키마를 적용하고 배포한 다음, 생성 중지 상태의 안전한 조회부터 검증합니다. 최종 생성 활성화 후 두 브라우저에서 설문·초대·조합·공유·삭제를 확인합니다.
@@ -18,7 +18,9 @@ Next.js App Router와 Node.js Route Handlers, Neon PostgreSQL 구성입니다. �
 | CRON_SECRET | 무작위 32자 이상 비밀 문자열. Vercel Cron이 Bearer 인증에 사용 |
 | CREATION_ENABLED | 최초 `false`, DB 검증 후 `true` |
 
-Preview에는 별도의 DB와 해당 Preview의 고정 도메인을 APP_ORIGIN으로 설정합니다. Production의 URL을 복사하면 Preview의 쓰기 요청은 Origin 검사에서 거부됩니다. 임의 Host 헤더를 신뢰해 Origin을 자동 허용하지 않습니다.
+Preview에는 별도의 DB와 운영과 다른 CRON_SECRET을 설정합니다. Vercel의 시스템 환경변수 노출을 켜면 `VERCEL=1`, `VERCEL_ENV=preview`에서 `VERCEL_URL`의 정확한 HTTPS 배포 주소를 Origin과 초대 링크에 사용합니다. Preview 검증은 대시보드의 해당 배포 URL에서 진행합니다. 별칭·커스텀 도메인은 자동 허용하지 않으며, 시스템 배포 호스트가 없거나 잘못되면 설정 오류로 차단합니다. Production은 APP_ORIGIN을 그대로 사용합니다. 요청의 Host/Origin 헤더로 허용 주소를 만들지 않습니다.
+
+Neon 연결의 **Create Database Branch For Deployment → Preview**와 **Require Active Resource Before Deploy**를 켜면 `preview/dev` 등 별도 DB 브랜치가 생성되고 해당 배포에 DB 연결 변수가 주입됩니다. 프로젝트 환경변수 목록에는 원래 연결값이 보여도 배포별 연결값이 우선합니다. 브랜치는 운영 스냅샷에서 시작하므로 생성 이후 쓰기는 분리되지만 기존 데이터의 빈 복사본은 아닙니다. 운영 데이터를 테스트에 복제하면 안 되는 단계에서는 별도 빈 DB로 전환합니다. [Neon 공식 안내](https://neon.com/docs/guides/vercel-managed-integration), [Vercel 시스템 환경변수](https://vercel.com/docs/environment-variables/system-environment-variables).
 
 설정은 `vercel.json`에 기록되어 있습니다. Framework Preset **Next.js**, Build Command **pnpm build**, Node.js **22.x**입니다. 기존 Output Directory Override(`dist`/`dist/client`)는 해제합니다. Next가 페이지·API·정적 파일 라우팅을 생성하므로 SPA rewrite와 includeFiles는 사용하지 않습니다. 결과 페이지는 캐시하지 않는 화면을 렌더링하고, 결과 API가 삭제·만료·존재 여부를 판정합니다. 삭제된 결과의 HTML 응답은200이며 API 응답은410입니다.
 

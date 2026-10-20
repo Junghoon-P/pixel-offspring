@@ -1,5 +1,9 @@
-export type Body = "snail" | "ghost" | "jelly" | "mushroom" | "bird" | "dragon";
-export type Face = "happy" | "sleepy";
+export type LegacyBody = "snail" | "ghost" | "jelly" | "mushroom" | "bird" | "dragon";
+export type ComicBody = "capybara" | "frog" | "duck" | "cat" | "hamster" | "potato" | "raccoon" | "penguin" | "axolotl" | "sloth" | "cucumber" | "broccoli" | "pepe" | "squidward";
+export type Body = LegacyBody | ComicBody;
+export type Hybrid = "mushroom-bird" | "snail-dragon" | "ghost-jelly"
+  | "capybara-frog" | "duck-cat" | "hamster-potato" | "raccoon-penguin" | "axolotl-sloth";
+export type Face = "happy" | "sleepy" | "signature";
 export type Decoration = "flame" | "blanket" | "sparkles" | "leaves";
 export interface Traits {
   adventure: number;
@@ -8,8 +12,10 @@ export interface Traits {
   expression?: number;
 }
 export interface Recipe {
-  assetVersion: 1 | 2 | 3;
+  assetVersion: 1 | 2 | 3 | 4;
   body: Body;
+  hybrid?: Hybrid;
+  hybridStyle?: "costume";
   face: Face;
   decorations: Decoration[];
   palette: "original";
@@ -28,7 +34,7 @@ export interface Parent {
   nickname: string;
   traits: Traits;
   recipe: Recipe;
-  assetVersion: 1 | 2 | 3;
+  assetVersion: 1 | 2 | 3 | 4;
 }
 export interface Character extends Parent {
   createdAt: number;
@@ -47,7 +53,7 @@ export interface Child {
   ability: string;
   inheritance: Inheritance[];
   notes?: string[];
-  engineVersion: 1 | 2;
+  engineVersion: 1 | 2 | 3;
   copyVersion: 1 | 2;
 }
 export interface PublicParent {
@@ -57,7 +63,7 @@ export interface PublicParent {
   id: string;
   nickname: string;
   recipe: Recipe;
-  assetVersion: 1 | 2 | 3;
+  assetVersion: 1 | 2 | 3 | 4;
 }
 export interface PublicResult {
   resultId: string;

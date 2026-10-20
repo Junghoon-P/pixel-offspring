@@ -28,7 +28,18 @@ export interface RuntimeConfig {
 export const readConfig = (
   values: Record<string, string | undefined>,
 ): RuntimeConfig => {
-  const result = schema.safeParse(values);
+  const isPreview = values.VERCEL === "1" && values.VERCEL_ENV === "preview";
+  const host = z
+    .string()
+    .regex(/^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.vercel\.app$/)
+    .safeParse(values.VERCEL_URL);
+  if (isPreview && !host.success)
+    throw new Error("Server environment is not configured");
+  const result = schema.safeParse({
+    ...values,
+    APP_ORIGIN:
+      isPreview && host.success ? `https://${host.data}` : values.APP_ORIGIN,
+  });
   if (!result.success) throw new Error("Server environment is not configured");
   return result.data;
 };
