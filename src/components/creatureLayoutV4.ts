@@ -31,6 +31,19 @@ const SIZES: Record<string, [number, number]> = {
   "snail": [1254, 1254],
 };
 export const creatureLayersV4 = (recipe: Recipe): CreatureLayer[] => {
+  if (recipe.fusionBody) {
+    const [width, height] = SIZES[recipe.body];
+    const [otherWidth, otherHeight] = SIZES[recipe.fusionBody];
+    // 두 상반신을 겹쳐 하나의 하체로 이어 붙여 같은 종도 원본과 구별한다.
+    return [
+      { id: recipe.body, path: `/creatures/v4/${recipe.body}.png`,
+        source: [0, Math.round(height * 0.6), width, Math.round(height * 0.4)], target: [8, 34, 48, 28] },
+      { id: recipe.body, path: `/creatures/v4/${recipe.body}.png`,
+        source: [0, 0, width, Math.round(height * 0.72)], target: [0, 0, 38, 44] },
+      { id: recipe.fusionBody, path: `/creatures/v4/${recipe.fusionBody}.png`,
+        source: [0, 0, otherWidth, Math.round(otherHeight * 0.72)], target: [26, 0, 38, 44] },
+    ];
+  }
   const id = recipe.hybrid ?? recipe.body;
   const isCostume = recipe.hybridStyle === "costume" && Boolean(recipe.hybrid);
   const size: [number, number] | undefined = isCostume ? [1254, 1254] : SIZES[id];

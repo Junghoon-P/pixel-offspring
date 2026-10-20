@@ -16,6 +16,7 @@ export interface Recipe {
   body: Body;
   hybrid?: Hybrid;
   hybridStyle?: "costume";
+  fusionBody?: Body;
   face: Face;
   decorations: Decoration[];
   palette: "original";

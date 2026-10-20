@@ -89,6 +89,7 @@ export const recipeSchema = z
     hybrid: z.enum(["mushroom-bird", "snail-dragon", "ghost-jelly", "capybara-frog",
       "duck-cat", "hamster-potato", "raccoon-penguin", "axolotl-sloth"]).optional(),
     hybridStyle: z.literal("costume").optional(),
+    fusionBody: bodySchema.optional(),
     decorations: z
       .array(z.enum(["flame", "blanket", "sparkles", "leaves"]))
       .max(2),
@@ -96,7 +97,8 @@ export const recipeSchema = z
   })
   .strict()
   .refine((r) => {
-    if (r.assetVersion !== 4) return isLegacyBody(r.body) && r.face !== "signature" && !r.hybrid && !r.hybridStyle;
+    if (r.assetVersion !== 4) return isLegacyBody(r.body) && r.face !== "signature" && !r.hybrid && !r.hybridStyle && !r.fusionBody;
+    if (r.fusionBody && (r.hybrid || r.hybridStyle)) return false;
     const design = HYBRIDS.find((item) => item.id === r.hybrid);
     if (r.hybridStyle && (!design || r.body !== design.baseBody)) return false;
     const validBody = r.hybrid ? design?.parents.some((body) => body === r.body) : true;
