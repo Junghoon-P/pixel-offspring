@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { COMIC_NAMES } from "../domain/catalog";
 import { useEffect, useState } from "react";
 import type { ReactElement } from "react";
 import { z } from "zod";
@@ -121,7 +122,7 @@ const CharacterCard = ({
     <h2>{character.nickname}</h2>
     {character.profile && (
       <>
-        <h3>{character.profile.name}</h3>
+        <h3>{character.recipe.assetVersion === 4 ? `${COMIC_NAMES[character.recipe.body]} · ` : ""}{character.profile.name}</h3>
         <p>{character.profile.description}</p>
         <p>
           <strong>작은 능력</strong> · {character.profile.ability}

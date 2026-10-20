@@ -13,7 +13,7 @@ it("구버전·새버전 카드의 크기와 닉네임·유전 설명을 보존�
     .map((entry) => entry.value)
     .filter(
       (element): element is HTMLCanvasElement =>
-        element instanceof HTMLCanvasElement,
+        element instanceof HTMLCanvasElement && element.width === 1080,
     )
     .map((canvas) => [canvas.width, canvas.height]);
   expect(sizes).toEqual([

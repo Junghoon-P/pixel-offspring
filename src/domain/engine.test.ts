@@ -35,15 +35,20 @@ describe("검증과 유전 엔진", () => {
           second = parent(`b${b}`, b);
         const child = await offspring(first, second);
         expect(child).toEqual(await offspring(second, first));
-        const bodySource = child.inheritance.find((x) => x.slot === "body")!;
+        const bodySource = child.inheritance.find((x) => x.slot === "body" && x.partId === child.recipe.body)!;
         expect(child.recipe.body).toBe(
           bodySource.parentId === first.id
             ? first.recipe.body
             : second.recipe.body,
         );
-        expect(
-          child.inheritance.find((x) => x.slot === "face")!.parentId,
-        ).not.toBe(bodySource.parentId);
+        if (child.recipe.hybrid) {
+          expect(child.inheritance.filter((x) => x.slot === "body")).toHaveLength(1);
+          expect(child.inheritance.filter((x) => x.slot === "decoration")).toHaveLength(1);
+          expect(child.recipe.hybridStyle).toBe("costume");
+          expect(child.recipe.face).toBe("signature");
+        } else {
+          expect(child.inheritance.find((x) => x.slot === "face")!.parentId).not.toBe(bodySource.parentId);
+        }
       }
   });
   it("자기 조합을 거부하고 버전을 저장한다", async () => {

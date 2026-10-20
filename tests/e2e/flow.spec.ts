@@ -99,7 +99,7 @@ test("저장 실패 후 초안을 유지하고 재시도한다", async ({ page }
   await page.getByRole("button", { name: "내 생물 탄생시키기" }).click();
   await expect(page.getByRole("heading", { name: "내 생물" })).toBeVisible();
 });
-test("16유형·64패턴·12쌍 파츠를 실제 렌더러로 표시하며 누락된 에셋이 없다", async ({
+test("20종·코스튬8쌍·구버전 파츠를 실제 렌더러로 표시하며 누락된 에셋이 없다", async ({
   page,
 }) => {
   const errors: string[] = [];
@@ -110,7 +110,9 @@ test("16유형·64패턴·12쌍 파츠를 실제 렌더러로 표시하며 누�
   });
   await page.setViewportSize({ width: 1100, height: 900 });
   await page.goto("/gallery");
-  await expect(page.getByRole("img")).toHaveCount(92);
+  await expect(page.getByRole("img")).toHaveCount(28);
+  await page.getByText("저장된 구버전 그림 비교", { exact: true }).click();
+  await expect(page.getByRole("img")).toHaveCount(104);
   await page.waitForLoadState("networkidle");
   expect(errors).toEqual([]);
   await page.screenshot({ path: "test-results/gallery.png", fullPage: true });
@@ -119,15 +121,16 @@ test("개선 그림과 구버전 비교·데모를 표시한다", async ({ page 
   await page.goto("/");
   await page.waitForLoadState("networkidle");
   await expect(
-    page.getByRole("img", { name: "불꽃 이불 달팽이", exact: true }),
+    page.getByRole("img", { name: "버섯 모자 작은 새", exact: true }),
   ).toBeVisible();
   await page
     .locator("section.panel")
-    .screenshot({ path: "test-results/character-v3-demo.png" });
+    .screenshot({ path: "test-results/character-costume-demo.png" });
   await page.goto("/gallery");
   await page.waitForLoadState("networkidle");
+  await page.getByText("저장된 구버전 그림 비교", { exact: true }).click();
   const updated = await page
-    .locator("canvas")
+    .locator("details canvas")
     .first()
     .evaluate((canvas: HTMLCanvasElement) => canvas.toDataURL());
   await page.getByLabel("그림 버전").selectOption("1");
@@ -135,7 +138,7 @@ test("개선 그림과 구버전 비교·데모를 표시한다", async ({ page 
   await expect
     .poll(() =>
       page
-        .locator("canvas")
+        .locator("details canvas")
         .first()
         .evaluate((canvas: HTMLCanvasElement) => canvas.toDataURL()),
     )
@@ -145,7 +148,7 @@ test("개선 그림과 구버전 비교·데모를 표시한다", async ({ page 
   await expect
     .poll(() =>
       page
-        .locator("canvas")
+        .locator("details canvas")
         .first()
         .evaluate((canvas: HTMLCanvasElement) => canvas.toDataURL()),
     )

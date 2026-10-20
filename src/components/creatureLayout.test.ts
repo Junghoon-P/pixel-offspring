@@ -133,3 +133,18 @@ it("전체84개 v3 허용 조합의 파츠는64px 안에서 원래 픽셀 크기
       }
   expect(count).toBe(84);
 });
+
+it("작은 새의 얼굴은 왼쪽 날개를 피하고 머리 안에 배치한다", () => {
+  for (const face of ["happy", "sleepy"] as const) {
+    const layers = creatureLayers({
+      assetVersion: 3, body: "bird", face,
+      decorations: ["leaves", "sparkles"], palette: "original",
+    });
+    const placed = layers.find((item) => item.id === face)!;
+    const [x, y, width, height] = placed.target;
+    expect(x).toBeGreaterThanOrEqual(29);
+    expect(y).toBeGreaterThanOrEqual(32);
+    expect(x + width).toBeLessThanOrEqual(51);
+    expect(y + height).toBeLessThanOrEqual(44);
+  }
+});

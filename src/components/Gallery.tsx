@@ -1,4 +1,6 @@
 "use client";
+import { comicRecipe, HYBRIDS } from "../domain/comicCatalog";
+import { COMIC_NAMES } from "../domain/catalog";
 import { surveyExamples } from "../domain/survey";
 import { useEffect, useState } from "react";
 import type { ReactElement } from "react";
@@ -35,7 +37,7 @@ const RecipeGrid = ({
       {items.map((item, i) => (
         <figure key={i}>
           <CreatureCanvas
-            recipe={{ ...item.recipe, assetVersion: version }}
+            recipe={item.recipe.assetVersion === 4 ? item.recipe : { ...item.recipe, assetVersion: version }}
             label={item.label}
             scale={2}
           />
@@ -81,19 +83,20 @@ export const Gallery = (): ReactElement => {
   return (
     <>
       <h1>파츠 검수 미리보기</h1>
-      <p>
-        새 설문 16유형, 이전 설문 64패턴과 고정 12쌍. 실제 화면·카드와 같은
-        Canvas 렌더러입니다.
-      </p>
+      <p>16유형의 기본 외형과 답변 강도에 따라 나오는 밈 캐릭터. 실제 화면·카드와 같은 Canvas 렌더러입니다.</p>
+      <RecipeGrid title="16유형 · 16개의 독립 캐릭터" version={3}
+        items={types.map((item) => ({ recipe: item.recipe,
+          label: `${COMIC_NAMES[item.recipe.body]} · ${item.profile.name}` }))} />
+      <RecipeGrid title="설문에서 만나는 밈 캐릭터" version={3}
+        items={[comicRecipe("cucumber"), comicRecipe("broccoli"), comicRecipe("pepe"), comicRecipe("squidward")].map((recipe) => ({
+          recipe, label: COMIC_NAMES[recipe.body] }))} />
+      <RecipeGrid title={`옷과 소품을 나눈 ${HYBRIDS.length}개 조합`} version={3}
+        items={HYBRIDS.map((design) => ({ label: design.name,
+          recipe: { assetVersion: 4, body: design.baseBody, hybrid: design.id, hybridStyle: "costume",
+            face: "signature", decorations: [], palette: "original" } }))} />
+      <details>
+      <summary>저장된 구버전 그림 비교</summary>
       <VersionSelector version={version} setVersion={setVersion} />
-      <RecipeGrid
-        title="새 설문 16유형"
-        version={version}
-        items={types.map((item) => ({
-          recipe: item.recipe,
-          label: item.profile.name,
-        }))}
-      />
       <RecipeGrid
         title="이전 설문 64패턴"
         version={version}
@@ -110,6 +113,7 @@ export const Gallery = (): ReactElement => {
           label: item.name,
         }))}
       />
+      </details>
     </>
   );
 };

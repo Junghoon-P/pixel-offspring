@@ -1,4 +1,5 @@
-import type { Body, Recipe } from "../domain/model";
+import { isLegacyBody } from "../domain/comicCatalog";
+import type { LegacyBody, Recipe } from "../domain/model";
 import type { CreatureLayer } from "./creatureLayout";
 type Point = [number, number];
 interface Placement {
@@ -7,7 +8,7 @@ interface Placement {
   coveredFace: Point;
   coveredHead: Point;
 }
-const PLACEMENTS: Record<Body, Placement> = {
+const PLACEMENTS: Record<LegacyBody, Placement> = {
   snail: {
     face: [39, 40],
     head: [14, 8],
@@ -33,9 +34,9 @@ const PLACEMENTS: Record<Body, Placement> = {
     coveredHead: [24, 0],
   },
   bird: {
-    face: [22, 38],
+    face: [30, 34],
     head: [24, 4],
-    coveredFace: [22, 38],
+    coveredFace: [30, 34],
     coveredHead: [24, 4],
   },
   dragon: {
@@ -59,6 +60,7 @@ const part = (
   target: [...position, width, height],
 });
 export const creatureLayersV3 = (recipe: Recipe): CreatureLayer[] => {
+  if (!isLegacyBody(recipe.body)) throw new Error("구버전 몸통이 아닙니다.");
   const covered = recipe.decorations.includes("blanket");
   const placement = PLACEMENTS[recipe.body];
   const head = covered ? placement.coveredHead : placement.head;

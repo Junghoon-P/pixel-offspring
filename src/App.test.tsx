@@ -25,7 +25,7 @@ it("홈 데모와 검수 페이지의 기존 캐릭터 동작을 유지한다", 
   await select('select[aria-label="2번 부모"]', "snail");
   await render(<Gallery />);
   await flush();
-  expect(document.querySelectorAll("canvas")).toHaveLength(92);
+  expect(document.querySelectorAll("canvas")).toHaveLength(104);
   for (const version of ["1", "2", "3"]) await select("select", version);
 });
 it("설문과 초대 페이지가 Next 라우터를 사용한다", async () => {

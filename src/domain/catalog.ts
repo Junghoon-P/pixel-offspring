@@ -1,5 +1,19 @@
 import type { Body, Decoration, Face } from "./model";
 export const BODY_NAMES: Record<Body, string> = {
+  pepe: "엄지 척 페페",
+  squidward: "퇴근하고 싶은 징징이",
+  cucumber: "현타 오이",
+  broccoli: "괜찮은 척 브로콜리",
+  capybara: "퇴근한 카피바라",
+  frog: "카페인 개구리",
+  duck: "식빵 낀 오리",
+  cat: "박스 과적 고양이",
+  hamster: "비상식량 햄스터",
+  potato: "출근 감자",
+  raccoon: "빨래하는 라쿤",
+  penguin: "미끄럼 초보 펭귄",
+  axolotl: "물안경 우파루파",
+  sloth: "로딩 중 나무늘보",
   snail: "달팽이",
   ghost: "유령",
   jelly: "젤리",
@@ -7,7 +21,13 @@ export const BODY_NAMES: Record<Body, string> = {
   bird: "작은 새",
   dragon: "꼬마 용",
 };
+export const COMIC_NAMES: Record<Body, string> = {
+  ...BODY_NAMES,
+  snail: "택배 과적 달팽이", ghost: "청소하다 엉킨 유령", jelly: "항복한 젤리",
+  mushroom: "우산 쓴 버섯", bird: "과자 도둑 새", dragon: "초보 불멍 용",
+};
 export const FACE_NAMES: Record<Face, string> = {
+  signature: "고유 표정과 자세",
   happy: "반짝이는 표정",
   sleepy: "졸린 표정",
 };
