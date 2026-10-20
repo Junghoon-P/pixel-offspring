@@ -152,3 +152,21 @@ Wrangler getPlatformProxy(persist:false)의 격리된 임시 D1에 실제 마이
 보안: 테스트 SQL은 VERCEL=1에서 환경 플래그와 인증 토큰이 있어도404, 일반 로컬에서 토큰이 없거나 틀려도404임을 테스트했다. 프로덕션 서버의 환경 오류는 비밀 없이503으로 응답한다. 기존 Origin·Zod·소유권·요청 제한·Cron 인증 회귀도 통과했다.
 
 동작 차이: 결과 페이지 HTML은 캐시 없는200 화면이며 삭제·만료 API는410을 유지한다. 서버의 HTML 조립을 제거하고 Next 메타데이터를 사용한다. DB 스키마는 변경하지 않았다. Neon 다중 연결 경합, 원격 Cron, 실제 기기 공유는 여전히 별도 검증 대상이다.
+
+
+## 운영 Neon/Vercel 검증 · 2026-10-20 11:12 KST
+- 사용자 승인으로 Neon main/neondb에 0001_postgres 적용. 원본 SHA-256 체크섬 8ce156b31d8969a12cc0277d55926d7fc589a1dd9e97ab6d86ceead017cc7cd6 기록, 테이블8개 확인. 트랜잭션·중복 적용 가드 유지.
+- 사용자가 CREATION_ENABLED=true로 재배포한 뒤 https://pixel-offspring.vercel.app 에서 검증.
+- 첫 사용자는 Chrome UI로12문항 초안 복구·저장·초대 생성·공동 목록·결과 화면·PNG 다운로드 검증. 두 번째 사용자는 독립 API 세션으로 v2 생물 저장·멱등 재요청·초대 조회·조합·결과 재조회·목록 검증. 두 브라우저 전체 E2E라고 간주하지 않는다.
+- PNG 실제 파일1080×1600 RGBA,133956바이트 확인. 결과 화면에서 부모와 유전 파츠·능력·공유 버튼 표시 확인.
+- 검증 생물2개를 앱 삭제 경로로 정리. 공동 결과 API410과 삭제 안내 화면 확인, 첫 사용자 생물/공동 결과 목록이 빈 상태임을 확인. 익명 세션·집계와 soft-delete 행은 보관/정리 정책에 따른다.
+- 운영 API503 해소: 존재하지 않는 결과404, 세션 없는 목록401, 인증 없는 Cron401. 인증된 Cron 실행·실제 모바일 공유 시트·원격 부하/복구는 미검증.
+- 코드 변경 없음. 이번 기록은 미커밋 상태.
+
+## 운영 브랜치·Preview 분리 · 2026-10-20
+- GitHub 기본 브랜치와 Vercel Production 추적 브랜치를 main으로 변경. main/039e42f 운영 배포 DLDefNZLNEQHSKxdJJG1ddzySguL Ready 확인. 운영의 존재하지 않는 결과 API404 확인.
+- Neon 연결에서 Preview 자동 DB 분기 활성화. dev Preview GdyEP1atX9CwwQrk5nKPkTRwiRvW Ready 및 Neon main과 별도 preview/dev 브랜치 생성 확인. 초기 데이터는 main의 스냅샷이며 빈 DB는 아니다.
+- 사용자가 Preview 전용 CRON_SECRET을 추가했다고 확인. 값은 읽거나 기록하지 않음.
+- Preview가 운영 APP_ORIGIN을 쓰는 구성 오류를 실패 테스트2개로 재현. Vercel Preview에서 시스템 VERCEL_URL로 정확한 HTTPS Origin을 구성하도록 수정. 운영·비Vercel 설정 유지, 누락/외부호스트/경로/인증정보/포트는 차단.
+- pnpm test:coverage: 62개 통과, 줄94.23%·분기91.10%·함수92.26%. pnpm typecheck, pnpm source:check, pnpm build 통과. 변경 범위는 설정/테스트/운영 기록이며 UI 변경 없음.
+- Preview 코드 배포 후 API 검증, 인증된 원격 Cron 실행, 부하/복원, 실제 모바일 공유는 아직 완료되지 않음. Cron은 soft-delete 및 만료 행의 영구 삭제를 포함하므로 수동 실행 전 확인 필요.
