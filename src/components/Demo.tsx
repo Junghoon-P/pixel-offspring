@@ -19,7 +19,7 @@ const DemoChild = ({ child }: { child: Child }): ReactElement => (
   <>
     <CreatureCanvas recipe={child.recipe} label={child.name} />
     <h2>{child.name}</h2>
-    <p>{child.description}</p>
+    <p className="story">{child.description}</p>
     <ul>
       {child.inheritance.map((item, i) => (
         <li key={i}>
@@ -56,7 +56,8 @@ export const Demo = (): ReactElement => {
   }, [left, right]);
   return (
     <section className="panel">
-      <p className="eyebrow">조합 미리보기 · 저장되지 않는 데모</p>
+      <p className="eyebrow">둘을 고르면, 바로 섞여요</p>
+      <p className="muted">마음껏 바꿔보세요. 미리보기는 저장되지 않아요.</p>
       <div className="parents">
         {[a, b].map((parent, i) => (
           <div key={parent.id}>

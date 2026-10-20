@@ -3,18 +3,18 @@ import type { Page } from "@playwright/test";
 const quiz = async (page: Page, name: string): Promise<void> => {
   await page.getByRole("link", { name: "내 생물 만들기", exact: true }).click();
   await page.getByLabel("닉네임").fill(name);
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 24; i++) {
     await page.getByRole("radio").first().check();
     await page
       .getByRole("button", {
-        name: i === 11 ? "내 생물 탄생시키기" : "다음",
+        name: i === 23 ? "내 생물 탄생시키기" : "다음",
         exact: true,
       })
       .click();
   }
   await expect(page.getByRole("heading", { name: "내 생물" })).toBeVisible();
   await expect(
-    page.getByRole("heading", { name: "든든한 분위기꾼" }),
+    page.getByRole("heading", { name: "포근한 기록가" }),
   ).toBeVisible();
 };
 test("두 브라우저에서 초대·질문·공동 결과·PNG·삭제", async ({ browser }) => {
@@ -70,7 +70,7 @@ test("질문 초안 복구·이전·한글 길이 검증", async ({ page }) => {
   await page.getByLabel("닉네임").fill("복구");
   await page.getByRole("button", { name: "다음", exact: true }).click();
   await page.reload();
-  await expect(page.getByText("약속 없는 오후, 몸이 원하는 건?")).toBeVisible();
+  await expect(page.getByText("약속 없는 오후를 보내는 방법은?")).toBeVisible();
   await page.getByRole("button", { name: "이전", exact: true }).click();
   await expect(page.getByLabel("닉네임")).toHaveValue("복구");
   await expect(page.getByRole("radio").first()).toBeChecked();
@@ -78,7 +78,7 @@ test("질문 초안 복구·이전·한글 길이 검증", async ({ page }) => {
 test("저장 실패 후 초안을 유지하고 재시도한다", async ({ page }) => {
   await page.goto("/create");
   await page.getByLabel("닉네임").fill("재시도");
-  for (let i = 0; i < 11; i++) {
+  for (let i = 0; i < 23; i++) {
     await page.getByRole("radio").first().check();
     await page.getByRole("button", { name: "다음", exact: true }).click();
   }
@@ -165,7 +165,7 @@ test("전체84개 허용 파츠 조합 검수판을 렌더링한다", async ({ p
     fullPage: true,
   });
 });
-test("구6문항 초안을 새12문항 답변과 섞지 않는다", async ({ page }) => {
+test("구6문항 초안을 새24문항 답변과 섞지 않는다", async ({ page }) => {
   await page.goto("/");
   await page.evaluate(() =>
     sessionStorage.setItem(
@@ -179,7 +179,7 @@ test("구6문항 초안을 새12문항 답변과 섞지 않는다", async ({ pag
     ),
   );
   await page.goto("/create");
-  await expect(page.getByRole("status")).toContainText("12문항");
+  await expect(page.getByRole("status")).toContainText("24문항");
   await expect(page.getByLabel("닉네임")).toHaveValue("이전친구");
   await expect(page.getByRole("progressbar")).toHaveAttribute("value", "1");
   await expect(page.getByRole("radio").first()).not.toBeChecked();

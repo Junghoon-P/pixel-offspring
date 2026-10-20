@@ -1,4 +1,6 @@
 "use client";
+import { CompatibilityDetails } from "../components/CompatibilityDetails";
+import { LEGENDS } from "../domain/legends";
 import Link from "next/link";
 import { readSessionValue, removeSessionValue } from "../shared/sessionStorage";
 import { useEffect, useState } from "react";
@@ -21,7 +23,7 @@ const useBirth = (id: string): { birth: boolean; skip: () => void } => {
   return { birth, skip: () => setBirth(false) };
 };
 const ResultDetails = ({ result }: { result: PublicResult }): ReactElement => (
-  <section className="panel">
+  <section className="panel creature-card">
     <div className="parents">
       {result.parents.map((p) => (
         <div key={p.id}>
@@ -31,8 +33,9 @@ const ResultDetails = ({ result }: { result: PublicResult }): ReactElement => (
       ))}
     </div>
     <CreatureCanvas recipe={result.child.recipe} label={result.child.name} />
+    {result.child.legend && <p className="eyebrow">이 조합, 레전드다.</p>}
     <h2>{result.child.name}</h2>
-    <p>{result.child.description}</p>
+    <p className="story">{result.child.description}</p>
     <p>
       <strong>특수 능력</strong>
       <br />
@@ -72,7 +75,7 @@ export const Result = ({ id }: { id: string }): ReactElement => {
   const result = resource.data!;
   return (
     <>
-      <p className="eyebrow">두 사람의 작은 특징이 만나서</p>
+      <p className="eyebrow">너 반, 나 반. 예상 밖의 우리.</p>
       <h1>우리 사이에 태어난 생물</h1>
       {birth && (
         <section className="panel birth" role="status">
@@ -81,6 +84,11 @@ export const Result = ({ id }: { id: string }): ReactElement => {
         </section>
       )}
       <ResultDetails result={result} />
+      {result.child.compatibility && <CompatibilityDetails compatibility={result.child.compatibility} />}
+      {result.child.legend && <section className="panel"><h2>레전드 발견 기록</h2>
+        <p>{result.child.legend.reason}</p>
+        <p>발견한 레전드: {result.child.legend.matched.map((id) => LEGENDS.find((design) => design.id === id)?.name).join(" · ")}</p>
+        <Link href="/me">레전드 도감 보기</Link></section>}
       <ResultShare card={card} />
       <p className="muted">
         {new Date(result.expiresAt).toLocaleDateString("ko-KR")}까지 보관돼요.

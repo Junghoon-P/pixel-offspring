@@ -53,3 +53,22 @@ it("합성 공유 카드는 몸통과 두 부모 상반신을 모두 그린다",
   expect(sourceDraws.some((args) => args[1] === 0 && args[2] === 0 && args[3] === 1261)).toBe(true);
   expect(sourceDraws.some((args) => args[1] === 0 && args[2] === 0 && args[3] === 1254)).toBe(true);
 });
+
+it("레전드·궁합 카드에 풀이와 팁이 포함되고 문장이 카드 아래로 넘치지 않는다", async () => {
+  const { createSurveyV3 } = await import("../domain/surveyV3");
+  const { QUESTIONS_V3 } = await import("../domain/surveyV3Questions");
+  const { offspring } = await import("../domain/engine");
+  const profile = createSurveyV3(QUESTIONS_V3.map((q) => ({ questionId: q.id, optionId: q.aScore > 0 ? "a" : "e" })));
+  const parents = ["첫친구", "둘째친구"].map((nickname) => ({ ...profile, id: crypto.randomUUID(), nickname, quizVersion: 3 as const, assetVersion: 4 as const }));
+  const child = await offspring(parents[0], parents[1]);
+  const saved = { ...await result(), parents, child };
+  const createElement = vi.spyOn(document, "createElement");
+  await renderCard(saved);
+  const card = createElement.mock.results.map((entry) => entry.value).find((value) => value instanceof HTMLCanvasElement && value.width === 1080);
+  expect(card).toBeDefined();
+  const texts = canvasContext.fillText.mock.calls.map(([value]) => String(value)).join("");
+  expect(texts).toContain("레전드");
+  expect(texts).toContain(child.compatibility!.title);
+  expect(texts).toContain("둘만의 공략법");
+  expect(canvasContext.fillText.mock.calls.every((args) => Number(args[2]) < card.height)).toBe(true);
+});

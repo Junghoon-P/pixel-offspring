@@ -175,7 +175,7 @@ interface SurveyProfile {
   recipe: Recipe;
   profile: Profile;
 }
-const TYPE_BODIES: Body[] = [
+export const TYPE_BODIES: Body[] = [
   "potato", "cat", "capybara", "ghost",
   "frog", "bird", "jelly", "duck",
   "snail", "hamster", "mushroom", "sloth",

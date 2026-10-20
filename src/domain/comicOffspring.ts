@@ -1,3 +1,5 @@
+import { describeCompatibility } from "./compatibility";
+import { discoverLegend } from "./legends";
 import { BODY_NAMES, COMIC_NAMES } from "./catalog";
 import { COMIC_COPY, findHybrid } from "./comicCatalog";
 import { combinationCopy } from "./combinationCopy";
@@ -8,18 +10,22 @@ export const comicOffspring = (parents: Parent[], bodyParent: Parent): Child | u
     ? findHybrid(a.recipe.body, b.recipe.body) : undefined;
   if (!hybrid && parents.every((parent) => parent.recipe.assetVersion !== 4)) return undefined;
   const otherParent = parents.find((parent) => parent.id !== bodyParent.id)!;
+  const legend = discoverLegend(parents);
+  const compatibility = parents.some((parent) => parent.quizVersion === 3) ? describeCompatibility(parents) : undefined;
   const recipe: Recipe = hybrid
     ? { assetVersion: 4, body: hybrid.baseBody, hybrid: hybrid.id, hybridStyle: "costume",
         face: "signature", decorations: [], palette: "original" }
     : { assetVersion: 4, body: bodyParent.recipe.body, fusionBody: otherParent.recipe.body,
         face: "signature", decorations: [], palette: "original" };
+  const resultRecipe = legend ? { ...recipe, legend: legend.id } : recipe;
   const copy = combinationCopy(parents, bodyParent, recipe);
   const comic = COMIC_COPY[bodyParent.recipe.body];
   return {
-    ...copy, recipe, engineVersion: 3,
-    name: hybrid?.name ?? `${BODY_NAMES[bodyParent.recipe.body]} × ${BODY_NAMES[otherParent.recipe.body]}`,
-    description: hybrid?.description ?? `${comic.description} ${copy.description}`,
-    ability: hybrid?.ability ?? `${comic.ability}. ${copy.ability}`,
+    ...copy, recipe: resultRecipe, engineVersion: 3,
+    ...(compatibility ? { compatibility } : {}), ...(legend ? { legend } : {}),
+    name: legend?.name ?? hybrid?.name ?? `${BODY_NAMES[bodyParent.recipe.body]} × ${BODY_NAMES[otherParent.recipe.body]}`,
+    description: legend?.reason ?? (compatibility ? compatibility.strengths.join(" ") : undefined) ?? hybrid?.description ?? `${comic.description} ${copy.description}`,
+    ability: legend?.ability ?? (compatibility ? "서로의 다른 방식을 알아보고 둘만의 공략법 만들기" : undefined) ?? hybrid?.ability ?? `${comic.ability}. ${copy.ability}`,
     inheritance: parents.map((parent) => ({
       parentId: parent.id, partId: parent.recipe.body,
       slot: hybrid ? (parent.recipe.body !== hybrid.baseBody ? "decoration" : "body")

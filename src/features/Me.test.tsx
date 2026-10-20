@@ -17,7 +17,7 @@ it("빈 목록과 조회 실패에서 다시 시도할 수 있다", async () => 
   failed = false;
   await click(button("다시 시도"));
   expect(text()).toContain("아직 생물이 없어요");
-  expect(text()).toContain("아직 함께 만든 생물이 없어요");
+  expect(text()).toContain("우리의 첫 조합은 어떤 모습일까요?");
 });
 it("내 생물 초대·복사·결과 더보기·삭제 및 포커스 재조회를 수행한다", async () => {
   const parent = character(),

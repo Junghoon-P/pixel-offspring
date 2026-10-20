@@ -2,7 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactElement } from "react";
 import { z } from "zod";
-import { QUESTIONS_V2 as QUESTIONS } from "../domain/survey";
+import { QUESTIONS_V3 as QUESTIONS, ANSWER_OPTIONS, answerLabel } from "../domain/surveyV3Questions";
+import type { AnswerOption } from "../domain/surveyV3Questions";
 import {
   characterSchema,
   idSchema,
@@ -11,10 +12,10 @@ import {
 } from "../shared/contracts";
 import { api, ensureSession, recordEvent } from "../shared/api";
 const draftSchema = z.object({
-  quizVersion: z.literal(2),
+  quizVersion: z.literal(3),
   migrated: z.boolean().optional(),
   nickname: z.string(),
-  choices: z.record(z.string(), z.enum(["a", "b"])),
+  choices: z.record(z.string(), z.enum(ANSWER_OPTIONS)),
   step: z
     .number()
     .int()
@@ -23,10 +24,10 @@ const draftSchema = z.object({
   key: z.uuid(),
 });
 interface Draft {
-  quizVersion: 2;
+  quizVersion: 3;
   migrated?: boolean;
   nickname: string;
-  choices: Record<string, "a" | "b">;
+  choices: Record<string, AnswerOption>;
   step: number;
   key: string;
 }
@@ -39,7 +40,7 @@ interface QuizState {
   reset: () => void;
 }
 const newDraft = (): Draft => ({
-  quizVersion: 2,
+  quizVersion: 3,
   nickname: "",
   choices: {},
   step: 0,
@@ -68,7 +69,7 @@ const loadDraft = (): Draft => {
     const old = z
       .object({ nickname: z.string(), quizVersion: z.number().optional() })
       .safeParse(value);
-    if (old.success && old.data.quizVersion !== 2)
+    if (old.success && old.data.quizVersion !== 3)
       return { ...newDraft(), nickname: old.data.nickname, migrated: true };
   } catch {
     /* 저장이 제한된 브라우저에서도 새 설문을 시작할 수 있다. */
@@ -80,7 +81,7 @@ const saveCharacter = async (
   navigate: (path: string) => void,
 ): Promise<void> => {
   const payload = submissionSchema.parse({
-    quizVersion: 2,
+    quizVersion: 3,
     nickname: draft.nickname,
     answers: QUESTIONS.map((q) => ({
       questionId: q.id,
@@ -191,7 +192,7 @@ const QuestionField = ({ state }: { state: QuizState }): ReactElement => {
   return (
     <fieldset ref={ref} tabIndex={-1} disabled={state.busy}>
       <legend>{question.text}</legend>
-      {(["a", "b"] as const).map((option) => (
+      {ANSWER_OPTIONS.map((option) => (
         <label className="choice" key={option}>
           <input
             type="radio"
@@ -205,7 +206,7 @@ const QuestionField = ({ state }: { state: QuizState }): ReactElement => {
               })
             }
           />
-          {question[option]}
+          {answerLabel(question, option)}
         </label>
       ))}
     </fieldset>
@@ -254,9 +255,9 @@ export const Quiz = ({
     <>
       <p className="eyebrow">나를 닮은 작은 생물 찾기</p>
       <h1>오늘의 나는?</h1>
-      <p>가볍게 즐기는 놀이예요. 성격이나 관계를 진단하지 않아요.</p>
+      <p>정답은 없어요. 평소의 나에게 가까운 쪽을 골라주세요.</p>
       <p className="muted">
-        닉네임·생물·유형 설명은 초대·결과 링크를 아는 사람에게 보여요. 답변은
+        닉네임·생물·성향 풀이와 조합 궁합은 초대·결과 링크를 아는 사람에게 보여요. 원본 답변은
         서버에 보관하지 않아요.
       </p>
       <progress
@@ -264,12 +265,12 @@ export const Quiz = ({
         max={QUESTIONS.length}
         aria-label="질문 진행률"
       />
-      <p>
+      <p className="question-count">
         {state.draft.step + 1} / {QUESTIONS.length}
       </p>
       {state.draft.migrated && (
         <p role="status">
-          설문이 12문항으로 새로워졌어요. 닉네임은 유지했고, 이전 답변을 섞지
+          설문이 24문항으로 새로워졌어요. 닉네임은 유지했고, 이전 답변을 섞지
           않도록 첫 질문부터 시작해요.
         </p>
       )}

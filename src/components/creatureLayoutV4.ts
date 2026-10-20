@@ -1,3 +1,4 @@
+import { LEGENDS } from "../domain/legends";
 import type { Recipe } from "../domain/model";
 import type { CreatureLayer } from "./creatureLayout";
 const SIZES: Record<string, [number, number]> = {
@@ -30,7 +31,7 @@ const SIZES: Record<string, [number, number]> = {
   "snail-dragon": [1254, 1254],
   "snail": [1254, 1254],
 };
-export const creatureLayersV4 = (recipe: Recipe): CreatureLayer[] => {
+const portraitLayers = (recipe: Recipe): CreatureLayer[] => {
   if (recipe.fusionBody) {
     const [width, height] = SIZES[recipe.body];
     const [otherWidth, otherHeight] = SIZES[recipe.fusionBody];
@@ -52,4 +53,14 @@ export const creatureLayersV4 = (recipe: Recipe): CreatureLayer[] => {
   const width = Math.round(size[0] * ratio), height = Math.round(size[1] * ratio);
   return [{ id, path: `/creatures/v4/${isCostume ? "costumes/" : ""}${id}.png`, source: [0, 0, ...size],
     target: [Math.floor((64 - width) / 2), 62 - height, width, height] }];
+};
+
+export const creatureLayersV4 = (recipe: Recipe): CreatureLayer[] => {
+  const layers = portraitLayers(recipe);
+  const legend = LEGENDS.find((design) => design.id === recipe.legend);
+  if (!legend) return layers;
+  return [...layers,
+    { id: legend.id, path: `/creatures/v1/${legend.decoration}.png`, source: [0, 0, 64, 64], target: [0, 44, 20, 20] },
+    { id: `${legend.id}-right`, path: `/creatures/v1/${legend.decoration}.png`, source: [0, 0, 64, 64], target: [44, 44, 20, 20] },
+  ];
 };

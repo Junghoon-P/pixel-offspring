@@ -1,3 +1,4 @@
+import { createSurveyV3 } from "../src/domain/surveyV3";
 import type { z } from "zod";
 import { createSurveyProfile } from "../src/domain/survey";
 import { characterSchema, submissionSchema } from "../src/shared/contracts";
@@ -72,7 +73,7 @@ const createSnapshot = (
   id: string,
 ): Character => {
   const survey =
-    data.quizVersion === 2 ? createSurveyProfile(data.answers) : undefined;
+    data.quizVersion === 3 ? createSurveyV3(data.answers) : data.quizVersion === 2 ? createSurveyProfile(data.answers) : undefined;
   const recipe = survey?.recipe ?? parentRecipe(data.answers);
   return {
     id,
