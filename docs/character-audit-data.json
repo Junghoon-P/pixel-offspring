@@ -1,0 +1,883 @@
+{
+  "parentAnswerPatterns": 64,
+  "uniqueParentRecipes": 10,
+  "fixedIdOrderedPairs": 4096,
+  "uniqueSampleChildRecipes": 62,
+  "supportedNonemptyRecipes": 84,
+  "parentDistribution": {
+    "ghost/sleepy/blanket": 9,
+    "mushroom/sleepy/leaves": 18,
+    "snail/sleepy/flame": 12,
+    "jelly/happy/blanket": 3,
+    "bird/happy/leaves": 6,
+    "dragon/happy/flame": 4,
+    "ghost/sleepy/sparkles": 3,
+    "mushroom/sleepy/sparkles": 6,
+    "jelly/happy/sparkles": 1,
+    "bird/happy/sparkles": 2
+  },
+  "sampledChildRecipes": [
+    "bird/happy/flame",
+    "bird/happy/flame+sparkles",
+    "bird/happy/leaves",
+    "bird/happy/leaves+sparkles",
+    "bird/happy/sparkles",
+    "bird/sleepy/flame",
+    "bird/sleepy/flame+sparkles",
+    "bird/sleepy/leaves",
+    "bird/sleepy/leaves+sparkles",
+    "bird/sleepy/sparkles",
+    "dragon/happy/flame",
+    "dragon/happy/flame+sparkles",
+    "dragon/happy/leaves",
+    "dragon/sleepy/flame",
+    "dragon/sleepy/flame+sparkles",
+    "dragon/sleepy/leaves",
+    "ghost/happy/blanket",
+    "ghost/happy/blanket+flame",
+    "ghost/happy/blanket+leaves",
+    "ghost/happy/blanket+sparkles",
+    "ghost/happy/flame+sparkles",
+    "ghost/happy/leaves+sparkles",
+    "ghost/happy/sparkles",
+    "ghost/sleepy/blanket",
+    "ghost/sleepy/blanket+flame",
+    "ghost/sleepy/blanket+leaves",
+    "ghost/sleepy/blanket+sparkles",
+    "ghost/sleepy/flame+sparkles",
+    "ghost/sleepy/leaves+sparkles",
+    "ghost/sleepy/sparkles",
+    "jelly/happy/blanket",
+    "jelly/happy/blanket+flame",
+    "jelly/happy/blanket+leaves",
+    "jelly/happy/blanket+sparkles",
+    "jelly/happy/flame+sparkles",
+    "jelly/happy/leaves+sparkles",
+    "jelly/happy/sparkles",
+    "jelly/sleepy/blanket",
+    "jelly/sleepy/blanket+flame",
+    "jelly/sleepy/blanket+leaves",
+    "jelly/sleepy/blanket+sparkles",
+    "jelly/sleepy/flame+sparkles",
+    "jelly/sleepy/leaves+sparkles",
+    "jelly/sleepy/sparkles",
+    "mushroom/happy/flame",
+    "mushroom/happy/flame+sparkles",
+    "mushroom/happy/leaves",
+    "mushroom/happy/leaves+sparkles",
+    "mushroom/happy/sparkles",
+    "mushroom/sleepy/flame",
+    "mushroom/sleepy/flame+sparkles",
+    "mushroom/sleepy/leaves",
+    "mushroom/sleepy/leaves+sparkles",
+    "mushroom/sleepy/sparkles",
+    "snail/happy/blanket+flame",
+    "snail/happy/flame",
+    "snail/happy/flame+sparkles",
+    "snail/happy/leaves",
+    "snail/sleepy/blanket+flame",
+    "snail/sleepy/flame",
+    "snail/sleepy/flame+sparkles",
+    "snail/sleepy/leaves"
+  ],
+  "cases": [
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "happy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "sleepy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "happy",
+      "decorations": [
+        "flame",
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "sleepy",
+      "decorations": [
+        "flame",
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "happy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "sleepy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "happy",
+      "decorations": [
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "sleepy",
+      "decorations": [
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "happy",
+      "decorations": [
+        "blanket",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "sleepy",
+      "decorations": [
+        "blanket",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "happy",
+      "decorations": [
+        "blanket",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "sleepy",
+      "decorations": [
+        "blanket",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "happy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "happy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "happy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "snail",
+      "face": "sleepy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "happy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "sleepy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "happy",
+      "decorations": [
+        "flame",
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "sleepy",
+      "decorations": [
+        "flame",
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "happy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "sleepy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "happy",
+      "decorations": [
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "sleepy",
+      "decorations": [
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "happy",
+      "decorations": [
+        "blanket",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "sleepy",
+      "decorations": [
+        "blanket",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "happy",
+      "decorations": [
+        "blanket",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "sleepy",
+      "decorations": [
+        "blanket",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "happy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "happy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "happy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "ghost",
+      "face": "sleepy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "happy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "sleepy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "happy",
+      "decorations": [
+        "flame",
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "sleepy",
+      "decorations": [
+        "flame",
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "happy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "sleepy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "happy",
+      "decorations": [
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "sleepy",
+      "decorations": [
+        "blanket"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "happy",
+      "decorations": [
+        "blanket",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "sleepy",
+      "decorations": [
+        "blanket",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "happy",
+      "decorations": [
+        "blanket",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "sleepy",
+      "decorations": [
+        "blanket",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "happy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "happy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "happy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "jelly",
+      "face": "sleepy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "mushroom",
+      "face": "happy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "mushroom",
+      "face": "sleepy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "mushroom",
+      "face": "happy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "mushroom",
+      "face": "sleepy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "mushroom",
+      "face": "happy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "mushroom",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "mushroom",
+      "face": "happy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "mushroom",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "mushroom",
+      "face": "happy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "mushroom",
+      "face": "sleepy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "bird",
+      "face": "happy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "bird",
+      "face": "sleepy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "bird",
+      "face": "happy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "bird",
+      "face": "sleepy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "bird",
+      "face": "happy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "bird",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "bird",
+      "face": "happy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "bird",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "bird",
+      "face": "happy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "bird",
+      "face": "sleepy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "dragon",
+      "face": "happy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "dragon",
+      "face": "sleepy",
+      "decorations": [
+        "flame"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "dragon",
+      "face": "happy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "dragon",
+      "face": "sleepy",
+      "decorations": [
+        "flame",
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "dragon",
+      "face": "happy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "dragon",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "dragon",
+      "face": "happy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "dragon",
+      "face": "sleepy",
+      "decorations": [
+        "sparkles",
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "dragon",
+      "face": "happy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    },
+    {
+      "assetVersion": 3,
+      "body": "dragon",
+      "face": "sleepy",
+      "decorations": [
+        "leaves"
+      ],
+      "palette": "original"
+    }
+  ]
+}

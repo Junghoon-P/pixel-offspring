@@ -1,0 +1,92 @@
+{
+  "environment": "local Next.js + PGlite PostgreSQL, not cloud billing metrics",
+  "timestamp": "2026-10-20T01:45:37.188Z",
+  "requestCount": 12,
+  "p50WallMs": 4.67,
+  "p95WallMs": 22.61,
+  "rowGrowth": {
+    "sessions": 2,
+    "characters": 2,
+    "invites": 1,
+    "results": 1,
+    "snapshot_bytes": 2138
+  },
+  "requests": [
+    {
+      "method": "POST",
+      "category": "/api/session",
+      "status": 200,
+      "wallMs": 19.15
+    },
+    {
+      "method": "POST",
+      "category": "/api/characters",
+      "status": 201,
+      "wallMs": 22.61
+    },
+    {
+      "method": "GET",
+      "category": "/api/me/characters",
+      "status": 200,
+      "wallMs": 4.67
+    },
+    {
+      "method": "GET",
+      "category": "/api/me/results",
+      "status": 200,
+      "wallMs": 4.43
+    },
+    {
+      "method": "POST",
+      "category": "/api/invites",
+      "status": 201,
+      "wallMs": 7.98
+    },
+    {
+      "method": "GET",
+      "category": "/api/invites/:id",
+      "status": 200,
+      "wallMs": 2.72
+    },
+    {
+      "method": "POST",
+      "category": "/api/session",
+      "status": 200,
+      "wallMs": 2.05
+    },
+    {
+      "method": "POST",
+      "category": "/api/characters",
+      "status": 201,
+      "wallMs": 5.39
+    },
+    {
+      "method": "POST",
+      "category": "/api/invites/:id/pair",
+      "status": 201,
+      "wallMs": 9.98
+    },
+    {
+      "method": "GET",
+      "category": "/api/results/:id",
+      "status": 200,
+      "wallMs": 3.36
+    },
+    {
+      "method": "GET",
+      "category": "/api/me/results",
+      "status": 200,
+      "wallMs": 2.64
+    },
+    {
+      "method": "GET",
+      "category": "/api/results/:id",
+      "status": 200,
+      "wallMs": 2.18
+    }
+  ],
+  "cloudCpuMs": null,
+  "cloudRowsRead": null,
+  "cloudRowsWritten": null,
+  "notes": "Wall time is not CPU. Snapshot bytes exclude indexes, cookies, metrics and PostgreSQL pages. Browser telemetry, revalidation and HTML reads add requests."
+}
