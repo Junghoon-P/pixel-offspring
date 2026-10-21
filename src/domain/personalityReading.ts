@@ -1,3 +1,4 @@
+import { BALANCED_THRESHOLD } from "./characterPersonality";
 import type { Traits } from "./model";
 import type { PersonalityReading, TraitAxis, TraitReading } from "./personalityModel";
 interface AxisCopy { label: string; low: string; high: string; balanced: string }
@@ -10,7 +11,7 @@ export const AXIS_COPY: Record<TraitAxis, AxisCopy> = {
   support: { label: "도움 방식", low: "마음을 충분히 듣고 공감하는 쪽이에요", high: "실제로 도움이 될 방법부터 찾는 쪽이에요", balanced: "공감과 해결을 함께 챙기는 균형형이에요" },
 };
 const choose = (score: number, low: string, high: string, balanced: string): string =>
-  Math.abs(score) < 0.25 ? balanced : score > 0 ? high : low;
+  Math.abs(score) < BALANCED_THRESHOLD ? balanced : score > 0 ? high : low;
 const readAxis = (traits: Traits, axis: TraitAxis): TraitReading => {
   const copy = AXIS_COPY[axis], score = traits[axis] ?? 0;
   const summary = choose(score, copy.low, copy.high, copy.balanced);

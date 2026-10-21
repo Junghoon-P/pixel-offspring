@@ -1,13 +1,15 @@
 "use client";
+import Link from "next/link";
+import { recipeName } from "../domain/personalityArt";
 import { comicRecipe, HYBRIDS } from "../domain/comicCatalog";
 import { COMIC_NAMES } from "../domain/catalog";
-import { surveyExamples } from "../domain/survey";
+import { surveyV3Examples } from "../domain/surveyV3";
 import { useEffect, useState } from "react";
 import type { ReactElement } from "react";
 import { parentRecipe, scoreAnswers, offspring } from "../domain/engine";
 import type { Child, Parent, Recipe } from "../domain/model";
 import { CreatureCanvas } from "./CreatureCanvas";
-const types = surveyExamples();
+const types = surveyV3Examples();
 const examples: Parent[] = Array.from({ length: 64 }, (_, mask) => {
   const answers = Array.from({ length: 6 }, (_, i) => ({
     questionId: `q${i + 1}`,
@@ -24,7 +26,7 @@ const examples: Parent[] = Array.from({ length: 64 }, (_, mask) => {
 interface RecipeGridProps {
   title: string;
   version: 1 | 2 | 3;
-  items: { recipe: Recipe; label: string }[];
+  items: { recipe: Recipe; label: string; detail?: string }[];
 }
 const RecipeGrid = ({
   title,
@@ -41,7 +43,7 @@ const RecipeGrid = ({
             label={item.label}
             scale={2}
           />
-          <figcaption>{item.label}</figcaption>
+          <figcaption>{item.label}{item.detail && <p>{item.detail}</p>}</figcaption>
         </figure>
       ))}
     </div>
@@ -83,10 +85,12 @@ export const Gallery = (): ReactElement => {
   return (
     <>
       <h1>파츠 검수 미리보기</h1>
-      <p>16유형의 기본 외형과 답변 강도에 따라 나오는 밈 캐릭터. 실제 화면·카드와 같은 Canvas 렌더러입니다.</p>
+      <p>새 검사의 16유형과 성향을 나타내는 소품을 확인해요. 중립인 축은 혼합형으로 남기고, 밈 캐릭터는 관계 성향 조건까지 맞을 때 나타나요. 실제 화면·카드와 같은 Canvas 렌더러입니다.</p>
+      <p><Link href="/gallery/fusions">210개 조합 완성 그림 보기</Link></p>
+      <p><Link href="/gallery/memes">성격 과다 생물도감 · 새 스타일 6종</Link></p>
       <RecipeGrid title="16유형 · 16개의 독립 캐릭터" version={3}
         items={types.map((item) => ({ recipe: item.recipe,
-          label: `${COMIC_NAMES[item.recipe.body]} · ${item.profile.name}` }))} />
+          label: `${recipeName(item.recipe)} · ${item.profile.name}`, detail: item.profile.characterMatch?.reason }))} />
       <RecipeGrid title="설문에서 만나는 밈 캐릭터" version={3}
         items={[comicRecipe("cucumber"), comicRecipe("broccoli"), comicRecipe("pepe"), comicRecipe("squidward")].map((recipe) => ({
           recipe, label: COMIC_NAMES[recipe.body] }))} />

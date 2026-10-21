@@ -27,3 +27,9 @@ export interface LegendDiscovery {
   ability: string;
   matched: LegendId[];
 }
+
+export interface CharacterMatch {
+  version: 1;
+  kind: "type" | "mixed" | "balanced";
+  reason: string;
+}

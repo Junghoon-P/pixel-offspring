@@ -1,3 +1,4 @@
+import memeFusions from "../../src/domain/memeFusions.json" with { type: "json" };
 import { test, expect } from "@playwright/test";
 import type { Page } from "@playwright/test";
 const quiz = async (page: Page, name: string): Promise<void> => {
@@ -14,7 +15,7 @@ const quiz = async (page: Page, name: string): Promise<void> => {
   }
   await expect(page.getByRole("heading", { name: "내 생물" })).toBeVisible();
   await expect(
-    page.getByRole("heading", { name: "포근한 기록가" }),
+    page.getByRole("heading", { name: /경계 없는 균형가/ }),
   ).toBeVisible();
 };
 test("두 브라우저에서 초대·질문·공동 결과·PNG·삭제", async ({ browser }) => {
@@ -121,7 +122,7 @@ test("개선 그림과 구버전 비교·데모를 표시한다", async ({ page 
   await page.goto("/");
   await page.waitForLoadState("networkidle");
   await expect(
-    page.getByRole("img", { name: "버섯 모자 작은 새", exact: true }),
+    page.getByRole("img", { name: memeFusions.find((item) => item.id === "bird-mushroom")!.name, exact: true }),
   ).toBeVisible();
   await page
     .locator("section.panel")

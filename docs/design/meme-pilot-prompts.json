@@ -1,0 +1,93 @@
+{
+  "method": "built-in image_gen",
+  "jobs": [
+    {
+      "id": "planned-escape",
+      "refs": [
+        "personality/potato",
+        "personality/cat"
+      ],
+      "name": "계획적 탈주범",
+      "pair": "감자 × 고양이",
+      "line": "계획대로 안 할 계획까지 세웠다.",
+      "story": "순서를 챙기는 감자와 샛길을 찾는 고양이가 만났어요. 계획표를 꼼꼼하게 작성한 뒤 종이비행기로 접었습니다. 목적지는 바뀌어도 출발은 정확해요.",
+      "good": "한 명이 준비하면 다른 한 명이 새로운 쓰임을 찾아요.",
+      "clash": "일정을 바꿀 때는 접기 전에 먼저 말해 주세요.",
+      "scene": "A potato-cat hybrid: potato-shaped ochre body with potato speckles, purple cat ears and striped tail, tiny necktie. Riding a giant paper airplane visibly folded from a checklist with simple checkmarks (no words). Body leaning forward at alarming speed but tiny narrow eyes and bureaucratic deadpan face. One paw checking a box on the plane while flying. Exaggerated tiny legs. Dominant visual joke: meticulously organized escape."
+    },
+    {
+      "id": "walking-home",
+      "refs": [
+        "sloth",
+        "personality/cat"
+      ],
+      "name": "외출하는 집",
+      "pair": "나무늘보 × 고양이",
+      "line": "집 밖은 싫고, 세상은 궁금해.",
+      "story": "익숙한 자리를 아끼는 나무늘보와 새 길을 달리는 고양이가 만났어요. 나갈지 말지 고민하다 집째로 출발했습니다. 창밖은 바뀌어도 내 자리는 그대로예요.",
+      "good": "편안함과 새로움을 동시에 챙길 방법을 잘 찾아요.",
+      "clash": "상대도 같은 속도로 즐기는지 가끔 확인해 주세요.",
+      "scene": "A single sloth-cat hybrid with sloth eye patches and purple triangular cat ears and long striped tail. Its torso snugly enclosed in a small cardboard house with tiny roof. Two absurdly oversized lanky furry legs attached to body protrude under box, sprinting with huge slippers. Tiny deadpan sleepy face in window, relaxed paws on windowsill. Body continuous inside house. Not two animals. Dominant joke: a content homebody literally carrying its home at sprint speed."
+    },
+    {
+      "id": "social-sleep",
+      "refs": [
+        "bird",
+        "sloth"
+      ],
+      "name": "인싸 절전모드",
+      "pair": "새 × 나무늘보",
+      "line": "너희 너무 좋아. 이제 가.",
+      "story": "흥이 오르면 날개부터 움직이는 새와 자기 속도를 지키는 나무늘보가 만났어요. 몸은 이미 퇴근했는데 날개 하나가 아직 앙코르를 받고 있습니다. 즐거웠다는 말과 쉬고 싶다는 말은 같이 할 수 있어요.",
+      "good": "분위기를 띄우는 힘과 쉬어 갈 타이밍을 나눠 가질 수 있어요.",
+      "clash": "조용해졌다고 재미없었다는 뜻은 아니에요.",
+      "scene": "One bird-sloth hybrid pancaked flat belly-down in exhaustion, sloth eye-mask markings, cream feathers, tiny orange beak and claws, tousled purple feather tuft. Half-lidded eyes with tiny pupils utterly vacant. One absurdly long feathered arm-wing still held straight up waving a mint glowstick enthusiastically, rest of body collapsed limp. One connected body. No standing smile, no hearts. Dominant joke body has shut down but social wing still partying."
+    },
+    {
+      "id": "overpacked",
+      "refs": [
+        "hamster",
+        "snail"
+      ],
+      "name": "비상식량 원정대",
+      "pair": "햄스터 × 달팽이",
+      "line": "혹시 모르니까 챙겼는데, 못 움직여.",
+      "story": "볼주머니를 채우는 햄스터와 짐부터 챙기는 달팽이가 만났어요. 서로의 준비성을 칭찬하다 간식이 본체보다 커졌습니다. 출발만 하면 든든한데, 아직 출발을 못 했어요.",
+      "good": "작은 불편을 먼저 발견하고 서로 챙겨 줘요.",
+      "clash": "혹시 필요한 것보다 지금 필요한 것부터 골라 보세요.",
+      "scene": "Single hamster-snail hybrid with round hamster ears huge stuffed cheeks and a continuous low snail foot body, spiral shell converted into ridiculously giant food-packed travel backpack THREE times body size. Crackers and bread bulge out top. Tiny determined squashed face and stubby paws pinned near ground under weight. Looking solemnly forward trying to take one step. Shell attached organically, one face no eye stalk faces. Dominant joke heroic expedition immobilized by snacks."
+    },
+    {
+      "id": "crying-repair",
+      "refs": [
+        "personality/raccoon",
+        "personality/potato"
+      ],
+      "name": "울면서 고쳐줌",
+      "pair": "라쿤 × 감자",
+      "line": "일단 울어. 백업은 내가 할게.",
+      "story": "마음을 챙기는 라쿤과 순서대로 해결하는 감자가 만났어요. 속상한 얘기에 같이 울면서도 손은 고장 난 것을 고칩니다. 위로와 해결을 둘 다 건네는 장면을 과장한 시안이에요.",
+      "good": "마음을 알아주는 말에 작은 행동까지 보탤 수 있어요.",
+      "clash": "바로 고치기 전에 지금은 들어 주면 되는지 물어봐 주세요.",
+      "scene": "Single raccoon-potato hybrid, ochre potato pear-shaped torso with speckles, raccoon dark eye mask rounded ears and striped tail integrated. Enormous two tear streams comically pouring from narrowed concentrated eyes, tightly pursed serious mouth. Short precise paws calmly using screwdriver to repair a small open laptop. Necktie soaked with tears. Show both stream and skilled hands clearly. One face one body. Dominant joke weeping emotionally while expertly solving problem, not sad helplessness."
+    },
+    {
+      "id": "horizontal-conquest",
+      "refs": [
+        "sloth",
+        "dragon"
+      ],
+      "name": "누워서 세계정복",
+      "pair": "나무늘보 × 드래곤",
+      "line": "야망은 큰데 일어나긴 싫어.",
+      "story": "자기 페이스가 중요한 나무늘보와 일단 해보는 드래곤이 만났어요. 원대한 계획을 세우고 가장 편한 실행 자세를 찾았습니다. 몸은 누워 있어도 꼬리는 꽤 바쁩니다.",
+      "good": "해보자는 용기와 오래 버틸 페이스를 나눌 수 있어요.",
+      "clash": "먼저 움직인 사람만 계속 바빠지지 않게 역할을 나눠요.",
+      "scene": "One sloth-dragon hybrid reclining completely horizontally under lavender blanket on tiny cushion. Sloth face markings and shaggy fur mixed with mint dragon snout tiny horns and small wings. Tiny crooked gold crown, extremely smug narrow eyes. Long attached dragon tail curves out blanket and holds a toy globe high as if conquering world while hands tucked in rest. Feet barely poking out. Dominant visual joke epic ambition with absolutely minimum physical effort. No second creature."
+    }
+  ],
+  "revision": {
+    "id": "horizontal-conquest",
+    "prompt": "Edit this exact image only to fix framing. Preserve the sloth-dragon creature, funny smug expression, crown, blanket, pillow, tail holding globe, pixel style and all colors. Zoom out/recompose so the COMPLETE pillow left tassel, left wing, blanket, feet and FULL tail and globe on right are inside canvas, with at least 10 percent transparent padding on ALL sides. No feature may touch image boundaries. Do not add anything. Transparent background."
+  }
+}

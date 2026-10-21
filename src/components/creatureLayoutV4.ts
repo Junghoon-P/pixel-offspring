@@ -1,3 +1,6 @@
+import { findHybrid } from "../domain/comicCatalog";
+import memeFusionSizes from "../domain/memeFusionSizes.json";
+import fusionSizes from "../domain/fusionSizes.json";
 import { LEGENDS } from "../domain/legends";
 import type { Recipe } from "../domain/model";
 import type { CreatureLayer } from "./creatureLayout";
@@ -32,18 +35,21 @@ const SIZES: Record<string, [number, number]> = {
   "snail": [1254, 1254],
 };
 const portraitLayers = (recipe: Recipe): CreatureLayer[] => {
+  if (recipe.portraitStyle) return [{ id: recipe.body, path: `/creatures/v4/personality/${recipe.body}.png`,
+    source: [0, 0, 1254, 1254], target: [2, 2, 60, 60] }];
   if (recipe.fusionBody) {
-    const [width, height] = SIZES[recipe.body];
-    const [otherWidth, otherHeight] = SIZES[recipe.fusionBody];
-    // 두 상반신을 겹쳐 하나의 하체로 이어 붙여 같은 종도 원본과 구별한다.
-    return [
-      { id: recipe.body, path: `/creatures/v4/${recipe.body}.png`,
-        source: [0, Math.round(height * 0.6), width, Math.round(height * 0.4)], target: [8, 34, 48, 28] },
-      { id: recipe.body, path: `/creatures/v4/${recipe.body}.png`,
-        source: [0, 0, width, Math.round(height * 0.72)], target: [0, 0, 38, 44] },
-      { id: recipe.fusionBody, path: `/creatures/v4/${recipe.fusionBody}.png`,
-        source: [0, 0, otherWidth, Math.round(otherHeight * 0.72)], target: [26, 0, 38, 44] },
-    ];
+    const pair = [recipe.body, recipe.fusionBody].sort().join("-");
+    const sizes: Record<string, number[]> = fusionSizes;
+    const costume = recipe.fusionStyle ? undefined : findHybrid(recipe.body, recipe.fusionBody);
+    const memeSizes: Record<string, number[]> = memeFusionSizes;
+    const useMeme = recipe.fusionStyle === "meme" || (!costume && !sizes[pair]);
+    const size = costume ? [1254, 1254] : (useMeme ? memeSizes : sizes)[pair];
+    if (!size) throw new Error("준비되지 않은 조합 외형입니다.");
+    const ratio = 60 / Math.max(...size);
+    const width = Math.round(size[0] * ratio), height = Math.round(size[1] * ratio);
+    return [{ id: pair, path: costume ? `/creatures/v4/costumes/${costume.id}.png` : `/creatures/${useMeme ? "v5" : "v4"}/fusions/${pair}.png`,
+      source: [0, 0, size[0], size[1]],
+      target: [Math.floor((64 - width) / 2), 62 - height, width, height] }];
   }
   const id = recipe.hybrid ?? recipe.body;
   const isCostume = recipe.hybridStyle === "costume" && Boolean(recipe.hybrid);
