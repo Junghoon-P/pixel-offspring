@@ -1,4 +1,4 @@
-import type { CharacterMatch, PersonalityReading, Compatibility, LegendDiscovery, LegendId } from "./personalityModel";
+import type { CharacterMatch, PersonalityReading, Compatibility, LegendDiscovery, LegendId, TraitAxis } from "./personalityModel";
 export type LegacyBody = "snail" | "ghost" | "jelly" | "mushroom" | "bird" | "dragon";
 export type ComicBody = "capybara" | "frog" | "duck" | "cat" | "hamster" | "potato" | "raccoon" | "penguin" | "axolotl" | "sloth" | "cucumber" | "broccoli" | "pepe" | "squidward";
 export type Body = LegacyBody | ComicBody;
@@ -27,7 +27,20 @@ export interface Recipe {
   decorations: Decoration[];
   palette: "original";
 }
+export interface AnswerEvidence {
+  questionId: string;
+  question: string;
+  answer: string;
+  axis: TraitAxis;
+  score: number;
+}
+export interface CombinationReading {
+  version: 1;
+  headline: string;
+  evidence: { axis: TraitAxis; title: string; parents: { parentId: string; question: string; answer: string }[]; interpretation: string }[];
+}
 export interface Profile {
+  evidence?: AnswerEvidence[];
   characterMatch?: CharacterMatch;
   reading?: PersonalityReading;
   typeId: string;
@@ -36,8 +49,8 @@ export interface Profile {
   ability: string;
 }
 export interface Parent {
-  quizVersion?: 1 | 2 | 3;
-  scoreVersion?: 1 | 2 | 3;
+  quizVersion?: 1 | 2 | 3 | 4;
+  scoreVersion?: 1 | 2 | 3 | 4;
   profile?: Profile;
   id: string;
   nickname: string;
@@ -56,6 +69,7 @@ export interface Inheritance {
   label: string;
 }
 export interface Child {
+  combinationReading?: CombinationReading;
   compatibility?: Compatibility;
   legend?: LegendDiscovery;
   recipe: Recipe;
@@ -68,8 +82,8 @@ export interface Child {
   copyVersion: 1 | 2;
 }
 export interface PublicParent {
-  quizVersion?: 1 | 2 | 3;
-  scoreVersion?: 1 | 2 | 3;
+  quizVersion?: 1 | 2 | 3 | 4;
+  scoreVersion?: 1 | 2 | 3 | 4;
   profile?: Profile;
   id: string;
   nickname: string;

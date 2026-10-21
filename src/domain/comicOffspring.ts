@@ -1,3 +1,4 @@
+import { describeCombination } from "./combinationReading";
 import { recipeName } from "./personalityArt";
 import { describeCompatibility } from "./compatibility";
 import { discoverLegend } from "./legends";
@@ -13,7 +14,8 @@ export const comicOffspring = (parents: Parent[], bodyParent: Parent): Child | u
   if (!hybrid && parents.every((parent) => parent.recipe.assetVersion !== 4)) return undefined;
   const otherParent = parents.find((parent) => parent.id !== bodyParent.id)!;
   const legend = discoverLegend(parents);
-  const compatibility = parents.some((parent) => parent.quizVersion === 3) ? describeCompatibility(parents) : undefined;
+  const combinationReading = describeCombination(parents);
+  const compatibility = parents.some((parent) => (parent.quizVersion ?? 0) >= 3) ? describeCompatibility(parents) : undefined;
   const recipe: Recipe = { assetVersion: 4, body: bodyParent.recipe.body,
     fusionBody: otherParent.recipe.body, fusionStyle: "meme",
     face: "signature", decorations: [], palette: "original" };
@@ -23,6 +25,7 @@ export const comicOffspring = (parents: Parent[], bodyParent: Parent): Child | u
   const resultRecipe = legend ? { ...recipe, legend: legend.id } : recipe;
   const copy = combinationCopy(parents, bodyParent, recipe);
   return {
+    ...(combinationReading ? { combinationReading } : {}),
     ...copy, recipe: resultRecipe, engineVersion: 3,
     ...(compatibility ? { compatibility } : {}), ...(legend ? { legend } : {}),
     name: meme.name, description: `${meme.line} ${meme.description}`, ability: meme.ability,
@@ -34,7 +37,7 @@ export const comicOffspring = (parents: Parent[], bodyParent: Parent): Child | u
     notes: [
       ...(parents.some((parent) => parent.traits.expression === undefined)
         ? ["이전 설문에 없던 표현 성향은 추측해서 합치지 않았어요."] : []),
-      "두 부모의 특징이 만나 하나의 생물과 새로운 상황으로 태어났어요.",
+      "그림은 두 캐릭터를 섞은 상상이에요. 관계 풀이는 두 사람이 고른 답변을 바탕으로 안내해요.",
       ...(parents.some((parent) => parent.recipe.decorations.length)
         ? ["고유 표정과 소품을 가리지 않도록 기존 장식은 덧붙이지 않았어요."] : []),
     ],

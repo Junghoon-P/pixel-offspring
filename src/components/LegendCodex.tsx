@@ -6,7 +6,7 @@ import { CreatureCanvas } from "./CreatureCanvas";
 export const LegendCodex = ({ results, hasMore }: { results: PublicResult[]; hasMore: boolean }): ReactElement => (
   <details className="panel codex">
     <summary>레전드 도감 · {LEGENDS.filter((design) => results.some((result) => result.child.legend?.matched.includes(design.id))).length} / {LEGENDS.length}</summary>
-    <p>찰떡이어도, 정반대여도. 특별한 성향이 만나면 레전드 조합이 태어나요.</p>
+    <p>찰떡이어도, 정반대여도. 특별한 성향이 만나면 레전드 조합이 완성돼요.</p>
     {LEGENDS.map((design) => {
       const result = results.find((item) => item.child.legend?.matched.includes(design.id));
       return <section className="codex-entry" key={design.id}>

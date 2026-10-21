@@ -15,7 +15,7 @@ const matches = (id: LegendId, a: Traits, b: Traits): boolean => {
   return a.spontaneity >= 0.75 && b.spontaneity >= 0.75 && a.adventure >= 0.5 && b.adventure >= 0.5;
 };
 export const discoverLegend = (parents: Parent[]): LegendDiscovery | undefined => {
-  if (parents.some((parent) => parent.quizVersion !== 3 || parent.traits.conflict === undefined || parent.traits.support === undefined || parent.traits.expression === undefined)) return undefined;
+  if (parents.some((parent) => (parent.quizVersion ?? 0) < 3 || parent.traits.conflict === undefined || parent.traits.support === undefined || parent.traits.expression === undefined)) return undefined;
   const [a, b] = parents.map((parent) => parent.traits);
   const matched = LEGENDS.filter((design) => matches(design.id, a, b));
   const first = matched[0];

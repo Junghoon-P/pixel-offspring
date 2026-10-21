@@ -11,7 +11,7 @@ import {
 } from "../../tests/unit/dom";
 import { character, ok, failure } from "../../tests/unit/fixtures";
 setupDom();
-it("닉네임·선택 검증 후 24문항을 저장하고 초대로 복귀한다", async () => {
+it("닉네임·선택 검증 후 10문항을 저장하고 초대로 복귀한다", async () => {
   const navigate = vi.fn(),
     saved = character();
   const invite = crypto.randomUUID();
@@ -30,15 +30,15 @@ it("닉네임·선택 검증 후 24문항을 저장하고 초대로 복귀한다
   await input("#nickname", "테스트");
   await click(button("다음"));
   expect(text()).toContain("답 하나를");
-  for (let i = 0; i < 24; i++) {
+  for (let i = 0; i < 10; i++) {
     await click(
       document.querySelector<HTMLInputElement>('input[type="radio"]')!,
     );
-    await click(button(i === 23 ? "내 생물 탄생시키기" : "다음"));
+    await click(button(i === 9 ? "내 캐릭터 확인하기" : "다음"));
   }
   expect(requests).toHaveLength(1);
   expect(requests[0]).toMatchObject({
-    quizVersion: 3,
+    quizVersion: 4,
     nickname: "테스트",
     answers: expect.any(Array),
   });
@@ -52,12 +52,12 @@ it("저장 오류는 마지막 답변과 요청 키를 유지하고 재시도한
   sessionStorage.setItem(
     "quiz-draft",
     JSON.stringify({
-      quizVersion: 3,
+      quizVersion: 4,
       nickname: "복구",
       choices: Object.fromEntries(
-        Array.from({ length: 24 }, (_, i) => [`q${i + 1}`, "a"]),
+        Array.from({ length: 10 }, (_, i) => [`q${i + 1}`, "a"]),
       ),
-      step: 23,
+      step: 9,
       key,
     }),
   );
@@ -69,21 +69,21 @@ it("저장 오류는 마지막 답변과 요청 키를 유지하고 재시도한
     return failed ? failure("저장 오류") : ok(saved);
   });
   await render(<Quiz navigate={navigate} />);
-  await click(button("내 생물 탄생시키기"));
+  await click(button("내 캐릭터 확인하기"));
   expect(text()).toContain("저장 오류");
   failed = false;
-  await click(button("내 생물 탄생시키기"));
+  await click(button("내 캐릭터 확인하기"));
   expect(keys).toEqual([key, key]);
   expect(navigate).toHaveBeenCalledWith("/me");
 });
 it("구버전 초안은 닉네임만 유지하고 이전·초기화가 동작한다", async () => {
   sessionStorage.setItem(
     "quiz-draft",
-    JSON.stringify({ nickname: "옛친구", choices: { q1: "b" }, step: 3 }),
+    JSON.stringify({ quizVersion: 3, nickname: "옛친구", choices: { q1: "b" }, step: 3 }),
   );
   const navigate = vi.fn();
   await render(<Quiz navigate={navigate} />);
-  expect(text()).toContain("24문항으로 새로워졌어요");
+  expect(text()).toContain("10문항으로 새로워졌어요");
   expect(document.querySelector<HTMLInputElement>("#nickname")?.value).toBe(
     "옛친구",
   );

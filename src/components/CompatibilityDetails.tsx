@@ -14,6 +14,6 @@ export const CompatibilityDetails = ({ compatibility }: { compatibility: Compati
       <p><strong>둘만의 공략법</strong> {situation.tip}</p>
     </details>)}
     {compatibility.partial && <p className="muted">이전 설문에 없는 관계 성향은 추정하지 않았어요. <Link href="/create">새 설문으로 더 알아보기</Link></p>}
-    <p className="muted">잘 맞는 순간도, 엇갈리는 순간도 재미로 읽어주세요. 실제 관계를 판정하는 결과는 아니에요.</p>
+    <p className="muted">답변을 보고 풀어본 궁합이에요. 실제 두 사람의 관계와는 다를 수 있어요.</p>
   </section>
 );

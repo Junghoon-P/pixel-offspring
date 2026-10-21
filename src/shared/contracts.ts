@@ -1,3 +1,4 @@
+import { answersV4Schema, answerEvidenceSchema, combinationReadingSchema } from "./surveyV4Schemas";
 import { hasPersonalityArt } from "../domain/personalityArt";
 import { answersV3Schema, personalityReadingSchema, compatibilitySchema, legendDiscoverySchema, legendIdSchema } from "./personalitySchemas";
 import { isLegacyBody, HYBRIDS } from "../domain/comicCatalog";
@@ -57,6 +58,7 @@ export const answersV2Schema = z
   .length(12)
   .refine((answers) => new Set(answers.map((a) => a.questionId)).size === 12);
 export const submissionSchema = z.discriminatedUnion("quizVersion", [
+  z.object({ quizVersion: z.literal(4), nickname: nicknameSchema, answers: answersV4Schema, idempotencyKey: idSchema }).strict(),
   z.object({ quizVersion: z.literal(3), nickname: nicknameSchema, answers: answersV3Schema, idempotencyKey: idSchema }).strict(),
   z
     .object({
@@ -137,6 +139,7 @@ export const traitsSchema = z
   .strict();
 export const profileSchema = z
   .object({
+    evidence: answerEvidenceSchema.optional(),
     reading: personalityReadingSchema.optional(),
     characterMatch: z.object({ version: z.literal(1), kind: z.enum(["type", "mixed", "balanced"]), reason: z.string() }).strict().optional(),
     typeId: z.string().regex(/^[01x]{4}$/),
@@ -150,8 +153,8 @@ export const characterSchema = z
     id: idSchema,
     nickname: nicknameSchema,
     traits: traitsSchema,
-    quizVersion: z.union([z.literal(1), z.literal(2), z.literal(3)]).optional(),
-    scoreVersion: z.union([z.literal(1), z.literal(2), z.literal(3)]).optional(),
+    quizVersion: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4)]).optional(),
+    scoreVersion: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4)]).optional(),
     profile: profileSchema.optional(),
     recipe: recipeSchema,
     assetVersion: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4)]),
@@ -166,6 +169,7 @@ export const publicParentSchema = characterSchema.omit({
 });
 export const childSchema = z
   .object({
+    combinationReading: combinationReadingSchema.optional(),
     compatibility: compatibilitySchema.optional(),
     legend: legendDiscoverySchema.optional(),
     recipe: recipeSchema,

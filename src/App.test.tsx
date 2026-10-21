@@ -20,9 +20,9 @@ setupDom();
 it("홈 데모와 검수 페이지의 기존 캐릭터 동작을 유지한다", async () => {
   await render(<Home />);
   await flush();
-  expect(text()).toContain("둘을 고르면, 바로 섞여요");
-  await select('select[aria-label="1번 부모"]', "ghost");
-  await select('select[aria-label="2번 부모"]', "snail");
+  expect(text()).toContain("우리가 캐릭터라면?");
+  await select('select[aria-label="1번 캐릭터"]', "ghost");
+  await select('select[aria-label="2번 캐릭터"]', "snail");
   await render(<Gallery />);
   await flush();
   expect(document.querySelectorAll("canvas")).toHaveLength(104);
@@ -30,7 +30,7 @@ it("홈 데모와 검수 페이지의 기존 캐릭터 동작을 유지한다", 
 });
 it("설문과 초대 페이지가 Next 라우터를 사용한다", async () => {
   await render(<QuizPage />);
-  expect(text()).toContain("오늘의 나는?");
+  expect(text()).toContain("먼저, 나는 어떤 쪽?");
   await click(button("이전"));
   expect(navigation.push).toHaveBeenCalledWith("/");
   vi.stubGlobal("fetch", async () => failure("찾을 수 없어요", 404));

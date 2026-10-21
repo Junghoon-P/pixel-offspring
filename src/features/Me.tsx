@@ -144,7 +144,7 @@ const CharacterCard = ({
           void state.action(() => state.inviteFriend(character.id))
         }
       >
-        친구 초대 링크 만들기
+        함께할 사람 초대하기
       </button>
       <button
         className="secondary"
@@ -171,7 +171,7 @@ const InviteLink = ({ invite }: { invite: Invite }): ReactElement => {
     <section className="panel">
       <label htmlFor="invite-url">초대 링크</label>
       <input id="invite-url" readOnly value={invite.url} />
-      <p>여러 친구에게 같은 링크를 보낼 수 있어요.</p>
+      <p>같이 해보고 싶은 사람에게 보내세요. 여러 명에게 보내도 괜찮아요.</p>
       <button onClick={() => void copy()}>초대 링크 복사</button>
       {notice && <p role="status">{notice}</p>}
     </section>
@@ -193,12 +193,12 @@ const ResultSummary = ({ result }: { result: PublicResult }): ReactElement => (
 );
 const ResultList = ({ state }: { state: MeState }): ReactElement => (
   <>
-    <h2>우리 생물들</h2>
+    <h2>내가 만난 조합들</h2>
     <button className="secondary" onClick={state.refresh}>
       목록 새로고침
     </button>
     {state.results?.items.length === 0 && (
-      <p>우리의 첫 조합은 어떤 모습일까요? 친구를 초대해 발견해 보세요.</p>
+      <p>우리는 무슨 조합일까요? 함께할 사람을 초대해 보세요.</p>
     )}
     {state.results?.items.map((result) => (
       <ResultSummary key={result.resultId} result={result} />

@@ -10,10 +10,23 @@ const text = (context: CanvasRenderingContext2D, value: string, y: number, size 
   for (const [i, line] of lines.entries()) context.fillText(line, left ? 90 : 540, y + i * (size + 12));
   return y + lines.length * (size + 12);
 };
+const groundedContent = (result: PublicResult): Array<{ value: string; size: number }> => {
+  const reading = result.child.combinationReading;
+  if (!reading) return [];
+  const evidence = reading.evidence[0];
+  return [
+    { value: reading.headline, size: 30 },
+    ...(evidence ? [{ value: "우리, 이런 점이 닮고 달라요", size: 32 },
+      ...evidence.parents.map((parent) => ({ size: 24, value: `${result.parents.find((p) => p.id === parent.parentId)?.nickname ?? "참여자"} · ${parent.question} → ${parent.answer}` })),
+      { value: evidence.interpretation, size: 28 }] : []),
+    { value: "두 사람이 고른 답변을 비교했어요. 재미로 봐주세요.", size: 22 },
+  ];
+};
 const cardBlocks = (result: PublicResult, context: CanvasRenderingContext2D): TextBlock[] => {
   const { child, parents } = result;
   const content = [
     { value: `${child.legend ? "레전드 조합 · " : ""}${child.name}`, size: 44 },
+    ...(child.combinationReading ? groundedContent(result) : [
     { value: child.description, size: 30 },
     { value: `특수 능력 · ${child.ability}`, size: 28 },
     ...parents.map((parent) => ({ size: 24, value: `${parent.nickname}: ${child.inheritance.filter((part) => part.parentId === parent.id).map((part) => part.label).join(" · ")}` })),
@@ -24,6 +37,7 @@ const cardBlocks = (result: PublicResult, context: CanvasRenderingContext2D): Te
         { value: `엇갈릴 땐 · ${situation.friction}`, size: 24 },
         { value: `둘만의 공략법 · ${situation.tip}`, size: 24 },
       ])] : []),
+    ]),
   ];
   let y = 870;
   return content.map((block) => {
@@ -56,11 +70,11 @@ export const renderCard = async (result: PublicResult): Promise<Blob> => {
   canvas.height = Math.max(baseHeight, end + 120);
   ctx.fillStyle = "#fefaee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  text(ctx, "너랑 나 사이에서 태어난", 90, 48);
+  text(ctx, "우리 무슨 조합?", 90, 48);
   await drawParents(ctx, result);
   await drawCreature(ctx, result.child.recipe, 348, 430, 6);
   blocks.forEach((block) => text(ctx, block.value, block.y, block.size, block.size < 40));
-  text(ctx, "너를 닮고, 나를 닮은. 우리만의 조합 놀이", canvas.height - 50, 22);
+  text(ctx, "너랑 나, 같이 있으면", canvas.height - 50, 22);
   return new Promise((resolve, reject) => canvas.toBlob(
     (blob) => blob ? resolve(blob) : reject(new Error("PNG 변환에 실패했어요.")), "image/png",
   ));

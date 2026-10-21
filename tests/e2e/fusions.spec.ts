@@ -14,9 +14,8 @@ test("210조합은 누락 없이 완성 그림을 표시한다", async ({ page }
     await expect(page.getByRole("img")).toHaveCount(21);
     await page.waitForLoadState("networkidle");
     await expect(page.getByRole("main").getByRole("alert")).toHaveCount(0);
-    const nonempty = await page.locator("canvas").evaluateAll((canvases: HTMLCanvasElement[]) =>
-      canvases.every((canvas) => canvas.getContext("2d")!.getImageData(0, 0, canvas.width, canvas.height).data.some((value, i) => i % 4 === 3 && value > 0)));
-    expect(nonempty).toBe(true);
+    await expect.poll(() => page.locator("canvas").evaluateAll((canvases: HTMLCanvasElement[]) =>
+      canvases.every((canvas) => canvas.getContext("2d")!.getImageData(0, 0, canvas.width, canvas.height).data.some((value, i) => i % 4 === 3 && value > 0)))).toBe(true);
     for (const label of await page.locator("figcaption").allTextContents()) labels.add(label);
     await page.screenshot({ path: `test-results/fusions-${index + 1}.png`, fullPage: true });
     if (index < 9) await page.getByRole("button", { name: "다음 조합" }).click();

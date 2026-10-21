@@ -22,7 +22,7 @@ it("세션 없는 친구에게 설문 복귀 링크를 제공한다", async () =
     return ok({ active: true, accepted: true });
   });
   await render(<Invite id={id} navigate={vi.fn()} />);
-  expect(text()).toContain("먼저 나를 닮은 생물을");
+  expect(text()).toContain("10문항에 답하면");
   expect(
     document.querySelector('a[href^="/create"]')?.getAttribute("href"),
   ).toBe(`/create?invite=${id}`);
@@ -57,10 +57,10 @@ it("생물을 선택하고 조합 실패 후 같은 생물로 재시도한다", 
   });
   await render(<Invite id={id} navigate={navigate} />);
   await select("#my-character", b.id);
-  await click(button("우리 생물 만들기"));
+  await click(button("우리 조합 보기"));
   expect(text()).toContain("조합 실패");
   failed = false;
-  await click(button("우리 생물 만들기"));
+  await click(button("우리 조합 보기"));
   expect(sent).toEqual([b.id, b.id]);
   expect(navigate).toHaveBeenCalledWith(`/r/${resultId}`);
   expect(sessionStorage.getItem("pending-invite")).toBeNull();

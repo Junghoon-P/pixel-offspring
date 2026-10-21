@@ -1,4 +1,5 @@
 "use client";
+import { AnswerEvidenceDetails } from "../components/AnswerEvidenceDetails";
 import { CompatibilityDetails } from "../components/CompatibilityDetails";
 import { LEGENDS } from "../domain/legends";
 import Link from "next/link";
@@ -41,6 +42,8 @@ const ResultDetails = ({ result }: { result: PublicResult }): ReactElement => (
       <br />
       {result.child.ability}
     </p>
+    <details className="reading">
+      <summary>캐릭터 조합 자세히 보기</summary>
     <ul>
       {result.child.inheritance.map((v, i) => (
         <li key={i}>
@@ -54,6 +57,7 @@ const ResultDetails = ({ result }: { result: PublicResult }): ReactElement => (
         {note}
       </p>
     ))}
+    </details>
   </section>
 );
 export const Result = ({ id }: { id: string }): ReactElement => {
@@ -75,15 +79,16 @@ export const Result = ({ id }: { id: string }): ReactElement => {
   const result = resource.data!;
   return (
     <>
-      <p className="eyebrow">너 반, 나 반. 예상 밖의 우리.</p>
-      <h1>우리 사이에 태어난 생물</h1>
+      <p className="eyebrow">너랑 나, 같이 있으면</p>
+      <h1>우리 무슨 조합?</h1>
       {birth && (
         <section className="panel birth" role="status">
-          <p>새 생물이 눈을 뜨고 있어요…</p>
+          <p>우리 조합을 확인하고 있어요…</p>
           <button onClick={skip}>연출 건너뛰기</button>
         </section>
       )}
       <ResultDetails result={result} />
+      <AnswerEvidenceDetails result={result} />
       {result.child.compatibility && <CompatibilityDetails compatibility={result.child.compatibility} />}
       {result.child.legend && <section className="panel"><h2>레전드 발견 기록</h2>
         <p>{result.child.legend.reason}</p>
@@ -92,10 +97,10 @@ export const Result = ({ id }: { id: string }): ReactElement => {
       <ResultShare card={card} />
       <p className="muted">
         {new Date(result.expiresAt).toLocaleDateString("ko-KR")}까지 보관돼요.
-        부모 생물 중 하나가 삭제되면 이 공동 결과도 볼 수 없어요.
+        참여한 캐릭터 중 하나가 삭제되면 이 공동 결과도 볼 수 없어요.
       </p>
       <Link className="button" href="/create">
-        나도 생물 만들기
+        나도 해보기
       </Link>
     </>
   );

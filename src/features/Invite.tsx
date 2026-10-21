@@ -119,7 +119,7 @@ const JoinInvite = ({
       {chosen && <ChosenCharacter chosen={chosen} />}
       <div className="actions">
         <button disabled={busy} onClick={() => void combine()}>
-          {busy ? "우리 조합을 만드는 중…" : "우리 생물 만들기"}
+          {busy ? "우리 조합을 만드는 중…" : "우리 조합 보기"}
         </button>
       </div>
       <Link href={`/create?invite=${encodeURIComponent(id)}`}>
@@ -130,11 +130,9 @@ const JoinInvite = ({
 };
 const InviteHeader = ({ invite }: { invite: InvitePreview }): ReactElement => (
   <>
-    <p className="eyebrow">친구가 너와의 조합을 기다려요</p>
+    <p className="eyebrow">너와 나, 무슨 조합일까?</p>
     <h1>
-      우리 생물은
-      <br />
-      어떤 모습일까?
+      우리 무슨 조합?
     </h1>
     <section className="panel">
       <CreatureCanvas
@@ -172,8 +170,8 @@ export const Invite = (props: InviteProps): ReactElement => {
       ) : (
         <>
           <p>
-            먼저 나를 닮은 생물을 만들어 주세요. 질문이 끝나면 이 초대로
-            돌아와요.
+            10문항에 답하면 나를 닮은 캐릭터가 나와요.
+            답을 마치면 두 사람의 조합을 볼 수 있어요.
           </p>
           <Link
             className="button"

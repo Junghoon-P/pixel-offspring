@@ -105,7 +105,7 @@ test("PostgreSQL: 멱등성·다중 친구·역방향·20개 동시 요청·소�
   const publicResult = await a.get(`/api/results/${pair.resultId}`);
   const text = await publicResult.text();
   const html = await a.get(`/r/${pair.resultId}`);
-  expect(await html.text()).toContain(`${origin}/og.png`);
+  expect(await html.text()).toContain(`${origin}/og-combination.png`);
   expect(html.headers()["cache-control"]).toContain("no-store");
   expect(text).not.toMatch(/tokenHash|ownerSession|traits|answers/);
   expect(

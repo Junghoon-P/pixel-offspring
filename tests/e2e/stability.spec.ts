@@ -6,10 +6,10 @@ test("불완전 초안은 처음 빠진 질문으로 복구한다", async ({ pag
     sessionStorage.setItem(
       "quiz-draft",
       JSON.stringify({
-        quizVersion: 3,
+        quizVersion: 4,
         nickname: "복구",
-        choices: { q1: "a", q12: "b" },
-        step: 23,
+        choices: { q1: "a", q10: "b" },
+        step: 9,
         key: crypto.randomUUID(),
       }),
     ),
@@ -153,7 +153,7 @@ test("동작 줄이기 설정은 탄생 연출을 생략한다", async ({ page }
   );
   await page.goto(`/r/${result.resultId}`);
   await expect(page.getByRole("button", { name: "PNG 저장" })).toBeEnabled();
-  await expect(page.getByText("새 생물이 눈을 뜨고 있어요…")).toHaveCount(0);
+  await expect(page.getByText("우리 조합을 확인하고 있어요…")).toHaveCount(0);
 });
 
 test("닉네임이 손상된 초안은 닉네임 입력부터 복구한다", async ({ page }) => {
@@ -162,12 +162,12 @@ test("닉네임이 손상된 초안은 닉네임 입력부터 복구한다", asy
     sessionStorage.setItem(
       "quiz-draft",
       JSON.stringify({
-        quizVersion: 3,
+        quizVersion: 4,
         nickname: "",
         choices: Object.fromEntries(
-          Array.from({ length: 12 }, (_, i) => [`q${i + 1}`, "a"]),
+          Array.from({ length: 10 }, (_, i) => [`q${i + 1}`, "a"]),
         ),
-        step: 23,
+        step: 9,
         key: crypto.randomUUID(),
       }),
     ),

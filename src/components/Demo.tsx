@@ -23,7 +23,7 @@ const DemoChild = ({ child }: { child: Child }): ReactElement => (
     <ul>
       {child.inheritance.map((item, i) => (
         <li key={i}>
-          {item.parentId === "demo-a1" ? "첫 번째" : "두 번째"} 부모의{" "}
+          {item.parentId === "demo-a1" ? "첫 번째" : "두 번째"} 캐릭터의{" "}
           {item.label}
         </li>
       ))}
@@ -37,7 +37,7 @@ const DemoCard = ({ child, parents }: { child: Child; parents: Parent[] }): Reac
     <summary>PNG 카드 미리보기</summary>
     {card.cardError && <p role="alert">{card.cardError}<button onClick={card.retry}>다시 준비</button></p>}
     {card.imageUrl ? <>
-      <img src={card.imageUrl} alt="두 부모와 조합 결과의 공유 카드" width={270} />
+      <img src={card.imageUrl} alt="두 캐릭터와 조합 결과의 공유 카드" width={270} />
       <a href={card.imageUrl} download="pixel-offspring-demo.png">데모 PNG 저장</a>
     </> : <p>카드를 준비하고 있어요.</p>}
   </details>;
@@ -56,8 +56,8 @@ export const Demo = (): ReactElement => {
   }, [left, right]);
   return (
     <section className="panel">
-      <p className="eyebrow">둘을 고르면, 바로 섞여요</p>
-      <p className="muted">마음껏 바꿔보세요. 미리보기는 저장되지 않아요.</p>
+      <p className="eyebrow">우리가 캐릭터라면?</p>
+      <p className="muted">궁금한 캐릭터 둘을 골라보세요. 어떤 조합이 나올까요?</p>
       <div className="parents">
         {[a, b].map((parent, i) => (
           <div key={parent.id}>
@@ -67,7 +67,7 @@ export const Demo = (): ReactElement => {
               scale={2}
             />
             <select
-              aria-label={`${i + 1}번 부모`}
+              aria-label={`${i + 1}번 캐릭터`}
               value={i === 0 ? left : right}
               onChange={(e) => {
                 const v = bodySchema.parse(e.target.value);

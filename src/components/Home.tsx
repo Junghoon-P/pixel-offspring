@@ -3,16 +3,12 @@ import Link from "next/link";
 import { Demo } from "./Demo";
 export const Home = (): ReactElement => (
   <>
-    <p className="eyebrow">너를 닮고, 나를 닮은</p>
-    <h1>
-      너랑 나 사이에서
-      <br />
-      태어난
-    </h1>
+    <p className="eyebrow">친구도, 썸도, 연인도</p>
+    <h1>우리 무슨 조합?</h1>
     <p>
-      내 성향을 닮은 생물, 친구와 섞으면 어떤 모습일까?
+      우리 사이를 캐릭터로 그려보면?
       <br />
-      생김새부터 케미까지. 우리만의 조합을 발견해요.
+      각자 열 가지 질문에 답하면 둘만의 조합이 나와요.
     </p>
     <div className="actions">
       <Link className="button" href="/create">
@@ -23,7 +19,7 @@ export const Home = (): ReactElement => (
       </Link>
     </div>
     <p className="muted">
-      가입 없이 시작해요 · 질문 24개 · 나를 닮은 16가지 성향
+      각자 10문항 · 회원가입 없이 바로 시작
     </p>
     <Demo />
   </>

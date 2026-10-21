@@ -5,6 +5,6 @@ export const CharacterMatchDetails = ({ profile }: { profile?: Profile }): React
   return <details className="reading">
     <summary>왜 이 생물인가요?</summary>
     <p>{profile.characterMatch.reason}</p>
-    <p className="muted">성향을 캐릭터에 빗댄 표현이에요. 표정이나 종이 능력·성격의 좋고 나쁨을 뜻하지 않아요.</p>
+    <p className="muted">답변에서 드러난 성향을 캐릭터로 표현했어요. 어떤 캐릭터가 나와도 더 좋거나 나쁜 건 아니에요.</p>
   </details>;
 };

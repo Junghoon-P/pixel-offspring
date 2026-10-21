@@ -10,8 +10,8 @@ export const shareFile = async (
 ): Promise<"shared" | "cancelled" | "unsupported"> => {
   if (!support.share) return "unsupported";
   const data = support.canShare?.({ files: [file] })
-    ? { files: [file], title: "우리 사이에 태어난 생물", url }
-    : { title: "우리 사이에 태어난 생물", url };
+    ? { files: [file], title: "우리 무슨 조합?", url }
+    : { title: "우리 무슨 조합?", url };
   try {
     await support.share(data);
     return "shared";

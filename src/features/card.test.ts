@@ -72,3 +72,21 @@ it("레전드·궁합 카드에 풀이와 팁이 포함되고 문장이 카드 �
   expect(texts).toContain("둘만의 공략법");
   expect(canvasContext.fillText.mock.calls.every((args) => Number(args[2]) < card.height)).toBe(true);
 });
+
+it("새 카드에는 근거 한 쌍만 담아 공유하고 긴 전체 궁합은 반복하지 않는다", async () => {
+  const saved = await result();
+  const reading = { version: 1 as const, headline: "속도가 달라도 같이 가는 조합", evidence: [{
+    axis: "energy" as const, title: "함께 쉬는 방식",
+    parents: saved.parents.map((parent, index) => ({ parentId: parent.id, question: "쉬는 날에는?", answer: index ? "편한 곳에서 쉬기" : "밖에서 놀기" })),
+    interpretation: "갈 곳 하나와 쉴 곳 하나를 정해보세요.",
+  }] };
+  const createElement = vi.spyOn(document, "createElement");
+  await renderCard({ ...saved, child: { ...saved.child, combinationReading: reading } });
+  const texts = canvasContext.fillText.mock.calls.map(([value]) => String(value)).join("");
+  expect(texts).toContain("우리 무슨 조합?");
+  expect(texts).toContain("우리, 이런 점이 닮고 달라요");
+  expect(texts).toContain("밖에서 놀기");
+  expect(texts).not.toContain("특수 능력");
+  const card = createElement.mock.results.map((entry) => entry.value).find((value) => value instanceof HTMLCanvasElement && value.width === 1080);
+  expect(canvasContext.fillText.mock.calls.every((args) => Number(args[2]) < card.height)).toBe(true);
+});

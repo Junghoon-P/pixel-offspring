@@ -17,7 +17,7 @@ const rest = (a: Traits, b: Traits): SituationReading => ({
 const conversation = (a: Traits, b: Traits): SituationReading => {
   if (a.conflict === undefined || b.conflict === undefined || a.support === undefined || b.support === undefined)
     return { title: "대화하고 위로할 때", match: "구버전 설문에는 대화·위로 방식 질문이 없어요.",
-      friction: "없는 답변을 추정해 궁합을 판단하지 않았어요.", tip: "두 사람 모두 새 24문항 설문을 마치면 이 부분도 풀어드려요." };
+      friction: "없는 답변을 추정해 궁합을 판단하지 않았어요.", tip: "두 사람 모두 새 10문항 설문을 마치면 이 부분도 풀어드려요." };
   return { title: "대화하고 위로할 때",
     match: distance(a, b, "support") <= 0.5 ? "어떤 도움을 먼저 건네고 싶은지 방향이 비슷해요." : "공감하는 역할과 해결 방법을 찾는 역할을 나눌 수 있어요.",
     friction: distance(a, b, "conflict") >= 1 ? "바로 대화하고 싶은 사람과 먼저 생각할 사람이 엇갈릴 수 있어요." :

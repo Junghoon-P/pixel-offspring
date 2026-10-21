@@ -4,11 +4,11 @@ import type { Page } from "@playwright/test";
 const quiz = async (page: Page, name: string): Promise<void> => {
   await page.getByRole("link", { name: "내 생물 만들기", exact: true }).click();
   await page.getByLabel("닉네임").fill(name);
-  for (let i = 0; i < 24; i++) {
+  for (let i = 0; i < 10; i++) {
     await page.getByRole("radio").first().check();
     await page
       .getByRole("button", {
-        name: i === 23 ? "내 생물 탄생시키기" : "다음",
+        name: i === 9 ? "내 캐릭터 확인하기" : "다음",
         exact: true,
       })
       .click();
@@ -28,17 +28,17 @@ test("두 브라우저에서 초대·질문·공동 결과·PNG·삭제", async 
     q = await b.newPage();
   await p.goto("/");
   await quiz(p, "한글🙂");
-  await p.getByRole("button", { name: "친구 초대 링크 만들기" }).click();
+  await p.getByRole("button", { name: "함께할 사람 초대하기" }).click();
   const invite = await p.getByLabel("초대 링크").inputValue();
   await q.goto(invite);
   await quiz(q, "이불 친구");
   await expect(
-    q.getByRole("button", { name: "우리 생물 만들기" }),
+    q.getByRole("button", { name: "우리 조합 보기" }),
   ).toBeVisible();
-  await q.getByRole("button", { name: "우리 생물 만들기" }).click();
+  await q.getByRole("button", { name: "우리 조합 보기" }).click();
   await expect(q).toHaveURL(/\/r\//);
   await expect(
-    q.getByRole("heading", { name: "우리 사이에 태어난 생물" }),
+    q.getByRole("heading", { name: "우리 무슨 조합?" }),
   ).toBeVisible();
   const url = q.url();
   await p.reload();
@@ -71,7 +71,7 @@ test("질문 초안 복구·이전·한글 길이 검증", async ({ page }) => {
   await page.getByLabel("닉네임").fill("복구");
   await page.getByRole("button", { name: "다음", exact: true }).click();
   await page.reload();
-  await expect(page.getByText("약속 없는 오후를 보내는 방법은?")).toBeVisible();
+  await expect(page.getByText("같이 밥 먹을 곳을 고른다면?")).toBeVisible();
   await page.getByRole("button", { name: "이전", exact: true }).click();
   await expect(page.getByLabel("닉네임")).toHaveValue("복구");
   await expect(page.getByRole("radio").first()).toBeChecked();
@@ -79,7 +79,7 @@ test("질문 초안 복구·이전·한글 길이 검증", async ({ page }) => {
 test("저장 실패 후 초안을 유지하고 재시도한다", async ({ page }) => {
   await page.goto("/create");
   await page.getByLabel("닉네임").fill("재시도");
-  for (let i = 0; i < 23; i++) {
+  for (let i = 0; i < 9; i++) {
     await page.getByRole("radio").first().check();
     await page.getByRole("button", { name: "다음", exact: true }).click();
   }
@@ -93,11 +93,11 @@ test("저장 실패 후 초안을 유지하고 재시도한다", async ({ page }
       }),
     }),
   );
-  await page.getByRole("button", { name: "내 생물 탄생시키기" }).click();
+  await page.getByRole("button", { name: "내 캐릭터 확인하기" }).click();
   await expect(page.getByRole("main").getByRole("alert")).toHaveText("테스트 저장 실패");
   await expect(page.getByRole("radio").first()).toBeChecked();
   await page.unroute("**/api/characters");
-  await page.getByRole("button", { name: "내 생물 탄생시키기" }).click();
+  await page.getByRole("button", { name: "내 캐릭터 확인하기" }).click();
   await expect(page.getByRole("heading", { name: "내 생물" })).toBeVisible();
 });
 test("20종·코스튬8쌍·구버전 파츠를 실제 렌더러로 표시하며 누락된 에셋이 없다", async ({
@@ -166,7 +166,7 @@ test("전체84개 허용 파츠 조합 검수판을 렌더링한다", async ({ p
     fullPage: true,
   });
 });
-test("구6문항 초안을 새24문항 답변과 섞지 않는다", async ({ page }) => {
+test("구6문항 초안을 새10문항 답변과 섞지 않는다", async ({ page }) => {
   await page.goto("/");
   await page.evaluate(() =>
     sessionStorage.setItem(
@@ -180,7 +180,7 @@ test("구6문항 초안을 새24문항 답변과 섞지 않는다", async ({ pag
     ),
   );
   await page.goto("/create");
-  await expect(page.getByRole("status")).toContainText("24문항");
+  await expect(page.getByRole("status")).toContainText("10문항");
   await expect(page.getByLabel("닉네임")).toHaveValue("이전친구");
   await expect(page.getByRole("progressbar")).toHaveAttribute("value", "1");
   await expect(page.getByRole("radio").first()).not.toBeChecked();
@@ -206,15 +206,15 @@ test("저장소를 차단한 친구도 설문 후 원래 초대로 돌아와 조
     q.on("pageerror", (error) => errors.push(error.message));
     await p.goto("/");
     await quiz(p, "초대주인");
-    await p.getByRole("button", { name: "친구 초대 링크 만들기" }).click();
+    await p.getByRole("button", { name: "함께할 사람 초대하기" }).click();
     await q.goto(await p.getByLabel("초대 링크").inputValue());
     await quiz(q, "저장차단친구");
-    await q.getByRole("button", { name: "우리 생물 만들기" }).click();
+    await q.getByRole("button", { name: "우리 조합 보기" }).click();
     await expect(q).toHaveURL(/\/r\//);
     await expect(q.getByRole("button", { name: "PNG 저장" })).toBeEnabled();
     await q.reload();
     await expect(
-      q.getByRole("heading", { name: "우리 사이에 태어난 생물" }),
+      q.getByRole("heading", { name: "우리 무슨 조합?" }),
     ).toBeVisible();
     expect(errors).toEqual([]);
   } finally {
