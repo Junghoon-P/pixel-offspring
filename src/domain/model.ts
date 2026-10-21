@@ -1,4 +1,4 @@
-import type { PersonalityReading, Compatibility, LegendDiscovery, LegendId } from "./personalityModel";
+import type { CharacterMatch, PersonalityReading, Compatibility, LegendDiscovery, LegendId } from "./personalityModel";
 export type LegacyBody = "snail" | "ghost" | "jelly" | "mushroom" | "bird" | "dragon";
 export type ComicBody = "capybara" | "frog" | "duck" | "cat" | "hamster" | "potato" | "raccoon" | "penguin" | "axolotl" | "sloth" | "cucumber" | "broccoli" | "pepe" | "squidward";
 export type Body = LegacyBody | ComicBody;
@@ -19,13 +19,16 @@ export interface Recipe {
   body: Body;
   hybrid?: Hybrid;
   hybridStyle?: "costume";
+  portraitStyle?: "personality";
   fusionBody?: Body;
+  fusionStyle?: "meme";
   legend?: LegendId;
   face: Face;
   decorations: Decoration[];
   palette: "original";
 }
 export interface Profile {
+  characterMatch?: CharacterMatch;
   reading?: PersonalityReading;
   typeId: string;
   name: string;

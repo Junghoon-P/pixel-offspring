@@ -23,7 +23,10 @@ export const canvasContext = {
 class LoadedImage {
   onload: (() => void) | null = null;
   onerror: (() => void) | null = null;
-  set src(_value: string) {
+  private source = "";
+  get src(): string { return this.source; }
+  set src(value: string) {
+    this.source = value;
     queueMicrotask(() => this.onload?.());
   }
 }

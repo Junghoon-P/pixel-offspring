@@ -13,7 +13,7 @@
     "preview": "next start --hostname 127.0.0.1 --port 4173",
     "check": "pnpm source:check && pnpm typecheck && pnpm test:coverage && pnpm build",
     "measure": "node scripts/measure.mjs",
-    "assets:check": "python3 scripts/check-assets.py",
+    "assets:check": "python3 scripts/check-assets.py && python3 scripts/check-fusions.py",
     "test:coverage": "vitest run --coverage",
     "source:check": "node scripts/check-source.mjs",
     "start": "next start --hostname 127.0.0.1 --port 5173"

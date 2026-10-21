@@ -1,3 +1,4 @@
+import { hasPersonalityArt } from "../domain/personalityArt";
 import { answersV3Schema, personalityReadingSchema, compatibilitySchema, legendDiscoverySchema, legendIdSchema } from "./personalitySchemas";
 import { isLegacyBody, HYBRIDS } from "../domain/comicCatalog";
 import { z } from "zod";
@@ -90,8 +91,10 @@ export const recipeSchema = z
     face: z.enum(["happy", "sleepy", "signature"]),
     hybrid: z.enum(["mushroom-bird", "snail-dragon", "ghost-jelly", "capybara-frog",
       "duck-cat", "hamster-potato", "raccoon-penguin", "axolotl-sloth"]).optional(),
+    portraitStyle: z.literal("personality").optional(),
     hybridStyle: z.literal("costume").optional(),
     fusionBody: bodySchema.optional(),
+    fusionStyle: z.literal("meme").optional(),
     legend: legendIdSchema.optional(),
     decorations: z
       .array(z.enum(["flame", "blanket", "sparkles", "leaves"]))
@@ -100,6 +103,8 @@ export const recipeSchema = z
   })
   .strict()
   .refine((r) => {
+    if (r.fusionStyle && (r.assetVersion !== 4 || !r.fusionBody || r.portraitStyle || r.hybrid || r.hybridStyle)) return false;
+    if (r.portraitStyle && (r.assetVersion !== 4 || !hasPersonalityArt(r.body) || r.fusionBody || r.hybrid || r.hybridStyle || r.legend)) return false;
     if (r.assetVersion !== 4) return isLegacyBody(r.body) && r.face !== "signature" && !r.hybrid && !r.hybridStyle && !r.fusionBody && !r.legend;
     if (r.fusionBody && (r.hybrid || r.hybridStyle)) return false;
     if (r.legend && !r.fusionBody && !r.hybrid) return false;
@@ -133,7 +138,8 @@ export const traitsSchema = z
 export const profileSchema = z
   .object({
     reading: personalityReadingSchema.optional(),
-    typeId: z.string().regex(/^[01]{4}$/),
+    characterMatch: z.object({ version: z.literal(1), kind: z.enum(["type", "mixed", "balanced"]), reason: z.string() }).strict().optional(),
+    typeId: z.string().regex(/^[01x]{4}$/),
     name: z.string(),
     description: z.string(),
     ability: z.string(),

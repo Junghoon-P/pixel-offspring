@@ -1,0 +1,2102 @@
+[
+  {
+    "id": "axolotl-axolotl",
+    "a": "axolotl",
+    "b": "axolotl",
+    "name": "수영장 원정대장",
+    "line": "준비운동만 세 시간째.",
+    "description": "튜브를 세 겹 끼고 스트레칭하다 팔이 닿지 않아요.",
+    "ability": "준비운동 무한 연장",
+    "scene": "Wedged inside three nested swim rings, tiny arms desperately trying to touch toes for a serious warmup."
+  },
+  {
+    "id": "axolotl-bird",
+    "a": "axolotl",
+    "b": "bird",
+    "name": "물속 응원단장",
+    "line": "잠수해도 리액션은 합니다.",
+    "description": "물안경 안으로 들어온 깃털을 보면서도 물장구 응원을 멈추지 않아요.",
+    "ability": "수중 박수 연타",
+    "scene": "Feathered gilled creature wearing goggles, enthusiastically clapping webbed wings and splashing its own face with a tiny puddle."
+  },
+  {
+    "id": "axolotl-broccoli",
+    "a": "axolotl",
+    "b": "broccoli",
+    "name": "안전 과잉 구조대",
+    "line": "구하러 왔는데 제가 안 빠져요.",
+    "description": "구명조끼를 너무 많이 입어 작은 물통 입구에 걸렸어요.",
+    "ability": "구조 전 자체 구조",
+    "scene": "Broccoli-crowned gilled creature wearing an absurdly inflated life vest, stuck halfway through a tiny empty bucket rim, feet kicking."
+  },
+  {
+    "id": "axolotl-capybara",
+    "a": "axolotl",
+    "b": "capybara",
+    "name": "온천 수심 조사관",
+    "line": "깊이는 발목. 장비는 심해.",
+    "description": "발목만 잠기는 대야에서 진지하게 잠수 준비를 해요.",
+    "ability": "발목 수심 정밀 측정",
+    "scene": "Round capybara-gilled creature equipped with oversized diving goggles, lowering a depth gauge into an ankle-deep tiny bath."
+  },
+  {
+    "id": "axolotl-cat",
+    "a": "axolotl",
+    "b": "cat",
+    "name": "방수 안 된 모험",
+    "line": "튜브는 챙겼고 상자는 젖었고.",
+    "description": "종이 상자를 보트로 믿고 탔다가 젖은 바닥을 발로 받치고 있어요.",
+    "ability": "침몰 중 표정 관리",
+    "scene": "Cat-eared gilled creature inside a soggy collapsing cardboard boat, lifting its bottom with both paws while keeping a poker face."
+  },
+  {
+    "id": "axolotl-cucumber",
+    "a": "axolotl",
+    "b": "cucumber",
+    "name": "준비된 무표정",
+    "line": "신납니다. 얼굴 빼고.",
+    "description": "출발 깃발은 힘차게 흔들지만 길쭉한 얼굴은 꿈쩍도 하지 않아요.",
+    "ability": "표정 없는 출항식",
+    "scene": "Tall cucumber-bodied gilled creature rigidly straight-faced, wildly waving an enormous departure flag while tiny feet bounce in a ring."
+  },
+  {
+    "id": "axolotl-dragon",
+    "a": "axolotl",
+    "b": "dragon",
+    "name": "자체 온수풀",
+    "line": "수영장 온도는 제가 맞출게요.",
+    "description": "입김으로 물을 데우다가 자기 튜브가 빵빵하게 부풀었어요.",
+    "ability": "온수 과열 경보",
+    "scene": "Gilled dragon creature puffing a tiny flame under its own bath, causing its attached swim ring to inflate absurdly while it looks surprised."
+  },
+  {
+    "id": "axolotl-duck",
+    "a": "axolotl",
+    "b": "duck",
+    "name": "구명빵 탑승객",
+    "line": "안전장비를 왜 먹냐고요?",
+    "description": "구명 튜브 대신 끼운 도넛을 조금씩 먹다가 자세가 기울었어요.",
+    "ability": "안전 반경 한입 축소",
+    "scene": "Duck-billed gilled creature wearing a doughnut float with a huge bite missing, leaning sideways and innocently chewing crumbs."
+  },
+  {
+    "id": "axolotl-frog",
+    "a": "axolotl",
+    "b": "frog",
+    "name": "카페 잠수회원",
+    "line": "물에 들어와도 아이스요.",
+    "description": "물안경을 내리고도 커피 잔만큼은 머리 위로 번쩍 지켜요.",
+    "ability": "음료 절대 방수",
+    "scene": "Frog-legged gilled creature ducking face into a tiny tub while one comically long arm holds iced coffee safely far overhead."
+  },
+  {
+    "id": "axolotl-ghost",
+    "a": "axolotl",
+    "b": "ghost",
+    "name": "영혼까지 방수",
+    "line": "젖을 몸은 없는데 챙겼어요.",
+    "description": "투명한 몸에 비옷을 단단히 여미느라 출발이 늦었어요.",
+    "ability": "빈틈 없는 허공 보호",
+    "scene": "Translucent gilled ghost struggling to fasten an oversized raincoat around its see-through torso, goggles fogged with determination."
+  },
+  {
+    "id": "axolotl-hamster",
+    "a": "axolotl",
+    "b": "hamster",
+    "name": "물놀이 도시락통",
+    "line": "이건 튜브가 아니라 점심이에요.",
+    "description": "볼주머니가 튜브보다 커져 물에 얼굴만 동동 떠요.",
+    "ability": "볼주머니 부력 확보",
+    "scene": "Hamster-eared gilled creature with gigantic snack-filled cheeks functioning as two floats, tiny body dangling between them and crumbs on lips."
+  },
+  {
+    "id": "axolotl-jelly",
+    "a": "axolotl",
+    "b": "jelly",
+    "name": "흘러내린 준비성",
+    "line": "장비는 다 맞는데 몸이 새요.",
+    "description": "물안경과 튜브 사이로 말랑한 몸이 쭉 흘러내리고 있어요.",
+    "ability": "장비 틈새 통과",
+    "scene": "Gilled jelly creature slowly oozing through a firmly inflated swim ring, goggles sliding down one continuous elastic face."
+  },
+  {
+    "id": "axolotl-mushroom",
+    "a": "axolotl",
+    "b": "mushroom",
+    "name": "비 오는 수영장",
+    "line": "물에 젖을까 봐 우산 챙겼어요.",
+    "description": "수영할 준비를 끝내고 우산으로 물방울을 필사적으로 막아요.",
+    "ability": "젖지 않는 물놀이",
+    "scene": "Mushroom-capped gilled creature in a swim ring holding an umbrella low against splashes from its own tiny kicking feet."
+  },
+  {
+    "id": "axolotl-penguin",
+    "a": "axolotl",
+    "b": "penguin",
+    "name": "입수 전 결재",
+    "line": "뛰어들 준비는 결재 중입니다.",
+    "description": "다이빙 자세로 굳어 선 채 방수 서류에 도장만 찍어요.",
+    "ability": "입수 직전 무한 승인",
+    "scene": "Penguin-bodied gilled creature frozen in a dramatic diving pose over a tiny puddle, stamping an enormous waterproof checklist midair."
+  },
+  {
+    "id": "axolotl-pepe",
+    "a": "axolotl",
+    "b": "pepe",
+    "name": "울어도 수위 상승",
+    "line": "감동받을수록 깊어집니다.",
+    "description": "출발 응원에 감격해 울었더니 자기 대야가 가득 찼어요.",
+    "ability": "눈물 셀프 급수",
+    "scene": "Gilled broad-lipped green creature giving thumbs-up while comically huge tears fill the small bath holding its own feet."
+  },
+  {
+    "id": "axolotl-potato",
+    "a": "axolotl",
+    "b": "potato",
+    "name": "정시 입수 감자",
+    "line": "물놀이도 출석부터.",
+    "description": "튜브를 낀 채 출근 도장을 찍으려다 팔이 책상에 닿지 않아요.",
+    "ability": "수영복 근태 관리",
+    "scene": "Potato-shaped gilled creature in a necktie and bulky float, stretching a tiny arm toward a time clock just beyond reach."
+  },
+  {
+    "id": "axolotl-raccoon",
+    "a": "axolotl",
+    "b": "raccoon",
+    "name": "장비 세탁 원정",
+    "line": "떠나기 전에 한 번만 더 빨게요.",
+    "description": "물안경을 닦다가 비누 거품이 본체보다 높이 쌓였어요.",
+    "ability": "출발 전 거품 산맥",
+    "scene": "Masked gilled creature scrubbing goggles in a basin so vigorously that a huge foam tower buries its torso, only earnest face and tail showing."
+  },
+  {
+    "id": "axolotl-sloth",
+    "a": "axolotl",
+    "b": "sloth",
+    "name": "둥둥 출발 대기",
+    "line": "마음은 이미 한 바퀴 돌았어.",
+    "description": "튜브 안에 베개를 맞춰 넣고 편안한 출발 자세를 연구해요.",
+    "ability": "부유형 휴식 확보",
+    "scene": "Sloth-marked gilled creature meticulously fluffing a pillow inside a float ring, already reclining with one sleepy eye open."
+  },
+  {
+    "id": "axolotl-snail",
+    "a": "axolotl",
+    "b": "snail",
+    "name": "등껍질 워터파크",
+    "line": "이사 갈 때 수영장도 갑니다.",
+    "description": "등의 작은 풀장을 지키느라 한 걸음마다 수평을 재요.",
+    "ability": "수위 유지 보행",
+    "scene": "Gilled snail creature carrying a shell-shaped pool on its back, balancing a tiny spirit level while taking a painfully careful step."
+  },
+  {
+    "id": "axolotl-squidward",
+    "a": "axolotl",
+    "b": "squidward",
+    "name": "수영 금지 수영부",
+    "line": "입수는 했고 말은 걸지 마요.",
+    "description": "작은 풀장에 혼자 있으려고 촉수로 차단봉을 세웠어요.",
+    "ability": "개인 수역 확보",
+    "scene": "Long-nosed gilled tentacled creature reclining in a tiny bath, attached tentacles stretching a velvet barrier around its own personal water space."
+  },
+  {
+    "id": "bird-bird",
+    "a": "bird",
+    "b": "bird",
+    "name": "앙코르 셀프 결제",
+    "line": "박수가 없어서 제가 칩니다.",
+    "description": "한쪽 날개로 인사하고 다른 날개로 자기 공연에 박수를 쳐요.",
+    "ability": "자급자족 기립박수",
+    "scene": "Extra-fluffy single bird taking a grand bow while one absurdly long wing claps against its own raised foot, smug performer expression."
+  },
+  {
+    "id": "bird-broccoli",
+    "a": "bird",
+    "b": "broccoli",
+    "name": "응원하다 만개",
+    "line": "박수 치다 머리가 커졌어요.",
+    "description": "응원할수록 브로콜리 볏이 부풀어 얼굴을 덮어 버려요.",
+    "ability": "흥분성 머리 증식",
+    "scene": "Single feathered broccoli creature wildly shaking pom-pom wings, its huge expanding broccoli crest folding over its face."
+  },
+  {
+    "id": "bird-capybara",
+    "a": "bird",
+    "b": "capybara",
+    "name": "잔잔한 헤드뱅잉",
+    "line": "기분은 락인데 몸은 온천.",
+    "description": "몸은 물에 가만히 담그고 머리 위 귤만 리듬 있게 튕겨요.",
+    "ability": "귤만 앙코르",
+    "scene": "Capybara-bird creature serenely sitting in a tiny tub, headbanging just enough to launch its forehead orange high above its feather crest."
+  },
+  {
+    "id": "bird-cat",
+    "a": "bird",
+    "b": "cat",
+    "name": "관객 없는 단독공연",
+    "line": "혼자 놀아도 티켓은 매진.",
+    "description": "상자 무대에서 꼬리를 마이크 삼아 진지하게 열창해요.",
+    "ability": "꼬리 마이크 독점",
+    "scene": "Cat-bird creature on a tiny cardboard stage singing intensely into its own curled striped tail like a microphone, tiny wings spread."
+  },
+  {
+    "id": "bird-cucumber",
+    "a": "bird",
+    "b": "cucumber",
+    "name": "기립만 하는 박수",
+    "line": "일어나긴 했습니다.",
+    "description": "길쭉한 몸은 뻣뻣하게 세우고 너무 짧은 날개만 허우적거려요.",
+    "ability": "박수 도달 실패",
+    "scene": "Tall cucumber-bird creature standing bolt upright, tiny feather wings straining to clap but unable to meet around its wide chest."
+  },
+  {
+    "id": "bird-dragon",
+    "a": "bird",
+    "b": "dragon",
+    "name": "생일초 과몰입",
+    "line": "촛불을 끄랬지 켜랬니.",
+    "description": "생일 축하 노래에 신나서 초 하나를 거대한 불꽃으로 키웠어요.",
+    "ability": "축하 열기 과다",
+    "scene": "Feathered dragon singing with puffed cheeks at a tiny cupcake, accidentally breathing an absurdly tall single candle flame, delighted unaware eyes."
+  },
+  {
+    "id": "bird-duck",
+    "a": "bird",
+    "b": "duck",
+    "name": "빵 터진 합창",
+    "line": "후렴은 씹고 넘어갈게요.",
+    "description": "빵을 입에 문 채 고음을 내다가 부스러기가 폭죽처럼 튀어요.",
+    "ability": "빵가루 고음 발사",
+    "scene": "Round duck-bird hybrid belting a high note with bread stuffed in its beak, breadcrumbs spraying in a fan like confetti."
+  },
+  {
+    "id": "bird-frog",
+    "a": "bird",
+    "b": "frog",
+    "name": "응원은 테이크아웃",
+    "line": "커피 식기 전에 한 곡만.",
+    "description": "커피를 마이크로 착각하고 노래하다 뚜껑에 입이 붙었어요.",
+    "ability": "뚜껑 밀착 라이브",
+    "scene": "Frog-legged bird gripping a takeaway coffee cup like a microphone, beak comically suctioned to its lid while wing gestures dramatically."
+  },
+  {
+    "id": "bird-ghost",
+    "a": "bird",
+    "b": "ghost",
+    "name": "투명한 존재감",
+    "line": "조용히 사라지는 건 못 해요.",
+    "description": "몸은 투명한데 반짝이 망토가 너무 커서 어디 있는지 다 보여요.",
+    "ability": "은신 실패 앙코르",
+    "scene": "Translucent feathered ghost attempting to hide behind a tiny curtain while an enormous glittery cape attached to its neck fans out conspicuously."
+  },
+  {
+    "id": "bird-hamster",
+    "a": "bird",
+    "b": "hamster",
+    "name": "볼빵빵 떼창",
+    "line": "가사보다 간식이 먼저 나와요.",
+    "description": "노래를 시작할 때마다 볼주머니에서 팝콘이 한 알씩 튀어요.",
+    "ability": "팝콘 박자 맞추기",
+    "scene": "Hamster-bird creature singing from enormously stuffed cheeks, popcorn kernels bouncing out of its tiny beak in a rhythmic arc."
+  },
+  {
+    "id": "bird-jelly",
+    "a": "bird",
+    "b": "jelly",
+    "name": "박수 치다 합체",
+    "line": "손뼉 한 번에 손이 붙었어.",
+    "description": "신나게 손뼉을 치다가 말랑한 날개 두 개가 한 덩어리가 됐어요.",
+    "ability": "박수 후 자체 접착",
+    "scene": "Jelly-bodied bird staring deadpan at its two soft wings stuck together into one big clapping blob above its head."
+  },
+  {
+    "id": "bird-mushroom",
+    "a": "bird",
+    "b": "mushroom",
+    "name": "우산 콘서트",
+    "line": "비 오면 음향이 더 좋아요.",
+    "description": "우산 안쪽에 머리를 넣고 자기 목소리의 울림을 즐겨요.",
+    "ability": "우산 속 단독 홀",
+    "scene": "Mushroom-capped bird shoving its face deep into an upturned umbrella used as an enormous acoustic horn, feet planted like a singer."
+  },
+  {
+    "id": "bird-penguin",
+    "a": "bird",
+    "b": "penguin",
+    "name": "안전한 슬램",
+    "line": "헬멧 썼으니 신나도 됩니다.",
+    "description": "안전모를 꾹 눌러쓰고 작은 탬버린 하나에 전력을 다해 춤춰요.",
+    "ability": "보호 장비 댄스",
+    "scene": "Helmeted penguin-bird creature doing an exaggerated sideways dance kick, tiny tambourine held formally in one wing and utterly serious face."
+  },
+  {
+    "id": "bird-pepe",
+    "a": "bird",
+    "b": "pepe",
+    "name": "울먹이는 앙코르",
+    "line": "마지막 곡만 여섯 번째야.",
+    "description": "끝인사를 하며 울다가 날개로 다시 시작 신호를 보내요.",
+    "ability": "퇴장 무한 연장",
+    "scene": "Broad-lipped green bird waving farewell with tears streaming while its opposite wing secretly conducts another enthusiastic musical cue."
+  },
+  {
+    "id": "bird-potato",
+    "a": "bird",
+    "b": "potato",
+    "name": "정시 퇴근 아이돌",
+    "line": "앵콜은 근무시간에 해주세요.",
+    "description": "무대 인사를 하면서도 발은 이미 출근 카드 쪽으로 향해 있어요.",
+    "ability": "퇴근 박자 고정",
+    "scene": "Potato-bird in necktie taking a dramatic stage bow, one long foot secretly reaching to punch a time card beside its tiny podium."
+  },
+  {
+    "id": "bird-raccoon",
+    "a": "bird",
+    "b": "raccoon",
+    "name": "간식 배급 콘서트",
+    "line": "후렴 때 한 입씩 받으세요.",
+    "description": "지휘봉 대신 바나나를 들고 간식 통을 악보처럼 펼쳤어요.",
+    "ability": "간식 박자 배급",
+    "scene": "Masked bird-raccoon conducting very seriously with a banana baton, snack boxes arranged like an unfolding music score beneath its wings."
+  },
+  {
+    "id": "bird-sloth",
+    "a": "bird",
+    "b": "sloth",
+    "name": "인싸 절전모드",
+    "line": "너희 너무 좋아. 이제 가.",
+    "description": "흥이 오르면 날개부터 움직이는 새와 자기 속도를 지키는 나무늘보가 만났어요. 몸은 이미 퇴근했는데 날개 하나가 아직 앙코르를 받고 있습니다. 즐거웠다는 말과 쉬고 싶다는 말은 같이 할 수 있어요.",
+    "ability": "날개 단독 영업",
+    "scene": "One bird-sloth hybrid pancaked flat belly-down in exhaustion, sloth eye-mask markings, cream feathers, tiny orange beak and claws, tousled purple feather tuft. Half-lidded eyes with tiny pupils utterly vacant. One absurdly long feathered arm-wing still held straight up waving a mint glowstick enthusiastically, rest of body collapsed limp. One connected body. No standing smile, no hearts. Dominant joke body has shut down but social wing still partying."
+  },
+  {
+    "id": "bird-snail",
+    "a": "bird",
+    "b": "snail",
+    "name": "늦게 오는 앙코르",
+    "line": "공연은 끝났고 이제 도착.",
+    "description": "등껍질을 공연장처럼 꾸미느라 자기 입장도 늦어졌어요.",
+    "ability": "이동식 앙코르 홀",
+    "scene": "Bird-snail with shell shaped as a little concert stage, dragging a long rolled entrance carpet tangled around its own low foot, eager expression."
+  },
+  {
+    "id": "bird-squidward",
+    "a": "bird",
+    "b": "squidward",
+    "name": "표정 없는 떼창",
+    "line": "신난 거 맞으니까 그만 물어봐.",
+    "description": "입은 일자로 다문 채 촉수 여섯 개가 응원 도구를 흔들어요.",
+    "ability": "무표정 다중 응원",
+    "scene": "Long-nosed feathered tentacled creature with flat unimpressed face, attached tentacles enthusiastically waving matching tiny glowsticks in every direction."
+  },
+  {
+    "id": "broccoli-broccoli",
+    "a": "broccoli",
+    "b": "broccoli",
+    "name": "자기계발 숲",
+    "line": "성장했는데 문을 못 나가요.",
+    "description": "자신감 있게 자란 머리가 작은 문틀보다 커져 꼼짝 못 해요.",
+    "ability": "성장 한도 초과",
+    "scene": "One broccoli creature whose gigantic branching crown is wedged in a tiny freestanding doorway, muscular little arms confidently giving thumbs-up below."
+  },
+  {
+    "id": "broccoli-capybara",
+    "a": "broccoli",
+    "b": "capybara",
+    "name": "온천 헬스장",
+    "line": "쉬는 김에 한 세트만.",
+    "description": "뜨거운 물에 앉아 머리 위 귤을 덤벨처럼 들어 올려요.",
+    "ability": "휴식 중 귤 프레스",
+    "scene": "Capybara-broccoli creature relaxed in a tiny bath but solemnly lifting an absurdly small orange like a heavy dumbbell, shaking arm."
+  },
+  {
+    "id": "broccoli-cat",
+    "a": "broccoli",
+    "b": "cat",
+    "name": "탈출 도우미 감금",
+    "line": "나가는 법 알려주다 제가 꼈어요.",
+    "description": "상자 탈출을 시범 보이다 풍성한 머리가 입구에 걸렸어요.",
+    "ability": "시범 중 탈출 대기",
+    "scene": "Broccoli-crowned cat creature stuck halfway out of a tiny cardboard box, confident paw pointing forward while huge crown jams the opening."
+  },
+  {
+    "id": "broccoli-cucumber",
+    "a": "broccoli",
+    "b": "cucumber",
+    "name": "채소계 피지컬",
+    "line": "말은 짧고 준비운동은 길어요.",
+    "description": "길쭉한 몸에 스트레칭 밴드를 걸었다가 스스로 접혔어요.",
+    "ability": "자체 반 접기",
+    "scene": "Tall cucumber-broccoli creature bent into a U by a resistance band hooked beneath its tiny feet and over its leafy head, stoic eyes."
+  },
+  {
+    "id": "broccoli-dragon",
+    "a": "broccoli",
+    "b": "dragon",
+    "name": "열정의 찜기",
+    "line": "응원 좀 했더니 익었네.",
+    "description": "힘찬 불꽃 응원에 자기 머리에서 김이 모락모락 올라요.",
+    "ability": "열정 셀프 찜",
+    "scene": "Broccoli-crowned dragon passionately breathing a little fire upward, its own leafy crown steaming like freshly cooked vegetables, proud thumbs-up."
+  },
+  {
+    "id": "broccoli-duck",
+    "a": "broccoli",
+    "b": "duck",
+    "name": "실전 빵 코치",
+    "line": "먹는 자세부터 고쳐드릴게요.",
+    "description": "빵 한 조각을 먹으려고 진지하게 턱 스트레칭을 하고 있어요.",
+    "ability": "한입 자세 교정",
+    "scene": "Duck-billed broccoli creature treating a bread slice like athletic equipment, stretching its beak with both hands before a serious bite."
+  },
+  {
+    "id": "broccoli-frog",
+    "a": "broccoli",
+    "b": "frog",
+    "name": "걷기만 만 보째",
+    "line": "카페는 코앞인데 준비운동 중.",
+    "description": "커피가 바로 옆인데 제자리걸음을 너무 열심히 해서 바닥이 파였어요.",
+    "ability": "제자리 원정 완료",
+    "scene": "Frog-broccoli creature power-marching in place in a tiny deep groove, reaching for a coffee cup just beyond the groove with determined eyes."
+  },
+  {
+    "id": "broccoli-ghost",
+    "a": "broccoli",
+    "b": "ghost",
+    "name": "실체 없는 코치",
+    "line": "시범은 완벽한데 잡히질 않네.",
+    "description": "운동 시범을 보이는데 덤벨이 투명한 손을 계속 통과해요.",
+    "ability": "중량 영점 유지",
+    "scene": "Translucent broccoli ghost flexing impressively while a tiny dumbbell falls straight through its transparent palm, proud face oblivious."
+  },
+  {
+    "id": "broccoli-hamster",
+    "a": "broccoli",
+    "b": "hamster",
+    "name": "보급형 헬스장",
+    "line": "단백질보다 간식이 무거워.",
+    "description": "양볼을 덤벨처럼 들어 올리며 간식 무게로 운동해요.",
+    "ability": "볼주머니 중량 운동",
+    "scene": "Hamster-broccoli creature lifting its own enormous stuffed cheeks with little arms like two heavy barbells, solemn workout grimace."
+  },
+  {
+    "id": "broccoli-jelly",
+    "a": "broccoli",
+    "b": "jelly",
+    "name": "탄력적 응원",
+    "line": "할 수 있어. 모양은 몰라도.",
+    "description": "응원하며 팔을 들 때마다 몸이 늘어나 천장 없는 기둥이 돼요.",
+    "ability": "응원 신장 갱신",
+    "scene": "Jelly-broccoli creature stretching both cheering arms so high that its single torso becomes a ridiculously thin wobbly column, tiny feet planted."
+  },
+  {
+    "id": "broccoli-mushroom",
+    "a": "broccoli",
+    "b": "mushroom",
+    "name": "과잉 친절 파라솔",
+    "line": "햇빛 한 줄도 못 들어옵니다.",
+    "description": "우산을 너무 넓게 펴서 자기 시야까지 전부 가려 버렸어요.",
+    "ability": "그늘 완전 점유",
+    "scene": "Broccoli-mushroom creature proudly holding a comically enormous umbrella so low that it entirely covers its face, only a thumbs-up and feet visible."
+  },
+  {
+    "id": "broccoli-penguin",
+    "a": "broccoli",
+    "b": "penguin",
+    "name": "빙판 출발 코치",
+    "line": "밀어줄게. 나도 같이 밀렸네.",
+    "description": "출발 자세를 가르치려다 자기 발이 양옆으로 쫙 벌어졌어요.",
+    "ability": "빙판 강제 스트레칭",
+    "scene": "Helmeted broccoli-penguin on a tiny ice tile, feet sliding into an absurdly wide split while one flipper maintains a confident instructional thumbs-up."
+  },
+  {
+    "id": "broccoli-pepe",
+    "a": "broccoli",
+    "b": "pepe",
+    "name": "응원 과부하",
+    "line": "괜찮아를 너무 세게 말했어.",
+    "description": "양손 엄지를 세운 채 감동에 부푼 볼이 머리보다 커졌어요.",
+    "ability": "격려 압력 상승",
+    "scene": "Broad-lipped broccoli creature giving two huge thumbs-up, tearful cheeks puffed to balloon size from holding an overly emotional cheer."
+  },
+  {
+    "id": "broccoli-potato",
+    "a": "broccoli",
+    "b": "potato",
+    "name": "실행력 과적",
+    "line": "할 일은 줄었는데 몸이 안 보여.",
+    "description": "완료 표시를 하나씩 붙이다 스티커에 몸이 전부 덮였어요.",
+    "ability": "완료 스티커 갑옷",
+    "scene": "Potato-broccoli in necktie completely buried under oversized checkmark stickers, tiny proud eyes peering through and one hand adding another."
+  },
+  {
+    "id": "broccoli-raccoon",
+    "a": "broccoli",
+    "b": "raccoon",
+    "name": "도움이 너무 많아",
+    "line": "하나씩 하랬는데 전부 들었어.",
+    "description": "세탁 바구니를 전부 안았다가 눈 위로 빨랫감이 쌓였어요.",
+    "ability": "친절 적재 한도 초과",
+    "scene": "Masked broccoli creature carrying an impossible leaning tower of laundry baskets, peeking sideways with a confident thumbs-up despite wobbling knees."
+  },
+  {
+    "id": "broccoli-sloth",
+    "a": "broccoli",
+    "b": "sloth",
+    "name": "스트레칭 수면법",
+    "line": "몸 풀다가 마음까지 풀렸어.",
+    "description": "기지개를 켠 자세 그대로 편안하게 잠들어 버렸어요.",
+    "ability": "기지개 자세 고정",
+    "scene": "Sloth-marked broccoli creature asleep in a comically elaborate standing stretch, one foot balanced on its own leafy head and peaceful face."
+  },
+  {
+    "id": "broccoli-snail",
+    "a": "broccoli",
+    "b": "snail",
+    "name": "등껍질 트레이너",
+    "line": "등 운동은 집을 들면 됩니다.",
+    "description": "등껍질을 번쩍 들려고 힘을 줬더니 몸만 쭉 늘어났어요.",
+    "ability": "주거 중량 도전",
+    "scene": "Broccoli-snail bracing tiny arms to lift its own enormous attached shell like a weight, soft torso stretching comically while shell stays grounded."
+  },
+  {
+    "id": "broccoli-squidward",
+    "a": "broccoli",
+    "b": "squidward",
+    "name": "조용한 응원석",
+    "line": "응원은 할게. 소리는 빼고.",
+    "description": "촉수로 큰 엄지 모양을 만들고 표정 없이 흔들어요.",
+    "ability": "무음 응원 증폭",
+    "scene": "Long-nosed broccoli-tentacle creature arranging attached tentacles into one giant thumbs-up above its head, absolutely impassive expression."
+  },
+  {
+    "id": "capybara-capybara",
+    "a": "capybara",
+    "b": "capybara",
+    "name": "온천 지분 백 퍼",
+    "line": "여기가 제 자리이고 저기도요.",
+    "description": "작은 대야에 너무 편하게 퍼져 손발이 사방으로 넘쳐요.",
+    "ability": "휴식 면적 확장",
+    "scene": "Extra-wide single capybara sprawled over a ridiculously tiny bath, relaxed limbs flowing over all four sides, perfectly balanced orange on head."
+  },
+  {
+    "id": "capybara-cat",
+    "a": "capybara",
+    "b": "cat",
+    "name": "느긋한 급발진",
+    "line": "급한 건 상자뿐입니다.",
+    "description": "상자에 바퀴를 달고 달리는데 본체는 차분하게 차를 마셔요.",
+    "ability": "고속 평온 유지",
+    "scene": "Cat-capybara reclining serenely in a tiny cardboard cart with huge spinning wheels, carefully sipping tea while tail streams backward."
+  },
+  {
+    "id": "capybara-cucumber",
+    "a": "capybara",
+    "b": "cucumber",
+    "name": "수분 충전 완료",
+    "line": "충전은 됐는데 뽑기 싫어.",
+    "description": "길쭉한 몸을 컵에 담그고 빨대처럼 느긋하게 기대 있어요.",
+    "ability": "수분 상시 대기",
+    "scene": "Tall cucumber-capybara creature wedged lazily in a small drinking glass like a giant cucumber stick, short arms folded over rim, sleepy eyes."
+  },
+  {
+    "id": "capybara-dragon",
+    "a": "capybara",
+    "b": "dragon",
+    "name": "미지근한 불꽃",
+    "line": "열정은 적정 온도로 주세요.",
+    "description": "아주 작은 불꽃으로 자기 찻잔만 조심스럽게 데워요.",
+    "ability": "열정 온도 조절",
+    "scene": "Capybara-dragon with oversized horns delicately breathing a minuscule flame under one tiny teacup, immense concentration on a trivial warm drink."
+  },
+  {
+    "id": "capybara-duck",
+    "a": "capybara",
+    "b": "duck",
+    "name": "빵 위의 휴가",
+    "line": "떠내려가면 여행이죠.",
+    "description": "토스트를 뗏목으로 타고 누워 가장자리를 조금씩 먹어요.",
+    "ability": "식용 휴양지 축소",
+    "scene": "Capybara-duck lying peacefully on a toast raft in a tiny puddle, nibbling the raft corner while body overhangs its shrinking edges."
+  },
+  {
+    "id": "capybara-frog",
+    "a": "capybara",
+    "b": "frog",
+    "name": "카페인 무효화",
+    "line": "세 잔째인데 마음은 잔잔해.",
+    "description": "빈 커피 컵을 높이 쌓고 그 안에서 고요하게 쉬어요.",
+    "ability": "각성 대신 안정",
+    "scene": "Frog-capybara serenely asleep inside a precarious throne of empty coffee cups, one tiny fresh espresso balanced on its nose."
+  },
+  {
+    "id": "capybara-ghost",
+    "a": "capybara",
+    "b": "ghost",
+    "name": "존재감 반신욕",
+    "line": "몸의 절반은 이미 쉬러 갔어요.",
+    "description": "대야 아래로 투명한 몸이 빠져나가는데 얼굴은 평온해요.",
+    "ability": "수면 아래 은신",
+    "scene": "Translucent capybara-ghost reclining in a tiny bath while its lower ghost body drifts straight through the bottom in one continuous soft tail."
+  },
+  {
+    "id": "capybara-hamster",
+    "a": "capybara",
+    "b": "hamster",
+    "name": "귤 비상금",
+    "line": "머리에 하나. 볼에 열두 개.",
+    "description": "머리 위 귤 하나만 가진 척하지만 볼은 양쪽으로 한참 부풀었어요.",
+    "ability": "간식 은닉 평정심",
+    "scene": "Capybara-hamster with gigantic round stuffed cheeks and one innocent orange balanced on its head, tiny paws folded calmly over belly."
+  },
+  {
+    "id": "capybara-jelly",
+    "a": "capybara",
+    "b": "jelly",
+    "name": "휴식 구역 확대",
+    "line": "좀 누웠더니 방이 됐네.",
+    "description": "편하게 퍼진 몸이 자기 쿠션보다 열 배 커졌어요.",
+    "ability": "말랑한 면적 독점",
+    "scene": "Capybara-jelly creature spread into an enormous flat pancake around a tiny cushion, single sleepy face in center and tiny limbs at distant edges."
+  },
+  {
+    "id": "capybara-mushroom",
+    "a": "capybara",
+    "b": "mushroom",
+    "name": "그늘 예약석",
+    "line": "햇빛 오면 제가 옮길게요.",
+    "description": "몸은 가만히 두고 버섯 갓만 비스듬히 돌려 그늘을 맞춰요.",
+    "ability": "고개만 피서",
+    "scene": "Capybara with oversized mushroom cap tilted like an adjustable parasol, tiny hands rotating the cap while the rest reclines immovably in a little chair."
+  },
+  {
+    "id": "capybara-penguin",
+    "a": "capybara",
+    "b": "penguin",
+    "name": "빙판 스파 회원",
+    "line": "미끄러진 김에 눕겠습니다.",
+    "description": "안전모를 쓴 채 빙판에 누워 자기 발자국을 베개로 삼아요.",
+    "ability": "낙상 후 휴식 전환",
+    "scene": "Helmeted capybara-penguin lying blissfully on one tiny ice slab, feet still raised from a slip, folded flippers supporting head like a spa pose."
+  },
+  {
+    "id": "capybara-pepe",
+    "a": "capybara",
+    "b": "pepe",
+    "name": "평온한 오열",
+    "line": "행복해서 우는데 좀 넘치네.",
+    "description": "눈물로 대야가 넘쳐도 느긋한 엄지 응원은 그대로예요.",
+    "ability": "눈물 온천 개장",
+    "scene": "Broad-lipped capybara-green creature peacefully giving thumbs-up as huge happy tears overflow its small bath, serene half-closed eyes."
+  },
+  {
+    "id": "capybara-potato",
+    "a": "capybara",
+    "b": "potato",
+    "name": "휴식도 체크 완료",
+    "line": "아무것도 안 하기, 완료.",
+    "description": "누운 채 체크리스트 마지막 칸을 찍고 펜까지 내려놓아요.",
+    "ability": "휴식 일정 사수",
+    "scene": "Potato-capybara in loose necktie reclining on a tiny mat, solemnly stamping one enormous checkmark onto a blank rest card balanced on belly."
+  },
+  {
+    "id": "capybara-raccoon",
+    "a": "capybara",
+    "b": "raccoon",
+    "name": "세탁 중 휴식",
+    "line": "빨래 기다리다 제가 불었어요.",
+    "description": "빨랫감 대신 자기 꼬리를 대야에 담그고 느긋하게 기다려요.",
+    "ability": "꼬리 불림 모드",
+    "scene": "Masked capybara with striped raccoon tail soaking its own tail in a washbasin, leaning contentedly on an oversized laundry timer."
+  },
+  {
+    "id": "capybara-sloth",
+    "a": "capybara",
+    "b": "sloth",
+    "name": "기다림의 왕좌",
+    "line": "일어날 타이밍을 기다리는 중.",
+    "description": "알람을 베개로 삼았더니 진동이 자장가가 됐어요.",
+    "ability": "알람 마사지 수면",
+    "scene": "Capybara-sloth sleeping on a comically oversized vibrating alarm clock like a pillow, tiny relaxed smile and loosely draped limbs."
+  },
+  {
+    "id": "capybara-snail",
+    "a": "capybara",
+    "b": "snail",
+    "name": "온천 이삿짐",
+    "line": "물 식기 전에 도착하면 돼.",
+    "description": "등껍질 대야에 몸을 반쯤 담근 채 아주 천천히 움직여요.",
+    "ability": "휴식 상태 이동",
+    "scene": "Capybara-snail with shell forming a tiny hot tub, twisting its single torso backward to soak while one low snail foot inches forward."
+  },
+  {
+    "id": "capybara-squidward",
+    "a": "capybara",
+    "b": "squidward",
+    "name": "혼자만의 만석",
+    "line": "자리 있는데 자리는 없어요.",
+    "description": "작은 의자 하나에 촉수를 전부 올려 빈자리를 없앴어요.",
+    "ability": "개인 공간 전석 예약",
+    "scene": "Capybara-faced long-nosed tentacled creature on one tiny chair, attached tentacles occupying every edge and armrest, flat content expression."
+  },
+  {
+    "id": "cat-cat",
+    "a": "cat",
+    "b": "cat",
+    "name": "상자 부동산 재벌",
+    "line": "들어갈 몸은 하나. 집은 여덟.",
+    "description": "몸 하나를 여러 상자에 걸쳐 눕혀 전부 자기 자리로 만들어요.",
+    "ability": "다중 상자 점유",
+    "scene": "Single extra-fluffy cat stretched absurdly long across a stack of differently sized cardboard boxes, one connected body lazily occupying every box."
+  },
+  {
+    "id": "cat-cucumber",
+    "a": "cat",
+    "b": "cucumber",
+    "name": "놀라지 않은 척",
+    "line": "별로 안 놀랐어요. 천장만 좀.",
+    "description": "길쭉한 몸이 용수철처럼 솟았는데 표정은 태연해요.",
+    "ability": "수직 무표정 점프",
+    "scene": "Cucumber-bodied cat stretched vertically like a spring in a huge startled leap, tail rigid and tiny pupils but perfectly straight mouth."
+  },
+  {
+    "id": "cat-dragon",
+    "a": "cat",
+    "b": "dragon",
+    "name": "배송 중 점화",
+    "line": "상자에 날개 달면 빠르잖아.",
+    "description": "상자 뒤에 붙인 불꽃 추진력이 너무 세서 수염이 뒤로 날려요.",
+    "ability": "상자 초고속 배송",
+    "scene": "Cat-dragon crouched in a tiny cardboard rocket-cart, attached tail breathing a small rear flame while cheeks and whiskers stretch backward from speed."
+  },
+  {
+    "id": "cat-duck",
+    "a": "cat",
+    "b": "duck",
+    "name": "빵 상자 세입자",
+    "line": "집을 조금 먹었을 뿐인데.",
+    "description": "식빵 상자에 들어가 안쪽부터 먹다가 바닥만 남았어요.",
+    "ability": "먹을 수 있는 월세",
+    "scene": "Cat-duck hybrid sitting smugly in a hollow loaf like a box, large bite marks collapsing its bread walls around one connected body."
+  },
+  {
+    "id": "cat-frog",
+    "a": "cat",
+    "b": "frog",
+    "name": "산책은 핑계",
+    "line": "운동했어요. 카페까지.",
+    "description": "작은 상자를 킥보드처럼 밀면서 커피 한 방울도 안 흘리려 해요.",
+    "ability": "커피 수평 질주",
+    "scene": "Frog-legged cat propelling a tiny cardboard scooter with one enormous hopping foot, torso rigidly balancing an iced coffee held at perfect level."
+  },
+  {
+    "id": "cat-ghost",
+    "a": "cat",
+    "b": "ghost",
+    "name": "택배 없는 언박싱",
+    "line": "들어갔는데 바닥이 없더라.",
+    "description": "상자에 숨었는데 투명한 몸이 바닥 아래로 주르륵 나와요.",
+    "ability": "포장 통과 은신",
+    "scene": "Translucent cat-ghost attempting to curl inside a cardboard box, its continuous ghost tail and belly drooping through the solid bottom."
+  },
+  {
+    "id": "cat-hamster",
+    "a": "cat",
+    "b": "hamster",
+    "name": "볼주머니 택배",
+    "line": "포장재까지 챙긴 건 아니고.",
+    "description": "상자에 들어가려고 간식을 볼에 넣었더니 얼굴만 못 들어가요.",
+    "ability": "입주 직전 부피 초과",
+    "scene": "Hamster-cheeked cat with absurdly swollen cheeks trying to squeeze head into a tiny box, hindquarters already inside and paws pushing cheeks inward."
+  },
+  {
+    "id": "cat-jelly",
+    "a": "cat",
+    "b": "jelly",
+    "name": "상자 규격 준수",
+    "line": "맞는 상자가 없으면 맞추죠.",
+    "description": "너무 작은 상자에 들어가느라 몸이 네모난 젤리로 굳었어요.",
+    "ability": "배송 규격 변신",
+    "scene": "Jelly-cat squeezed into a ridiculously tiny open cardboard box, its elastic body rising as a tall perfect cube with ears bent flat and deadpan face."
+  },
+  {
+    "id": "cat-mushroom",
+    "a": "cat",
+    "b": "mushroom",
+    "name": "우산 안 펴지는 집",
+    "line": "비는 막았고 출구도 막았어.",
+    "description": "상자 안에서 버섯 우산을 폈더니 얼굴과 발만 남았어요.",
+    "ability": "실내 우산 만개",
+    "scene": "Mushroom-capped cat wedged in a small box, enormous mushroom cap expanded like an umbrella inside it and bowing the cardboard walls outward."
+  },
+  {
+    "id": "cat-penguin",
+    "a": "cat",
+    "b": "penguin",
+    "name": "코너링 과신",
+    "line": "헬멧 썼다고 운전이 되진 않네.",
+    "description": "상자 썰매를 급하게 돌리다가 안전모만 반듯하게 남았어요.",
+    "ability": "상자 드리프트",
+    "scene": "Helmeted penguin-cat leaning at an absurd angle in a tiny skidding box sled, tail counterbalancing while helmet stays perfectly upright."
+  },
+  {
+    "id": "cat-pepe",
+    "a": "cat",
+    "b": "pepe",
+    "name": "상자 속 응원단",
+    "line": "안 나가도 응원은 합니다.",
+    "description": "상자 밖으로 엄지와 커다란 눈만 빼꼼 내밀고 있어요.",
+    "ability": "비대면 엄지 지원",
+    "scene": "Broad-lipped green cat tucked entirely inside a small box, only huge watery eyes and an oversized thumbs-up paw protruding through the lid gap."
+  },
+  {
+    "id": "cat-potato",
+    "a": "cat",
+    "b": "potato",
+    "name": "계획적 탈주범",
+    "line": "계획대로 안 할 계획까지 세웠다.",
+    "description": "순서를 챙기는 감자와 샛길을 찾는 고양이가 만났어요. 계획표를 꼼꼼하게 작성한 뒤 종이비행기로 접었습니다. 목적지는 바뀌어도 출발은 정확해요.",
+    "ability": "체크리스트 이륙",
+    "scene": "A potato-cat hybrid: potato-shaped ochre body with potato speckles, purple cat ears and striped tail, tiny necktie. Riding a giant paper airplane visibly folded from a checklist with simple checkmarks (no words). Body leaning forward at alarming speed but tiny narrow eyes and bureaucratic deadpan face. One paw checking a box on the plane while flying. Exaggerated tiny legs. Dominant visual joke: meticulously organized escape."
+  },
+  {
+    "id": "cat-raccoon",
+    "a": "cat",
+    "b": "raccoon",
+    "name": "상자 손빨래",
+    "line": "집이 더러워서 빨았는데요.",
+    "description": "상자를 열심히 빨다가 종이 집이 젖어 축 처졌어요.",
+    "ability": "주거 청결 과몰입",
+    "scene": "Masked cat-raccoon scrubbing its own cardboard box home in a washbasin, soaked cardboard sagging around its hips while it looks earnestly proud."
+  },
+  {
+    "id": "cat-sloth",
+    "a": "cat",
+    "b": "sloth",
+    "name": "외출하는 집",
+    "line": "집 밖은 싫고, 세상은 궁금해.",
+    "description": "익숙한 자리를 아끼는 나무늘보와 새 길을 달리는 고양이가 만났어요. 나갈지 말지 고민하다 집째로 출발했습니다. 창밖은 바뀌어도 내 자리는 그대로예요.",
+    "ability": "거주 상태 전력 질주",
+    "scene": "A single sloth-cat hybrid with sloth eye patches and purple triangular cat ears and long striped tail. Its torso snugly enclosed in a small cardboard house with tiny roof. Two absurdly oversized lanky furry legs attached to body protrude under box, sprinting with huge slippers. Tiny deadpan sleepy face in window, relaxed paws on windowsill. Body continuous inside house. Not two animals. Dominant joke: a content homebody literally carrying its home at sprint speed."
+  },
+  {
+    "id": "cat-snail",
+    "a": "cat",
+    "b": "snail",
+    "name": "집 고르는 집주인",
+    "line": "집을 구했는데 집이 안 들어가.",
+    "description": "등껍질째 상자에 들어가려다 상자 입구만 잔뜩 벌려 놨어요.",
+    "ability": "이중 주거 시도",
+    "scene": "Cat-snail creature trying to reverse its enormous attached spiral shell into a tiny cardboard box, front paws formally measuring the mismatch."
+  },
+  {
+    "id": "cat-squidward",
+    "a": "cat",
+    "b": "squidward",
+    "name": "택배 수령 거부",
+    "line": "상자는 주세요. 대화는 두고 가요.",
+    "description": "상자 안에 숨어 촉수 하나로만 문고리를 잡고 있어요.",
+    "ability": "비대면 입주 완료",
+    "scene": "Long-nosed cat-tentacle creature tightly curled in a box, one attached tentacle pulling its lid shut while another politely holds a tiny doorbell away."
+  },
+  {
+    "id": "cucumber-cucumber",
+    "a": "cucumber",
+    "b": "cucumber",
+    "name": "정적 최대치",
+    "line": "아무 일도 없어서 바쁩니다.",
+    "description": "몸을 꼿꼿이 세운 채 자기 그림자와 눈싸움을 해요.",
+    "ability": "정적 버티기",
+    "scene": "Single elongated cucumber creature standing stiffly, bending only its tiny eyes downward to stare intensely at a small oval shadow beneath it."
+  },
+  {
+    "id": "cucumber-dragon",
+    "a": "cucumber",
+    "b": "dragon",
+    "name": "냉정한 화력",
+    "line": "화난 거 아니고 온도 조절.",
+    "description": "작은 불꽃을 내뿜고도 입꼬리 하나 움직이지 않아요.",
+    "ability": "무표정 불 조절",
+    "scene": "Tall cucumber-dragon breathing one carefully squared tiny flame onto a toasted marshmallow, completely rigid face and dainty claw grip."
+  },
+  {
+    "id": "cucumber-duck",
+    "a": "cucumber",
+    "b": "duck",
+    "name": "무감동 시식회",
+    "line": "맛있어요. 표시는 안 납니다.",
+    "description": "빵을 너무 크게 베어 물어 부리보다 볼이 더 넓어졌어요.",
+    "ability": "표정 없는 한입 평가",
+    "scene": "Cucumber-duck with a stiff narrow body and cheeks absurdly bulging around a huge toast bite, tiny blank eyes gazing straight ahead."
+  },
+  {
+    "id": "cucumber-frog",
+    "a": "cucumber",
+    "b": "frog",
+    "name": "아이스 인간",
+    "line": "얼음은 빼고 제가 들어갈게요.",
+    "description": "커피 컵에 몸이 쏙 들어가 빨대 옆에서 멀뚱히 서 있어요.",
+    "ability": "음료 일체형 냉정",
+    "scene": "Slender cucumber-frog creature standing inside an oversized clear iced-coffee cup like a cucumber straw, arms folded and unblinking face."
+  },
+  {
+    "id": "cucumber-ghost",
+    "a": "cucumber",
+    "b": "ghost",
+    "name": "기척 없는 기척",
+    "line": "없는 줄 알았으면 성공.",
+    "description": "투명한 몸을 가리려고 작은 손수건 하나를 펼쳤어요.",
+    "ability": "존재감 최소 포장",
+    "scene": "Translucent tall cucumber-ghost holding a tiny handkerchief in front of its very long body as if fully hidden, toes and head visibly protruding."
+  },
+  {
+    "id": "cucumber-hamster",
+    "a": "cucumber",
+    "b": "hamster",
+    "name": "말 없는 보급창",
+    "line": "괜찮아. 간식은 놓고 가.",
+    "description": "길쭉한 몸 양옆에 볼주머니만 크게 튀어나와 있어요.",
+    "ability": "묵묵한 간식 저장",
+    "scene": "Tall cucumber-hamster with two comically enormous round cheek pouches making a T silhouette, silently offering one tiny seed with a short paw."
+  },
+  {
+    "id": "cucumber-jelly",
+    "a": "cucumber",
+    "b": "jelly",
+    "name": "굳은 척하는 젤리",
+    "line": "안 흔들린 척은 할 수 있어.",
+    "description": "표정은 단단한데 몸 아래쪽은 물결처럼 흔들려요.",
+    "ability": "안면 고정 흔들림",
+    "scene": "Cucumber-jelly creature with a rigid poker-faced rectangular head while its continuous lower body wobbles in an exaggerated zigzag accordion."
+  },
+  {
+    "id": "cucumber-mushroom",
+    "a": "cucumber",
+    "b": "mushroom",
+    "name": "혼자 쓰는 대형 우산",
+    "line": "우산이 큰 건 거리 두려고요.",
+    "description": "몸보다 열 배 큰 버섯 갓 아래 딱 혼자 서 있어요.",
+    "ability": "개인 그늘 광역화",
+    "scene": "Tiny tall cucumber-mushroom creature under an absurdly wide attached mushroom cap, tiny arms folded and empty shaded space emphasized."
+  },
+  {
+    "id": "cucumber-penguin",
+    "a": "cucumber",
+    "b": "penguin",
+    "name": "차가운 출발선",
+    "line": "마음은 준비됐고 발은 얼었고.",
+    "description": "진지하게 앞으로 기울였는데 발이 작은 얼음에 딱 붙었어요.",
+    "ability": "빙판 정지 출발",
+    "scene": "Helmeted cucumber-penguin leaning dramatically forward in a sprint pose, both tiny flippers glued to a single small ice cube beneath it."
+  },
+  {
+    "id": "cucumber-pepe",
+    "a": "cucumber",
+    "b": "pepe",
+    "name": "속으로 대성통곡",
+    "line": "표정은 그대로. 수위만 상승.",
+    "description": "무표정한 얼굴 아래로 눈물만 얇고 길게 흘러내려요.",
+    "ability": "무음 눈물 배출",
+    "scene": "Tall cucumber creature with broad frog lips and utterly flat eyes, two perfectly straight enormous tear streams pooling around tiny feet."
+  },
+  {
+    "id": "cucumber-potato",
+    "a": "cucumber",
+    "b": "potato",
+    "name": "말 없는 진행률",
+    "line": "대답 대신 완료했습니다.",
+    "description": "작은 입은 다문 채 도장을 연속으로 찍어 팔이 안 보여요.",
+    "ability": "무응답 업무 완료",
+    "scene": "Cucumber-potato in necktie stamping a long strip of checkmark paper at frantic speed, stiff silent face and exaggerated arm motion arcs."
+  },
+  {
+    "id": "cucumber-raccoon",
+    "a": "cucumber",
+    "b": "raccoon",
+    "name": "무심한 손빨래",
+    "line": "신경 안 써요. 세 번 빨았을 뿐.",
+    "description": "표정 없이 작은 손수건을 빨았더니 천이 손톱만 해졌어요.",
+    "ability": "조용한 얼룩 집착",
+    "scene": "Masked cucumber-raccoon stoically wringing an absurdly tiny overwashed handkerchief between large paws over a disproportionately big basin."
+  },
+  {
+    "id": "cucumber-sloth",
+    "a": "cucumber",
+    "b": "sloth",
+    "name": "세워 둔 휴식",
+    "line": "서 있는 건 켜져 있는 게 아니야.",
+    "description": "길쭉한 몸을 벽 대신 베개에 기대고 선 채 쉬어요.",
+    "ability": "수직 휴식 유지",
+    "scene": "Cucumber-sloth creature sleeping perfectly upright with a tiny pillow strapped to its forehead, limbs hanging completely loose."
+  },
+  {
+    "id": "cucumber-snail",
+    "a": "cucumber",
+    "b": "snail",
+    "name": "묵묵한 장거리",
+    "line": "가고 있어요. 확대하면 보여요.",
+    "description": "아주 긴 몸을 한 칸짜리 발판에 옮기느라 신중해요.",
+    "ability": "미세 전진 측정",
+    "scene": "Tall cucumber-snail carefully extending its low foot over a ridiculously tiny ruler, expressionless face inspecting one minuscule forward increment."
+  },
+  {
+    "id": "cucumber-squidward",
+    "a": "cucumber",
+    "b": "squidward",
+    "name": "침묵의 회의",
+    "line": "둘 다 할 말이 없어서 끝났어요.",
+    "description": "촉수로 귀를 전부 막고 자기 의자를 한 번 더 감싸요.",
+    "ability": "대화 수신 종료",
+    "scene": "Tall cucumber-tentacle creature with long nose wrapping attached tentacles around its own chair and ears, eyes calmly shut in total silence."
+  },
+  {
+    "id": "dragon-dragon",
+    "a": "dragon",
+    "b": "dragon",
+    "name": "열정 화재경보기",
+    "line": "작게 시작하랬는데 불이 컸어.",
+    "description": "작은 마시멜로 하나를 굽다가 자기 왕관이 그을렸어요.",
+    "ability": "한입 화력 초과",
+    "scene": "Single chubby dragon proudly roasting a tiny marshmallow with an enormous flame, soot-blackened crown and stunned tiny pupils."
+  },
+  {
+    "id": "dragon-duck",
+    "a": "dragon",
+    "b": "duck",
+    "name": "빵굽는 호들갑",
+    "line": "토스트 하나에 출정식까지.",
+    "description": "빵 한 조각을 굽느라 날개를 활짝 펴고 장엄하게 불을 뿜어요.",
+    "ability": "아침 식사 대서사",
+    "scene": "Duck-billed dragon in an epic wide-winged pose breathing fire onto one tiny toast slice held ceremonially in a short claw."
+  },
+  {
+    "id": "dragon-frog",
+    "a": "dragon",
+    "b": "frog",
+    "name": "아이스 훼방꾼",
+    "line": "식히려고 불었는데 끓었네.",
+    "description": "커피를 식히려다 불꽃이 나와 컵 뚜껑이 들썩여요.",
+    "ability": "음료 역방향 냉각",
+    "scene": "Frog-legged dragon gently trying to blow on iced coffee but emitting a tiny flame, cup lid popping upward while it looks politely confused."
+  },
+  {
+    "id": "dragon-ghost",
+    "a": "dragon",
+    "b": "ghost",
+    "name": "용감한 야간등",
+    "line": "무서우면 제가 빛날게요.",
+    "description": "겁먹은 표정으로 자기 투명한 배 속 불꽃을 꼭 안고 있어요.",
+    "ability": "셀프 야간 조명",
+    "scene": "Translucent ghost-dragon nervously hugging its own belly where a small warm flame glows inside, huge brave-looking horns contrasting tiny scared eyes."
+  },
+  {
+    "id": "dragon-hamster",
+    "a": "dragon",
+    "b": "hamster",
+    "name": "간식 화력 보존",
+    "line": "볼에 넣으니까 자동으로 구워져.",
+    "description": "빵빵한 볼주머니에서 김이 나는데도 간식을 더 넣어요.",
+    "ability": "볼주머니 오븐",
+    "scene": "Hamster-cheeked dragon with bread bulging in both cheeks, little steam puffs rising from cheeks as one tiny claw tries to add another cracker."
+  },
+  {
+    "id": "dragon-jelly",
+    "a": "dragon",
+    "b": "jelly",
+    "name": "열정이 흘러내림",
+    "line": "의욕은 있는데 형태가 없네.",
+    "description": "불꽃을 뿜을 때마다 몸이 녹아 발 옆으로 퍼져요.",
+    "ability": "열기 속 형태 유지",
+    "scene": "Jelly-dragon proudly puffing a small flame while its one continuous body melts into a wide puddle, tiny horns sinking and determined face unchanged."
+  },
+  {
+    "id": "dragon-mushroom",
+    "a": "dragon",
+    "b": "mushroom",
+    "name": "불꽃 방수 점검",
+    "line": "우산은 준비했는데 안쪽이 탔어.",
+    "description": "비를 막는 우산 아래서 불을 뿜어 갓 안쪽에 그을음이 생겼어요.",
+    "ability": "우산 내부 열처리",
+    "scene": "Mushroom-capped dragon sheltering under its attached cap while a tiny upward fire puff leaves one obvious soot patch on cap underside."
+  },
+  {
+    "id": "dragon-penguin",
+    "a": "dragon",
+    "b": "penguin",
+    "name": "빙판 개척 과속",
+    "line": "길을 냈더니 길이 녹았어요.",
+    "description": "불로 새 길을 만들다가 자기 발밑 얼음만 작아졌어요.",
+    "ability": "진로 셀프 해빙",
+    "scene": "Helmeted penguin-dragon on a shrinking tiny ice disk, proudly breathing fire ahead while toes crowd together over the melting edge."
+  },
+  {
+    "id": "dragon-pepe",
+    "a": "dragon",
+    "b": "pepe",
+    "name": "감동의 불쇼",
+    "line": "벅차오르면 눈물도 끓어요.",
+    "description": "엄지를 올리며 울다가 눈물 끝에서 김이 피어올라요.",
+    "ability": "따뜻한 격려 증기",
+    "scene": "Broad-lipped green dragon giving thumbs-up with enormous tears, a tiny mouth flame turning the tear puddle into warm steam around its feet."
+  },
+  {
+    "id": "dragon-potato",
+    "a": "dragon",
+    "b": "potato",
+    "name": "업무 과열 주의",
+    "line": "오늘 할 일까지 태워 버렸네.",
+    "description": "완료 도장을 찍다가 콧김에 체크리스트 모서리가 탔어요.",
+    "ability": "마감 열기 상승",
+    "scene": "Potato-dragon in a tight necktie diligently stamping a checklist, little nostril flames singeing its paper edges while eyes remain focused."
+  },
+  {
+    "id": "dragon-raccoon",
+    "a": "dragon",
+    "b": "raccoon",
+    "name": "열정 손빨래",
+    "line": "삶아 빨자는 뜻은 아니었어.",
+    "description": "빨래를 빨리 말리려다 꼬리 수건이 잔뜩 부풀었어요.",
+    "ability": "즉석 고온 건조",
+    "scene": "Masked dragon-raccoon blowing a tiny flame at a wet towel stretched between paws, towel puffing into an enormous steaming cloud-like bundle."
+  },
+  {
+    "id": "dragon-sloth",
+    "a": "dragon",
+    "b": "sloth",
+    "name": "누워서 세계정복",
+    "line": "야망은 큰데 일어나긴 싫어.",
+    "description": "자기 페이스가 중요한 나무늘보와 일단 해보는 드래곤이 만났어요. 원대한 계획을 세우고 가장 편한 실행 자세를 찾았습니다. 몸은 누워 있어도 꼬리는 꽤 바쁩니다.",
+    "ability": "꼬리 단독 정복",
+    "scene": "One sloth-dragon hybrid reclining completely horizontally under lavender blanket on tiny cushion. Sloth face markings and shaggy fur mixed with mint dragon snout tiny horns and small wings. Tiny crooked gold crown, extremely smug narrow eyes. Long attached dragon tail curves out blanket and holds a toy globe high as if conquering world while hands tucked in rest. Feet barely poking out. Dominant visual joke epic ambition with absolutely minimum physical effort. No second creature."
+  },
+  {
+    "id": "dragon-snail",
+    "a": "dragon",
+    "b": "snail",
+    "name": "급발진 캠핑카",
+    "line": "짐은 천천히. 불꽃은 급하게.",
+    "description": "등껍질은 묵직한데 꼬리 불꽃만 전속력으로 뿜어요.",
+    "ability": "등짐 로켓 추진",
+    "scene": "Dragon-snail with huge heavy shell, tiny rear flame blasting dramatically while its low snail foot remains stubbornly stuck to a small pebble."
+  },
+  {
+    "id": "dragon-squidward",
+    "a": "dragon",
+    "b": "squidward",
+    "name": "열 받은 평온",
+    "line": "차분하게 화내는 중입니다.",
+    "description": "표정은 고요한데 촉수 끝마다 토스터처럼 열이 올라요.",
+    "ability": "무표정 열기 배출",
+    "scene": "Long-nosed dragon-tentacle creature sitting formally, flat half-lidded face while attached tentacle tips glow warm and toast a row of tiny bread slices."
+  },
+  {
+    "id": "duck-duck",
+    "a": "duck",
+    "b": "duck",
+    "name": "빵 속에 빵",
+    "line": "먹다가 집이 생겼습니다.",
+    "description": "겹겹이 포개진 빵 사이에서 얼굴만 내밀고 만족해요.",
+    "ability": "탄수화물 입주",
+    "scene": "Single round duck squeezed between an absurdly tall sandwich stack, only one smug face and tiny webbed feet protruding, nibbling upper bread."
+  },
+  {
+    "id": "duck-frog",
+    "a": "duck",
+    "b": "frog",
+    "name": "한입에 두 일정",
+    "line": "빵 먹고 커피 마시고 동시에.",
+    "description": "빵을 문 부리에 빨대까지 꽂으려다 눈이 몰렸어요.",
+    "ability": "아침 메뉴 동시 처리",
+    "scene": "Frog-legged duck cross-eyed trying to sip through a straw while its beak is packed with an oversized slice of toast, tiny arms juggling one cup."
+  },
+  {
+    "id": "duck-ghost",
+    "a": "duck",
+    "b": "ghost",
+    "name": "투명한 먹방",
+    "line": "어디로 갔는지 다 보이네.",
+    "description": "투명한 배 안에 빵이 그대로 보여 숨길 수가 없어요.",
+    "ability": "간식 위치 공개",
+    "scene": "Translucent duck-ghost with a whole toast slice clearly visible inside its transparent round belly, tiny wings unsuccessfully covering the evidence."
+  },
+  {
+    "id": "duck-hamster",
+    "a": "duck",
+    "b": "hamster",
+    "name": "한입의 정의",
+    "line": "한입은 입 크기에 따라 달라요.",
+    "description": "부리보다 몇 배 큰 볼을 잡고 진지하게 한입이라고 주장해요.",
+    "ability": "한입 용량 확장",
+    "scene": "Hamster-duck gripping its enormous food-stuffed cheeks, a comically tiny beak centered between them, one crumb falling from a determined mouth."
+  },
+  {
+    "id": "duck-jelly",
+    "a": "duck",
+    "b": "jelly",
+    "name": "푸딩인 척",
+    "line": "디저트 옆에 있었을 뿐인데.",
+    "description": "접시에 앉았더니 말랑한 몸에 숟가락 자국이 생겼어요.",
+    "ability": "디저트 위장 실패",
+    "scene": "Jelly-duck sitting in a small dessert dish, one spoon indentation in its elastic side, offended tiny beak while holding the spoon itself."
+  },
+  {
+    "id": "duck-mushroom",
+    "a": "duck",
+    "b": "mushroom",
+    "name": "빵 부스러기 우산",
+    "line": "머리 위에서도 간식이 내려요.",
+    "description": "버섯 갓에 쌓아 둔 빵가루가 몸을 움직일 때마다 쏟아져요.",
+    "ability": "간식비 셀프 예보",
+    "scene": "Mushroom-capped duck tilting its cap to pour a shower of breadcrumbs into its own open beak, wings held primly behind its back."
+  },
+  {
+    "id": "duck-penguin",
+    "a": "duck",
+    "b": "penguin",
+    "name": "미끄럼 시식단",
+    "line": "맛보러 왔다가 한 바퀴 더.",
+    "description": "빵 접시를 타고 빙판을 돌면서 한입씩 베어 먹어요.",
+    "ability": "회전식 시식",
+    "scene": "Helmeted penguin-duck spinning on a round bread plate atop a tiny ice patch, taking a serious bite from its own edible spinning platform."
+  },
+  {
+    "id": "duck-pepe",
+    "a": "duck",
+    "b": "pepe",
+    "name": "감동적인 탄수화물",
+    "line": "빵이 따뜻해서 울었습니다.",
+    "description": "한 조각을 꼭 안고 울어서 빵 한쪽이 축축해졌어요.",
+    "ability": "눈물 흡수 토스트",
+    "scene": "Broad-lipped duck-green creature hugging a single toast slice with overflowing happy tears, one soggy bread corner drooping dramatically."
+  },
+  {
+    "id": "duck-potato",
+    "a": "duck",
+    "b": "potato",
+    "name": "먹방 근태관리",
+    "line": "씹는 동안에도 체크는 합니다.",
+    "description": "빵을 먹으며 체크하다 도장에 빵가루가 잔뜩 붙었어요.",
+    "ability": "식사 중 업무 도장",
+    "scene": "Potato-duck in necktie stamping a blank checklist with a stamp accidentally stuck to a toast crust, beak full and eyes rigorously focused."
+  },
+  {
+    "id": "duck-raccoon",
+    "a": "duck",
+    "b": "raccoon",
+    "name": "씻어 먹는 토스트",
+    "line": "깨끗해졌는데 빵이 없어졌어.",
+    "description": "빵을 물에 씻었다가 흐물흐물한 조각만 두 손에 남았어요.",
+    "ability": "토스트 과세척",
+    "scene": "Masked duck-raccoon lifting a limp disintegrating toast slice from a washbasin, sincere puzzled eyes and dripping short paws."
+  },
+  {
+    "id": "duck-sloth",
+    "a": "duck",
+    "b": "sloth",
+    "name": "씹다 쉬는 중",
+    "line": "다음 한입은 잠깐 뒤에.",
+    "description": "빵을 베개로 삼고 입에 문 조각도 그대로 둔 채 쉬어요.",
+    "ability": "식사 일시 정지",
+    "scene": "Duck-sloth sleeping with cheek resting on an oversized toast pillow, tiny bite of bread still held in beak and wings relaxed."
+  },
+  {
+    "id": "duck-snail",
+    "a": "duck",
+    "b": "snail",
+    "name": "식빵 이삿짐",
+    "line": "이사 끝나면 벽부터 먹을게요.",
+    "description": "등껍질에 빵을 층층이 쌓고 한 장씩 확인하며 이동해요.",
+    "ability": "이동식 빵 창고",
+    "scene": "Duck-snail carrying an attached spiral shell packed with upright toast slices like a bookshelf, meticulously straightening one slice while inching forward."
+  },
+  {
+    "id": "duck-squidward",
+    "a": "duck",
+    "b": "squidward",
+    "name": "고독한 시식가",
+    "line": "맛있는데 같이 먹진 말죠.",
+    "description": "촉수로 빵 접시를 둘러싸고 아주 작게 한입 먹어요.",
+    "ability": "전용 시식석 확보",
+    "scene": "Long-nosed duck-tentacle creature protecting one tiny toast plate with a circular fence of attached tentacles, taking a microscopic dignified bite."
+  },
+  {
+    "id": "frog-frog",
+    "a": "frog",
+    "b": "frog",
+    "name": "단골 도장 만렙",
+    "line": "공짜 한 잔 받으러 열 잔 샀어.",
+    "description": "쿠폰 도장을 채우느라 커피 컵을 몸보다 높게 쌓았어요.",
+    "ability": "적립 목적 추가 구매",
+    "scene": "Single frog creature balancing an absurd leaning tower of coffee cups, solemnly inspecting a tiny stamp card with one last empty circle."
+  },
+  {
+    "id": "frog-ghost",
+    "a": "frog",
+    "b": "ghost",
+    "name": "유령 단골",
+    "line": "주문은 없는데 빨대가 움직여.",
+    "description": "투명한 몸 안으로 커피가 내려가는 길이 그대로 보여요.",
+    "ability": "투명 테이크아웃",
+    "scene": "Translucent frog-ghost sipping iced coffee, a visible brown liquid spiral tracing down inside its clear belly, tiny satisfied blank eyes."
+  },
+  {
+    "id": "frog-hamster",
+    "a": "frog",
+    "b": "hamster",
+    "name": "볼주머니 텀블러",
+    "line": "한 잔을 나눠 담았습니다.",
+    "description": "커피를 양볼에 머금고 넘치지 않게 조심조심 걸어요.",
+    "ability": "양볼 음료 보관",
+    "scene": "Hamster-frog with enormous liquid-filled cheeks visibly bulging, tiptoeing with both paws supporting cheeks and a straw stuck at one lip corner."
+  },
+  {
+    "id": "frog-jelly",
+    "a": "frog",
+    "b": "jelly",
+    "name": "쏟아진 단골",
+    "line": "흘린 건 커피가 아니라 저예요.",
+    "description": "잔은 멀쩡한데 말랑한 몸이 컵 받침처럼 퍼졌어요.",
+    "ability": "몸으로 컵받침",
+    "scene": "Jelly-frog spread flat into a huge soft coaster beneath a perfectly upright tiny coffee cup, single face peeking from the puddle edge."
+  },
+  {
+    "id": "frog-mushroom",
+    "a": "frog",
+    "b": "mushroom",
+    "name": "우천 카페 산책",
+    "line": "나는 젖어도 커피는 안 돼.",
+    "description": "우산을 커피 쪽으로 전부 기울이고 본인은 빗방울을 맞아요.",
+    "ability": "음료 우선 방수",
+    "scene": "Mushroom-capped frog bending its cap completely over a tiny coffee cup like an umbrella, own face exposed to a few isolated raindrops."
+  },
+  {
+    "id": "frog-penguin",
+    "a": "frog",
+    "b": "penguin",
+    "name": "아이스 직거래",
+    "line": "얼음 추가를 몸으로 합니다.",
+    "description": "빙판 조각을 컵에 넣으려다 컵보다 큰 걸 들어 버렸어요.",
+    "ability": "얼음 과다 추가",
+    "scene": "Helmeted frog-penguin straining to lower one enormous ice cube into a ridiculously tiny takeaway coffee cup, stern focused eyes."
+  },
+  {
+    "id": "frog-pepe",
+    "a": "frog",
+    "b": "pepe",
+    "name": "공감은 리필",
+    "line": "한 잔으로는 못 듣겠네요.",
+    "description": "커피를 들고 이야기에 몰입하다 눈물이 컵을 채워요.",
+    "ability": "감정 리필 무제한",
+    "scene": "Broad-lipped frog creature listening with huge watery eyes, tears streaming directly into an already full coffee cup held beneath chin."
+  },
+  {
+    "id": "frog-potato",
+    "a": "frog",
+    "b": "potato",
+    "name": "커피 출근 완료",
+    "line": "저보다 커피가 먼저 도착해요.",
+    "description": "발은 바쁜데 두 팔은 커피를 제단처럼 정중하게 받쳐요.",
+    "ability": "음료 최우선 이송",
+    "scene": "Potato-frog in necktie sprinting with enormous hopping feet, torso stiff and both hands ceremonially carrying one coffee cup on a tiny cushion."
+  },
+  {
+    "id": "frog-raccoon",
+    "a": "frog",
+    "b": "raccoon",
+    "name": "원두 손빨래",
+    "line": "쓴맛도 씻으면 빠질 줄 알았지.",
+    "description": "커피 원두를 정성껏 씻고 물이 갈색이 되자 고개를 갸웃해요.",
+    "ability": "원두 과잉 세척",
+    "scene": "Masked frog-raccoon carefully washing individual coffee beans in a tiny basin, staring at brown rinse water with earnest confusion."
+  },
+  {
+    "id": "frog-sloth",
+    "a": "frog",
+    "b": "sloth",
+    "name": "디카페인 발걸음",
+    "line": "카페인은 갔고 저는 남았어요.",
+    "description": "커피 컵에 턱을 괴고 다음 걸음을 천천히 생각해요.",
+    "ability": "각성 지연 처리",
+    "scene": "Sloth-marked frog resting chin on an oversized takeaway cup like a pillow, one hind leg frozen halfway through an extremely lazy step."
+  },
+  {
+    "id": "frog-snail",
+    "a": "frog",
+    "b": "snail",
+    "name": "커피 도착 예고",
+    "line": "뜨거웠는데 아이스로 도착.",
+    "description": "등껍질 컵홀더에 커피를 꽂고 배송용 리본을 매고 있어요.",
+    "ability": "장거리 자연 냉각",
+    "scene": "Frog-snail carrying a coffee cup in an attached spiral shell cupholder, painstakingly tying a tiny delivery bow while a single ice crystal forms on lid."
+  },
+  {
+    "id": "frog-squidward",
+    "a": "frog",
+    "b": "squidward",
+    "name": "단골 지정석",
+    "line": "제 자리는 비워 두세요. 전부요.",
+    "description": "커피 한 잔을 가운데 두고 촉수로 의자들을 끌어안아요.",
+    "ability": "카페 반경 독점",
+    "scene": "Long-nosed frog-tentacle creature with one coffee cup, attached tentacles pulling three tiny stools tightly around its single body, flat territorial stare."
+  },
+  {
+    "id": "ghost-ghost",
+    "a": "ghost",
+    "b": "ghost",
+    "name": "유령끼리 숨바꼭질",
+    "line": "찾는 중인데 저도 안 보여요.",
+    "description": "자기 몸을 찾으려고 랜턴을 배 안에 비춰 보고 있어요.",
+    "ability": "자체 위치 탐색",
+    "scene": "Single extra-translucent ghost curling into a question-mark posture, shining a small lantern through its own belly in baffled self-inspection."
+  },
+  {
+    "id": "ghost-hamster",
+    "a": "ghost",
+    "b": "hamster",
+    "name": "간식의 유령",
+    "line": "숨겼는데 전부 보입니다.",
+    "description": "볼주머니에 감춘 과자가 투명한 얼굴 밖에서도 훤히 보여요.",
+    "ability": "비밀 간식 생중계",
+    "scene": "Translucent hamster-ghost with round ears and huge clear cheeks full of visible crackers, tiny paws unsuccessfully covering both cheeks."
+  },
+  {
+    "id": "ghost-jelly",
+    "a": "ghost",
+    "b": "jelly",
+    "name": "형체 회의 중",
+    "line": "뭘 될지는 아직 정하지 않았어.",
+    "description": "말랑하고 투명한 몸을 손으로 잡아 다시 세우고 있어요.",
+    "ability": "셀프 형태 복구",
+    "scene": "Translucent jelly-ghost attempting to pull its own drooping face upright with soft hands, one continuous elastic body pooled below, deadpan eyes."
+  },
+  {
+    "id": "ghost-mushroom",
+    "a": "ghost",
+    "b": "mushroom",
+    "name": "유령 우산 분실",
+    "line": "비는 통과하고 우산만 남네.",
+    "description": "투명한 몸이 버섯 갓을 통과하려다 얼굴이 갓 가운데 끼었어요.",
+    "ability": "머리 위 은신 실패",
+    "scene": "Ghost-mushroom creature sinking through its own broad cap with one face stretched through the central hole, little ghost hands holding the brim."
+  },
+  {
+    "id": "ghost-penguin",
+    "a": "ghost",
+    "b": "penguin",
+    "name": "안전한 유령 탐사",
+    "line": "다칠 몸은 없어도 헬멧은 써요.",
+    "description": "헬멧이 투명한 머리 안으로 쑥 내려가 시야를 가려요.",
+    "ability": "보호 장비 과몰입",
+    "scene": "Translucent penguin-ghost whose oversized safety helmet has slipped halfway through its head, flippers lifting the helmet while eyes peek below rim."
+  },
+  {
+    "id": "ghost-pepe",
+    "a": "ghost",
+    "b": "pepe",
+    "name": "보이지 않는 눈물",
+    "line": "안 보인다고 안 우는 건 아냐.",
+    "description": "몸은 투명한데 눈물만 선명해서 위치가 들켰어요.",
+    "ability": "눈물 위치 표시",
+    "scene": "Translucent broad-lipped green ghost with barely visible body but enormous opaque blue tears pooling beneath, one shy thumbs-up floating visibly."
+  },
+  {
+    "id": "ghost-potato",
+    "a": "ghost",
+    "b": "potato",
+    "name": "영혼까지 출근",
+    "line": "퇴근했는데 도장이 따라와요.",
+    "description": "투명한 몸으로 빠져나가려는데 넥타이가 도장에 붙잡혔어요.",
+    "ability": "퇴근 직전 문서 집착",
+    "scene": "Potato-ghost in necktie floating away while its tie stretches backward caught beneath a heavy office stamp, one tired eye glancing back."
+  },
+  {
+    "id": "ghost-raccoon",
+    "a": "ghost",
+    "b": "raccoon",
+    "name": "깨끗한 유령",
+    "line": "먼지는 없고 손만 바쁩니다.",
+    "description": "투명한 몸을 솔로 문지르다가 솔이 그대로 통과해요.",
+    "ability": "실체 없는 얼룩 제거",
+    "scene": "Translucent masked raccoon-ghost scrubbing its own belly with a brush that passes straight through, striped ghost tail curled in concentration."
+  },
+  {
+    "id": "ghost-sloth",
+    "a": "ghost",
+    "b": "sloth",
+    "name": "영혼 먼저 퇴근",
+    "line": "몸은 여기. 마음은 이불.",
+    "description": "투명한 몸이 베개를 통과해서 아래로 길게 늘어져요.",
+    "ability": "베개 아래 휴식",
+    "scene": "Sloth-marked ghost resting head on a small pillow while its continuous transparent lower body droops through it like a long sleepy curtain."
+  },
+  {
+    "id": "ghost-snail",
+    "a": "ghost",
+    "b": "snail",
+    "name": "짐만 남은 탐험",
+    "line": "가볍게 떠났는데 집이 무거워.",
+    "description": "몸은 둥둥 뜨는데 묵직한 등껍질 때문에 바닥에서 못 떨어져요.",
+    "ability": "등짐 접지 부유",
+    "scene": "Translucent ghost-snail floating upward like a balloon while its attached enormous shell stays firmly grounded, continuous neck stretched taut."
+  },
+  {
+    "id": "ghost-squidward",
+    "a": "ghost",
+    "b": "squidward",
+    "name": "투명한 개인실",
+    "line": "안 보이면 문 두드리지 마요.",
+    "description": "투명한 몸 주위에 촉수로 작은 커튼을 꼼꼼하게 둘러요.",
+    "ability": "개인 공간 암막",
+    "scene": "Long-nosed ghost-tentacle creature using attached tentacles to wrap a tiny opaque curtain around its transparent torso, stern eyes above curtain edge."
+  },
+  {
+    "id": "hamster-hamster",
+    "a": "hamster",
+    "b": "hamster",
+    "name": "볼주머니 창고업",
+    "line": "재고 파악이 안 됩니다.",
+    "description": "한 알을 찾으려 볼을 뒤졌더니 간식이 폭포처럼 쏟아져요.",
+    "ability": "간식 재고 자동 방출",
+    "scene": "Single hamster with gigantic stuffed cheeks pulling one tiny seed out as a comical waterfall of crackers spills from one cheek, surprised eyes."
+  },
+  {
+    "id": "hamster-jelly",
+    "a": "hamster",
+    "b": "jelly",
+    "name": "간식이 섞였어",
+    "line": "보관했는데 젤리가 됐네.",
+    "description": "말랑한 볼 속 과자가 그대로 보여 장식처럼 박혔어요.",
+    "ability": "간식 투명 수납",
+    "scene": "Jelly-hamster with embedded colorful crackers visible throughout its elastic cheeks, stretching one cheek to retrieve a trapped biscuit with a tiny paw."
+  },
+  {
+    "id": "hamster-mushroom",
+    "a": "hamster",
+    "b": "mushroom",
+    "name": "우산 아래 식량창",
+    "line": "비보다 부스러기를 막습니다.",
+    "description": "버섯 갓 아래로 간식을 붙여 놓아 걸을 때마다 한 알씩 떨어져요.",
+    "ability": "우산 천장 보급",
+    "scene": "Hamster-mushroom with snacks packed under its broad attached cap, one falling cracker aimed at its open mouth while paws try to hold the stash."
+  },
+  {
+    "id": "hamster-penguin",
+    "a": "hamster",
+    "b": "penguin",
+    "name": "냉동 보급대장",
+    "line": "간식은 신선한데 이가 시려.",
+    "description": "차갑게 보관한 간식에 볼주머니가 네모나게 굳었어요.",
+    "ability": "볼주머니 급속 냉각",
+    "scene": "Helmeted hamster-penguin with two cheeks frozen into comically square ice-cube shapes, little flippers carefully warming one cheek."
+  },
+  {
+    "id": "hamster-pepe",
+    "a": "hamster",
+    "b": "pepe",
+    "name": "먹먹한 볼주머니",
+    "line": "감동도 간식도 꽉 찼어요.",
+    "description": "울음을 참으려다 가득 찬 볼 사이로 과자가 삐져나와요.",
+    "ability": "감동 중 간식 누출",
+    "scene": "Broad-lipped hamster-green creature with watery eyes and huge cheeks, trying to give a reassuring smile while crackers pop out at both mouth corners."
+  },
+  {
+    "id": "hamster-potato",
+    "a": "hamster",
+    "b": "potato",
+    "name": "재고 체크 감자",
+    "line": "세다가 먹어서 다시 세요.",
+    "description": "간식을 줄 세워 세다가 입에 하나 넣고 처음부터 다시 세요.",
+    "ability": "먹으며 재고 조사",
+    "scene": "Potato-hamster in necktie arranging crackers in a precise row, one paw checking a tally while the other secretly feeds a cracker into its own cheek."
+  },
+  {
+    "id": "hamster-raccoon",
+    "a": "hamster",
+    "b": "raccoon",
+    "name": "씻어서 볼에 쏙",
+    "line": "물기는 제가 흡수할게요.",
+    "description": "씻은 과일을 바로 볼에 넣어 양볼에서 물이 뚝뚝 떨어져요.",
+    "ability": "세척 후 즉시 보관",
+    "scene": "Masked hamster-raccoon with gigantic dripping wet cheeks, placing one freshly washed apple into cheek while small puddles form under both sides."
+  },
+  {
+    "id": "hamster-sloth",
+    "a": "hamster",
+    "b": "sloth",
+    "name": "간식 예약 수면",
+    "line": "깨면 먹을 거라서 입에 뒀어.",
+    "description": "간식을 꼭 쥔 채 졸다가 볼주머니가 베개처럼 납작해져요.",
+    "ability": "볼주머니 베개 전환",
+    "scene": "Hamster-sloth asleep on one enormous stuffed cheek used as a pillow, paw still gripping a cracker above mouth, other cheek round and full."
+  },
+  {
+    "id": "hamster-snail",
+    "a": "hamster",
+    "b": "snail",
+    "name": "비상식량 원정대",
+    "line": "혹시 모르니까 챙겼는데, 못 움직여.",
+    "description": "볼주머니를 채우는 햄스터와 짐부터 챙기는 달팽이가 만났어요. 서로의 준비성을 칭찬하다 간식이 본체보다 커졌습니다. 출발만 하면 든든한데, 아직 출발을 못 했어요.",
+    "ability": "비상식량 과적",
+    "scene": "Single hamster-snail hybrid with round hamster ears huge stuffed cheeks and a continuous low snail foot body, spiral shell converted into ridiculously giant food-packed travel backpack THREE times body size. Crackers and bread bulge out top. Tiny determined squashed face and stubby paws pinned near ground under weight. Looking solemnly forward trying to take one step. Shell attached organically, one face no eye stalk faces. Dominant joke heroic expedition immobilized by snacks."
+  },
+  {
+    "id": "hamster-squidward",
+    "a": "hamster",
+    "b": "squidward",
+    "name": "조용한 비축가",
+    "line": "말 걸면 과자 소리만 나요.",
+    "description": "촉수로 입을 가렸지만 볼주머니가 움직일 때마다 부스러기가 나와요.",
+    "ability": "무음 씹기 실패",
+    "scene": "Hamster-tentacle creature with long nose covering its stuffed mouth with attached tentacles, one conspicuous cracker crumb falling between them."
+  },
+  {
+    "id": "jelly-jelly",
+    "a": "jelly",
+    "b": "jelly",
+    "name": "형태 자유 이용권",
+    "line": "앉았는데 퇴근한 모양이네.",
+    "description": "의자에 앉자마자 몸이 바닥까지 길게 흘러내려요.",
+    "ability": "의자 완전 밀착",
+    "scene": "Single extra-elastic jelly creature draped over a tiny chair like a flowing blanket, one deadpan face on backrest and tiny limbs dangling to floor."
+  },
+  {
+    "id": "jelly-mushroom",
+    "a": "jelly",
+    "b": "mushroom",
+    "name": "우산에서 한 방울",
+    "line": "비는 그쳤는데 제가 떨어져요.",
+    "description": "버섯 갓 끝으로 말랑한 몸이 큰 물방울처럼 매달려요.",
+    "ability": "갓 끝 매달리기",
+    "scene": "Jelly-mushroom with its continuous body drooping from attached cap edge as one huge teardrop shape, small hands clinging to cap rim, bemused face."
+  },
+  {
+    "id": "jelly-penguin",
+    "a": "jelly",
+    "b": "penguin",
+    "name": "말랑한 안전모",
+    "line": "헬멧만 반듯하면 된 거죠?",
+    "description": "헬멧은 똑바른데 몸이 양옆으로 흘러 발을 덮어 버려요.",
+    "ability": "머리만 안전 고정",
+    "scene": "Helmeted penguin-jelly with a perfectly level rigid helmet while its soft body spreads sideways over its flippers and feet, solemn little beak."
+  },
+  {
+    "id": "jelly-pepe",
+    "a": "jelly",
+    "b": "pepe",
+    "name": "감정이 새는 중",
+    "line": "참았는데 옆으로 나왔어요.",
+    "description": "입은 꾹 다물었는데 말랑한 몸 옆으로 눈물이 스며 나와요.",
+    "ability": "감정 측면 배출",
+    "scene": "Broad-lipped jelly-green creature squeezing its lips tight while its soft torso bulges sideways and two enormous tear droplets ooze from its cheeks."
+  },
+  {
+    "id": "jelly-potato",
+    "a": "jelly",
+    "b": "potato",
+    "name": "유연한 마감",
+    "line": "늘어나긴 해도 끝은 맞출게.",
+    "description": "몸을 길게 늘여 멀리 있는 완료 도장에 겨우 닿아요.",
+    "ability": "마감 거리 확장",
+    "scene": "Potato-jelly in necktie stretched horizontally between a tiny stool and a far stamp pad, one elastic arm finally landing an oversized checkmark stamp."
+  },
+  {
+    "id": "jelly-raccoon",
+    "a": "jelly",
+    "b": "raccoon",
+    "name": "빨래와 일체화",
+    "line": "짜는 게 수건인지 저인지.",
+    "description": "수건을 짜다가 자기 말랑한 팔까지 나선형으로 꼬였어요.",
+    "ability": "손빨래 셀프 비틀기",
+    "scene": "Masked jelly-raccoon wringing a towel, its own soft connected forearms twisting into a spiral along with fabric, startled but composed face."
+  },
+  {
+    "id": "jelly-sloth",
+    "a": "jelly",
+    "b": "sloth",
+    "name": "쿠션이 된 휴식",
+    "line": "쉬다 보니 가구가 됐어요.",
+    "description": "베개 위에서 퍼진 몸이 베개를 통째로 감싸 버렸어요.",
+    "ability": "쿠션 완전 동화",
+    "scene": "Sloth-jelly creature relaxed around a tiny pillow, its enormous soft body forming a plush cushion shape with one sleepy face and dangling little arms."
+  },
+  {
+    "id": "jelly-snail",
+    "a": "jelly",
+    "b": "snail",
+    "name": "몸만 먼저 도착",
+    "line": "집은 아직 뒤에 있습니다.",
+    "description": "등껍질은 그대로인데 말랑한 몸만 길게 뻗어 간식에 닿아요.",
+    "ability": "선도착 목 늘이기",
+    "scene": "Jelly-snail with shell firmly grounded, continuous elastic torso stretched absurdly far forward to reach one tiny cracker, face politely focused."
+  },
+  {
+    "id": "jelly-squidward",
+    "a": "jelly",
+    "b": "squidward",
+    "name": "흐물한 경계선",
+    "line": "선은 지켰는데 제가 넘어갔네.",
+    "description": "촉수로 그어 둔 개인 공간 밖으로 몸이 조금씩 흘러요.",
+    "ability": "경계 밖 자연 유출",
+    "scene": "Long-nosed jelly-tentacle creature drawing a neat circle with one tentacle while its own soft torso slowly oozes across the boundary, irritated eyes."
+  },
+  {
+    "id": "mushroom-mushroom",
+    "a": "mushroom",
+    "b": "mushroom",
+    "name": "우산 중첩 주의",
+    "line": "혹시 몰라서 하나 더 폈어요.",
+    "description": "버섯 갓 아래 우산을 또 펴서 얼굴이 완전히 가려졌어요.",
+    "ability": "이중 방수 시야 차단",
+    "scene": "Single mushroom creature with one huge cap holding a second little umbrella directly beneath it, face squeezed into a tiny gap between two canopies."
+  },
+  {
+    "id": "mushroom-penguin",
+    "a": "mushroom",
+    "b": "penguin",
+    "name": "빙판 우산 썰매",
+    "line": "비를 피하다 속도가 붙었어.",
+    "description": "뒤집힌 우산을 썰매로 타고 안전모를 꼭 붙잡고 있어요.",
+    "ability": "우산 빙판 활강",
+    "scene": "Helmeted mushroom-penguin riding an upside-down umbrella like a sled on one small ice patch, feet raised and both flippers gripping helmet."
+  },
+  {
+    "id": "mushroom-pepe",
+    "a": "mushroom",
+    "b": "pepe",
+    "name": "눈물 전용 우산",
+    "line": "비는 안 와요. 제가 옵니다.",
+    "description": "눈물이 너무 많이 나서 우산을 거꾸로 들어 받아요.",
+    "ability": "감정 강수량 수집",
+    "scene": "Broad-lipped mushroom-green creature holding an upturned umbrella beneath its chin to catch two huge tear streams, touching proud expression."
+  },
+  {
+    "id": "mushroom-potato",
+    "a": "mushroom",
+    "b": "potato",
+    "name": "우산 출퇴근부",
+    "line": "비 올 확률도 체크했습니다.",
+    "description": "우산 손잡이에 체크리스트를 매달아 걷다 종이에 얼굴이 가려요.",
+    "ability": "날씨별 체크 완료",
+    "scene": "Potato-mushroom in necktie marching with umbrella handle covered in long checklist strips, papers fluttering over its focused eyes."
+  },
+  {
+    "id": "mushroom-raccoon",
+    "a": "mushroom",
+    "b": "raccoon",
+    "name": "빨래 말리는 갓",
+    "line": "비 막으면서 빨래도 말려요.",
+    "description": "갓 아래 빨래를 주렁주렁 걸어 자기 발만 겨우 보여요.",
+    "ability": "이동식 건조대",
+    "scene": "Masked mushroom-raccoon with laundry hanging from its broad cap rim on tiny clips, face peeking between socks while short paws carefully arrange one sock."
+  },
+  {
+    "id": "mushroom-sloth",
+    "a": "mushroom",
+    "b": "sloth",
+    "name": "펼친 채 숙면",
+    "line": "우산 접는 건 내일 생각해.",
+    "description": "펼친 우산 손잡이를 베개처럼 껴안고 작은 몸을 웅크려요.",
+    "ability": "방수 상태 휴식",
+    "scene": "Sloth-mushroom sleeping curled around an open umbrella handle, attached cap and umbrella creating an absurdly overprotected tiny sleeping nook."
+  },
+  {
+    "id": "mushroom-snail",
+    "a": "mushroom",
+    "b": "snail",
+    "name": "이동식 일기예보",
+    "line": "비 오기 전에 가려다 비랑 같이 가.",
+    "description": "등껍질 위 우산이 너무 커서 바람에 몸이 살짝 들렸어요.",
+    "ability": "우산 동력 탐험",
+    "scene": "Mushroom-snail with an enormous attached cap catching wind like a sail, snail foot barely lifting while it studies a tiny folded map calmly."
+  },
+  {
+    "id": "mushroom-squidward",
+    "a": "mushroom",
+    "b": "squidward",
+    "name": "닫힌 우산 상담소",
+    "line": "들어는 줄게. 안쪽에선 말고.",
+    "description": "버섯 갓을 커튼처럼 내리고 촉수 끝만 밖으로 내밀어요.",
+    "ability": "우산 속 개인실",
+    "scene": "Long-nosed mushroom-tentacle creature lowering its broad cap like a privacy curtain, a single tentacle tip poking out with a tiny polite wave."
+  },
+  {
+    "id": "penguin-penguin",
+    "a": "penguin",
+    "b": "penguin",
+    "name": "안전 제일 과속",
+    "line": "헬멧 두 개면 두 배 안전?",
+    "description": "헬멧을 두 겹 쓰느라 눈이 가려진 채 조심조심 미끄러져요.",
+    "ability": "시야 없는 안전 확보",
+    "scene": "Single penguin wearing two stacked oversized safety helmets, lower rim hiding its eyes while flippers cautiously feel ahead and feet slide apart."
+  },
+  {
+    "id": "penguin-pepe",
+    "a": "penguin",
+    "b": "pepe",
+    "name": "빙판 위 격려",
+    "line": "넘어져도 엄지는 안 내립니다.",
+    "description": "엉덩방아를 찧었는데도 엄지만큼은 높이 올려요.",
+    "ability": "낙상 중 응원 유지",
+    "scene": "Helmeted broad-lipped green penguin sitting after a comic slip, feet pointing upward and one enormous thumbs-up held proudly despite watery eyes."
+  },
+  {
+    "id": "penguin-potato",
+    "a": "penguin",
+    "b": "potato",
+    "name": "마감 빙상선수",
+    "line": "퇴근길이 제일 빠릅니다.",
+    "description": "체크리스트를 썰매 삼아 반듯한 자세로 미끄러져요.",
+    "ability": "문서 썰매 퇴근",
+    "scene": "Potato-penguin in necktie and helmet sitting formally on a checklist paper sled, tiny feet braced and one stamp held like a steering lever."
+  },
+  {
+    "id": "penguin-raccoon",
+    "a": "penguin",
+    "b": "raccoon",
+    "name": "빙판 세탁부",
+    "line": "닦았더니 더 미끄러워졌네.",
+    "description": "빙판을 반짝이게 닦다가 걸레에 끌려 몸이 쭉 늘어졌어요.",
+    "ability": "광택 후 강제 활강",
+    "scene": "Masked penguin-raccoon polishing a tiny ice tile with a cloth, flippers stretched ahead and body sliding after the cloth in an exaggerated prone pose."
+  },
+  {
+    "id": "penguin-sloth",
+    "a": "penguin",
+    "b": "sloth",
+    "name": "안전하게 누움",
+    "line": "넘어질 바엔 미리 눕죠.",
+    "description": "안전모를 베개 삼아 빙판 위에 자세를 먼저 잡았어요.",
+    "ability": "선제적 휴식 자세",
+    "scene": "Sloth-penguin calmly lying flat on a tiny ice patch with helmet used as a pillow, flippers folded over belly like a carefully planned rest."
+  },
+  {
+    "id": "penguin-snail",
+    "a": "penguin",
+    "b": "snail",
+    "name": "빙판 이사 업체",
+    "line": "미끄러우면 배송이 빠를 줄 알았지.",
+    "description": "등껍질이 무거워 얼음 한 조각이 통째로 따라와요.",
+    "ability": "빙판째 이동",
+    "scene": "Helmeted penguin-snail dragging an enormous shell whose weight has stuck a small ice tile to its underside, tiny feet straining forward."
+  },
+  {
+    "id": "penguin-squidward",
+    "a": "penguin",
+    "b": "squidward",
+    "name": "개인 빙판장",
+    "line": "제자리 회전도 혼자 할게요.",
+    "description": "촉수를 스케이트처럼 모아 작은 얼음 위에서 혼자 빙글 돌아요.",
+    "ability": "사적 회전 반경",
+    "scene": "Long-nosed penguin-tentacle creature spinning stiffly on a tiny ice disk, attached tentacles tucked into a precise cone like skates, unimpressed face."
+  },
+  {
+    "id": "pepe-pepe",
+    "a": "pepe",
+    "b": "pepe",
+    "name": "응원하다 수도관",
+    "line": "괜찮다는 말이 넘칩니다.",
+    "description": "엄지를 두 개 들고 울다가 눈물이 발목까지 차올랐어요.",
+    "ability": "격려 수위 상승",
+    "scene": "Single broad-lipped green creature with two enormous thumbs-up and exaggerated happy tear fountains, tiny feet submerged in its own tear puddle."
+  },
+  {
+    "id": "pepe-potato",
+    "a": "pepe",
+    "b": "potato",
+    "name": "눈물의 완료 보고",
+    "line": "울긴 했는데 끝내긴 했어요.",
+    "description": "축축해진 체크리스트를 꼭 쥐고 마지막 도장을 찍어요.",
+    "ability": "감정 동반 마감 완료",
+    "scene": "Broad-lipped potato creature in necktie crying intensely while triumphantly stamping a soggy checklist, paper drooping and eyes determined."
+  },
+  {
+    "id": "pepe-raccoon",
+    "a": "pepe",
+    "b": "raccoon",
+    "name": "눈물 손빨래",
+    "line": "세제는 됐고 마음이 넘쳐요.",
+    "description": "감격하며 빨래를 하다가 눈물로 대야 물을 갈아 버려요.",
+    "ability": "감정 자동 헹굼",
+    "scene": "Masked broad-lipped green creature weeping happy tears directly into its washbasin while carefully scrubbing one tiny sock, proud thumbs-up from one paw."
+  },
+  {
+    "id": "pepe-sloth",
+    "a": "pepe",
+    "b": "sloth",
+    "name": "누워서 공감",
+    "line": "듣고 있어. 눈만 좀 감을게.",
+    "description": "누워서 엄지를 들었는데 팔이 무거워 베개로 받쳐요.",
+    "ability": "베개 받침 격려",
+    "scene": "Sloth-marked broad-lipped green creature reclining with eyes almost closed, its encouraging thumbs-up arm propped on a tiny pillow to keep it raised."
+  },
+  {
+    "id": "pepe-snail",
+    "a": "pepe",
+    "b": "snail",
+    "name": "응원 지연 배송",
+    "line": "위로가 늦어도 도착은 합니다.",
+    "description": "등껍질에 큰 엄지 깃발을 달고 정성껏 한 걸음씩 가요.",
+    "ability": "느린 격려 운송",
+    "scene": "Broad-lipped green snail carrying an oversized thumbs-up-shaped flag on its attached shell, leaning earnestly forward as the heavy flag drags behind."
+  },
+  {
+    "id": "pepe-squidward",
+    "a": "pepe",
+    "b": "squidward",
+    "name": "거리를 둔 공감",
+    "line": "마음은 옆에. 의자는 저쪽에.",
+    "description": "촉수를 길게 뻗어 엄지를 보내면서 몸은 멀찍이 물러나요.",
+    "ability": "원거리 엄지 전달",
+    "scene": "Long-nosed broad-lipped green tentacle creature leaning far backward, one extremely long attached tentacle extending a reassuring thumbs-up away from its body."
+  },
+  {
+    "id": "potato-potato",
+    "a": "potato",
+    "b": "potato",
+    "name": "완료 강박 도장",
+    "line": "체크했다는 것도 체크했어요.",
+    "description": "체크리스트를 확인한 체크리스트까지 허리에 둘렀어요.",
+    "ability": "완료 확인 재확인",
+    "scene": "Single potato office creature wrapped in a long spiral of checklists like a sash, stamping a checkmark onto another already checked checkmark, severe focus."
+  },
+  {
+    "id": "potato-raccoon",
+    "a": "potato",
+    "b": "raccoon",
+    "name": "울면서 고쳐줌",
+    "line": "일단 울어. 백업은 내가 할게.",
+    "description": "라쿤의 눈가 무늬와 감자의 둥근 몸이 만났어요. 눈물은 쏟아지는데 손은 작은 노트북의 나사를 정확히 돌립니다. 울음과 침착한 손놀림이 동시에 이어지는 장면이에요.",
+    "ability": "눈물 속 정밀 수리",
+    "scene": "Single raccoon-potato hybrid, ochre potato pear-shaped torso with speckles, raccoon dark eye mask rounded ears and striped tail integrated. Enormous two tear streams comically pouring from narrowed concentrated eyes, tightly pursed serious mouth. Short precise paws calmly using screwdriver to repair a small open laptop. Necktie soaked with tears. Show both stream and skilled hands clearly. One face one body. Dominant joke weeping emotionally while expertly solving problem, not sad helplessness."
+  },
+  {
+    "id": "potato-sloth",
+    "a": "potato",
+    "b": "sloth",
+    "name": "휴식 결재 대기",
+    "line": "쉬기 전에 쉴 준비를 합니다.",
+    "description": "베개 각도를 자로 재다가 그대로 고개를 기대 버렸어요.",
+    "ability": "휴식 사전 점검",
+    "scene": "Potato-sloth in loose necktie measuring a pillow with a tiny ruler, already resting cheek on the pillow while one sleepy eye checks alignment."
+  },
+  {
+    "id": "potato-snail",
+    "a": "potato",
+    "b": "snail",
+    "name": "계획표 원정대",
+    "line": "일정표가 지도보다 길어요.",
+    "description": "등껍질에서 나온 일정표가 길어 자기 발밑에 둘둘 말렸어요.",
+    "ability": "동선보다 긴 일정",
+    "scene": "Potato-snail in necktie pulling a long itinerary strip from attached shell, the paper coiling beneath its own foot and slowing a solemn planned step."
+  },
+  {
+    "id": "potato-squidward",
+    "a": "potato",
+    "b": "squidward",
+    "name": "조용한 업무 종료",
+    "line": "완료했습니다. 대화도요.",
+    "description": "촉수로 모든 도구를 반듯하게 정리한 뒤 입까지 지퍼처럼 닫아요.",
+    "ability": "정리 후 수신 종료",
+    "scene": "Long-nosed potato-tentacle creature arranging ruler, stamp and pen into perfect parallel lines with attached tentacles, one tentacle ceremonially closing a tiny desk lid."
+  },
+  {
+    "id": "raccoon-raccoon",
+    "a": "raccoon",
+    "b": "raccoon",
+    "name": "씻고 또 씻는 밤",
+    "line": "물도 한 번 씻어야 할 것 같아.",
+    "description": "대야 물을 작은 체에 거르며 진지하게 깨끗함을 확인해요.",
+    "ability": "세척수 재세척",
+    "scene": "Single masked raccoon earnestly trying to wash water by pouring it through a tiny sieve over a basin, striped tail neatly wrapped and focused eyes."
+  },
+  {
+    "id": "raccoon-sloth",
+    "a": "raccoon",
+    "b": "sloth",
+    "name": "헹굼 예약 수면",
+    "line": "불리는 중입니다. 저도 같이.",
+    "description": "손을 대야에 담근 채 고개가 수건 위로 천천히 내려가요.",
+    "ability": "세탁 대기 동반 휴식",
+    "scene": "Masked sloth-raccoon asleep with both paws still in a washbasin, cheek resting on a rolled towel at rim, striped tail curled as a blanket."
+  },
+  {
+    "id": "raccoon-snail",
+    "a": "raccoon",
+    "b": "snail",
+    "name": "빨래방 이사 중",
+    "line": "깨끗한 집을 통째로 가져갑니다.",
+    "description": "등껍질에 매단 빨래가 바닥에 닿을까 몸을 한껏 들어요.",
+    "ability": "빨랫감 지상 보호",
+    "scene": "Masked raccoon-snail carrying laundry lines around its attached spiral shell, straining on a tiny raised foot to keep hanging socks off the floor."
+  },
+  {
+    "id": "raccoon-squidward",
+    "a": "raccoon",
+    "b": "squidward",
+    "name": "세탁 공간 분리",
+    "line": "같이 빨아도 제 수건은 따로.",
+    "description": "촉수로 대야 안을 칸칸이 나눠 작은 수건 한 장만 빨아요.",
+    "ability": "개인 수건 전용 구획",
+    "scene": "Long-nosed masked tentacled creature dividing a washbasin into elaborate compartments with attached tentacles, one tiny towel alone in the central compartment."
+  },
+  {
+    "id": "sloth-sloth",
+    "a": "sloth",
+    "b": "sloth",
+    "name": "휴식 준비 완료",
+    "line": "잘 쉬려고 미리 누웠어요.",
+    "description": "베개와 이불을 반듯하게 맞추고 눈만 살짝 감았어요.",
+    "ability": "휴식 자세 최적화",
+    "scene": "Single fluffy sloth buried in a precisely aligned stack of pillows, one paw carefully straightening the last pillow edge while eyes peacefully close."
+  },
+  {
+    "id": "sloth-snail",
+    "a": "sloth",
+    "b": "snail",
+    "name": "느긋한 이삿날",
+    "line": "도착하면 쉬고 가면서도 쉬어요.",
+    "description": "등껍질 입구에 베개를 끼우고 이동 중에도 턱을 괴어요.",
+    "ability": "이동형 휴식 확보",
+    "scene": "Sloth-snail with a pillow neatly fitted to attached shell opening, head resting on it while one soft foot makes a tiny careful forward step."
+  },
+  {
+    "id": "sloth-squidward",
+    "a": "sloth",
+    "b": "squidward",
+    "name": "무음 휴식실",
+    "line": "쉬는 중이라는 말도 쉬겠습니다.",
+    "description": "촉수로 이불을 꼭 여미고 작은 종까지 천으로 감싸 놓았어요.",
+    "ability": "알림 소리 포장",
+    "scene": "Sloth-tentacle creature snug under a blanket, attached tentacles meticulously wrapping a tiny ringing bell in soft cloth, peaceful half-closed eyes."
+  },
+  {
+    "id": "snail-snail",
+    "a": "snail",
+    "b": "snail",
+    "name": "이사 준비 원정",
+    "line": "집은 챙겼고 집 넣을 집도요.",
+    "description": "등껍질 밖에 더 큰 가방을 씌우다 몸이 앞으로 기울었어요.",
+    "ability": "주거 이중 포장",
+    "scene": "Single snail with huge attached spiral shell being squeezed into an even larger travel backpack, little arms tugging straps while torso tips forward."
+  },
+  {
+    "id": "snail-squidward",
+    "a": "snail",
+    "b": "squidward",
+    "name": "혼자 가는 단체짐",
+    "line": "동행은 없고 짐만 많습니다.",
+    "description": "촉수로 짐을 하나씩 붙잡았는데 빈손이 하나도 없어요.",
+    "ability": "단독 다중 수하물",
+    "scene": "Long-nosed snail-tentacle creature whose attached tentacles each carry a different tiny suitcase around one spiral shell, serious face peering through luggage."
+  },
+  {
+    "id": "squidward-squidward",
+    "a": "squidward",
+    "b": "squidward",
+    "name": "혼자도 만석입니다",
+    "line": "제 공간은 제가 다 씁니다.",
+    "description": "촉수를 전부 펼쳐 작은 소파의 모든 자리를 차지했어요.",
+    "ability": "개인 좌석 전석 확보",
+    "scene": "Single long-nosed tentacled creature occupying an entire tiny sofa with attached tentacles stretched across every seat, stiff dignified posture and flat eyes."
+  }
+]

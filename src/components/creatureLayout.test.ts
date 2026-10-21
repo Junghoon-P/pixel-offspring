@@ -148,3 +148,14 @@ it("작은 새의 얼굴은 왼쪽 날개를 피하고 머리 안에 배치한�
     expect(y + height).toBeLessThanOrEqual(44);
   }
 });
+
+it("버섯과 고양이는 순서와 관계없이 절단 없는 동일한 완성 외형을 사용한다", () => {
+  const first = creatureLayers({ assetVersion: 4, body: "mushroom", fusionBody: "cat",
+    face: "signature", decorations: [], palette: "original" });
+  const reverse = creatureLayers({ assetVersion: 4, body: "cat", fusionBody: "mushroom",
+    face: "signature", decorations: [], palette: "original" });
+  expect(first).toEqual(reverse);
+  expect(first).toHaveLength(1);
+  expect(first[0].path).toBe("/creatures/v4/fusions/cat-mushroom.png");
+  expect(first[0].source).toEqual([0, 0, 1254, 1254]);
+});

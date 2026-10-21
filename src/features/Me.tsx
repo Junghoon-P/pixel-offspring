@@ -1,8 +1,9 @@
 "use client";
+import { recipeName } from "../domain/personalityArt";
+import { CharacterMatchDetails } from "../components/CharacterMatchDetails";
 import { PersonalityDetails } from "../components/PersonalityDetails";
 import { LegendCodex } from "../components/LegendCodex";
 import Link from "next/link";
-import { COMIC_NAMES } from "../domain/catalog";
 import { useEffect, useState } from "react";
 import type { ReactElement } from "react";
 import { z } from "zod";
@@ -124,8 +125,9 @@ const CharacterCard = ({
     <h2>{character.nickname}</h2>
     {character.profile && (
       <>
-        <h3>{character.recipe.assetVersion === 4 ? `${COMIC_NAMES[character.recipe.body]} · ` : ""}{character.profile.name}</h3>
+        <h3>{character.recipe.assetVersion === 4 ? `${recipeName(character.recipe)} · ` : ""}{character.profile.name}</h3>
         <p className="character-intro">{character.profile.reading?.headline ?? character.profile.description}</p>
+        <CharacterMatchDetails profile={character.profile} />
         {character.profile.reading && <PersonalityDetails reading={character.profile.reading} />}
         <p>
           <strong>작은 능력</strong> · {character.profile.ability}

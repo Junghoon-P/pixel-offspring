@@ -1,4 +1,5 @@
 "use client";
+import { CharacterMatchDetails } from "../components/CharacterMatchDetails";
 import Link from "next/link";
 import {
   writeSessionValue,
@@ -83,6 +84,7 @@ const ChosenCharacter = ({ chosen }: { chosen: Character }): ReactElement => (
       <>
         <h3>{chosen.profile.name}</h3>
         <p>{chosen.profile.description}</p>
+        <CharacterMatchDetails profile={chosen.profile} />
       </>
     )}
   </section>
@@ -141,6 +143,7 @@ const InviteHeader = ({ invite }: { invite: InvitePreview }): ReactElement => (
       />
       <h2>{invite.parent.nickname}의 생물</h2>
       {invite.parent.profile && <p>{invite.parent.profile.name}</p>}
+      <CharacterMatchDetails profile={invite.parent.profile} />
     </section>
   </>
 );

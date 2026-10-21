@@ -42,3 +42,12 @@ for path in costumes:
     # 생성 PNG의 알파 1/255 잔여값은 육안상 투명하며 불투명 배경과 구분한다.
     assert image.getpixel((0, 0))[3] <= 1 and image.getbbox(), path.name
 print('8 costume portraits: exact set, dimensions and transparency passed.')
+
+personality = list((root / 'public/creatures/v4/personality').glob('*.png'))
+assert {path.stem for path in personality} == {'cat', 'frog', 'potato', 'mushroom', 'jelly', 'raccoon', 'ghost'}
+for path in personality:
+    image = Image.open(path)
+    assert image.size == (1254, 1254) and image.mode == 'RGBA', path.name
+    assert image.getchannel('A').getextrema() == (0, 255), path.name
+    assert image.getpixel((0, 0))[3] <= 1 and image.getbbox(), path.name
+print('7 personality portraits: exact set, dimensions and transparency passed.')

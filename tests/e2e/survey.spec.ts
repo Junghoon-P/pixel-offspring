@@ -139,3 +139,25 @@ test("v3는 개인 풀이·레전드 궁합을 저장하고 도감·공유·삭�
     expect((await contexts[0].request.get(`/api/results/${pair.resultId}`)).status()).toBe(410);
   } finally { await Promise.all(contexts.map((context) => context.close())); }
 });
+
+test("중립 검사는 균형형과 외형 선택 이유를 저장하고 재조회한다", async ({ page }) => {
+  await page.request.post("/api/session", { headers: { Origin: origin } });
+  const payload = { quizVersion: 3, nickname: "균형확인", idempotencyKey: crypto.randomUUID(),
+    answers: Array.from({ length: 24 }, (_, index) => ({ questionId: `q${index + 1}`, optionId: "c" })),
+  };
+  const response = await page.request.post("/api/characters", { data: payload, headers: { Origin: origin } });
+  expect(response.status()).toBe(201);
+  const character = characterSchema.parse((await response.json()).data);
+  expect(character.profile?.typeId).toBe("xxxx");
+  expect(character.profile?.characterMatch?.kind).toBe("balanced");
+  const retry = await page.request.post("/api/characters", { data: payload, headers: { Origin: origin } });
+  expect(characterSchema.parse((await retry.json()).data)).toEqual(character);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/me");
+  await page.getByText("왜 이 생물인가요?", { exact: true }).click();
+  await expect(page.getByText(/특정 유형으로 단정하지 않고/)).toBeVisible();
+  await expect(page.getByRole("heading", { name: /경계 없는 균형가/ })).toBeVisible();
+  await page.screenshot({ path: "test-results/character-match-balanced.png", fullPage: true });
+  await page.reload();
+  await expect(page.getByRole("heading", { name: /경계 없는 균형가/ })).toBeVisible();
+});

@@ -1,9 +1,10 @@
 import { answersV3Schema } from "../shared/personalitySchemas";
 import { QUESTIONS_V3 } from "./surveyV3Questions";
-import { describeTraits, TYPE_BODIES } from "./survey";
+import { matchCharacter } from "./characterPersonality";
+import { hasPersonalityArt } from "./personalityArt";
 import { comicRecipe } from "./comicCatalog";
 import { describePersonality } from "./personalityReading";
-import type { Body, Profile, Recipe, Traits } from "./model";
+import type { Profile, Recipe, Traits } from "./model";
 import type { TraitAxis } from "./personalityModel";
 const AXES: TraitAxis[] = ["adventure", "energy", "spontaneity", "expression", "conflict", "support"];
 export const scoreSurveyV3 = (input: unknown): Traits => {
@@ -15,18 +16,11 @@ export const scoreSurveyV3 = (input: unknown): Traits => {
   return { adventure: score("adventure"), energy: score("energy"), spontaneity: score("spontaneity"),
     expression: score("expression"), conflict: score("conflict"), support: score("support") };
 };
-const selectBody = (typeId: string, traits: Traits): Body => {
-  if (typeId === "0000" && traits.energy < 0 && traits.energy >= -0.5 && traits.expression! <= -0.75) return "cucumber";
-  if (typeId === "1101" && traits.energy > 0 && traits.energy <= 0.5 && traits.expression! >= 0.75) return "broccoli";
-  if (typeId === "0101" && traits.energy > 0 && traits.energy <= 0.5 && traits.expression! >= 0.75) return "pepe";
-  if (typeId === "1000" && traits.energy < 0 && traits.energy >= -0.5 && traits.expression! <= -0.75) return "squidward";
-  return TYPE_BODIES[parseInt(typeId, 2)];
-};
 export const createSurveyV3 = (input: unknown): { traits: Traits; profile: Profile; recipe: Recipe } => {
   const traits = scoreSurveyV3(input);
-  const base = describeTraits(traits), reading = describePersonality(traits);
-  return { traits, recipe: comicRecipe(selectBody(base.typeId, traits)), profile: {
-    ...base, reading, description: reading.axes.slice(0, 4).map((axis) => axis.summary).join(". ") + ".",
+  const match = matchCharacter(traits), reading = describePersonality(traits);
+  return { traits, recipe: { ...comicRecipe(match.body), ...(hasPersonalityArt(match.body) ? { portraitStyle: "personality" as const } : {}) }, profile: {
+    typeId: match.typeId, name: match.name, characterMatch: match.characterMatch, reading, description: reading.axes.slice(0, 4).map((axis) => axis.summary).join(". ") + ".",
     ability: reading.strength,
   } };
 };

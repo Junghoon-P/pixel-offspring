@@ -53,7 +53,7 @@ export const renderCard = async (result: PublicResult): Promise<Blob> => {
   const end = last.y + wrapText(last.value, (t) => ctx.measureText(t).width, 900).length * (last.size + 12);
   // 풀이가 길어져도 PNG에 담긴 마지막 공략법과 하단 문구가 겹치지 않게 한다.
   const baseHeight = result.child.copyVersion === 2 ? 1600 : 1350;
-  canvas.height = result.child.compatibility ? Math.max(baseHeight, end + 120) : baseHeight;
+  canvas.height = Math.max(baseHeight, end + 120);
   ctx.fillStyle = "#fefaee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   text(ctx, "너랑 나 사이에서 태어난", 90, 48);
